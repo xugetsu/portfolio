@@ -3,7 +3,7 @@ import styles from './MyLogo.css';
 import LogoFragment1 from './LogoFragments/LogoFragment1/LogoFragment1';
 import LogoFragment2 from './LogoFragments/LogoFragment2/LogoFragment2';
 import LogoFragment3 from './LogoFragments/LogoFragment3/LogoFragment3';
-// import Icons from './Icons/Icons';
+import Icons from './Icons/Icons';
 class Logo extends Component{
     render(){
         const width = this.props.windowWidth/4;
@@ -18,10 +18,10 @@ class Logo extends Component{
                 <LogoFragment1  s = {s} d = {d} f = {f} width = {width}  height= {height}/>
                 <LogoFragment2  s = {s} x = {x} d = {d} f = {f}  width = {width} height= {height}/>
                 <LogoFragment3  s = {s} d = {d} f = {f} width = {width}  height= {height} x = {x}/>
-              {/*   <Icons 
+                <Icons 
                     iconIndex = {this.props.iconIndex} 
                     switchIcon = {this.props.switchIcon}
-                    width = {width} /> */}
+                    width = {width} />
                 </div>
                 
             
