@@ -1,0 +1,22 @@
+.Fragment3{
+    /*background: rgba(255, 0, 157, 0.158);*/
+    position: absolute;
+    z-index: 2;
+    animation: move3 16s ease-in-out infinite alternate; 
+}
+
+@keyframes move3 {
+    0% { transform: rotate(0);      left: var(--s);}
+    10% { transform: rotate(0);     left: var(--s);}
+
+    25% { transform: rotate(90deg); left: calc( var(--d) + var(--x));}
+
+    35% {transform: rotate(90deg);  left: calc( var(--f) + var(--x));}
+   50% {transform: rotate(90deg);  left: calc( var(--f) + var(--x))}
+   65% {transform: rotate(90deg);  left: calc( var(--f) + var(--x))}
+
+   75% { transform: rotate(90deg); left: calc( var(--d) + var(--x));}
+
+   90% { transform: rotate(0);      left: var(--s);}
+   100% { transform: rotate(0);     left: var(--s);}
+}
