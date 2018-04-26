@@ -1,0 +1,8 @@
+.MyLogo{
+    /* background-color: rgba(189, 189, 189, 0.747); */
+    position: relative;
+    margin-top: 5%;
+    left: 50%;
+    height: 50px;
+    width: 0px; /* very important for positioning the logo */
+}
