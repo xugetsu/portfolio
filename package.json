@@ -6,7 +6,8 @@
     "react": "^16.3.2",
     "react-css-variables": "^2.0.1",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-scroll-parallax": "^1.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
