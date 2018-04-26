@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './MyLogo.css';
+import styles from './MyLogo.css';
 import LogoFragment1 from './LogoFragments/LogoFragment1/LogoFragment1';
 import LogoFragment2 from './LogoFragments/LogoFragment2/LogoFragment2';
 import LogoFragment3 from './LogoFragments/LogoFragment3/LogoFragment3';
@@ -14,7 +14,7 @@ class Logo extends Component{
         const s = -width/2 + 'px';
 
         return(
-            <div className='MyLogo' id ='logo' style={{height:( height+ height/10 )}}>
+            <div className={styles.MyLogo} id ='logo' style={{height:( height+ height/10 )}}>
                 <LogoFragment1  s = {s} d = {d} f = {f} width = {width}  height= {height}/>
                 <LogoFragment2  s = {s} x = {x} d = {d} f = {f}  width = {width} height= {height}/>
                 <LogoFragment3  s = {s} d = {d} f = {f} width = {width}  height= {height} x = {x}/>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './LogoFragment1.css';
+import styles from './LogoFragment1.css';
 import variables from 'react-css-variables';
 
 const logoFragment1 = (props) => { 
@@ -18,7 +18,7 @@ const logoFragment1 = (props) => {
                
     const viewBox = [5, 0, 200, 210].join(' ');
     return (
-    <svg    className ='Fragment1'
+    <svg    className={styles.Fragment1}
             viewBox={viewBox} 
             height={props.height} 
             width={props.width}
