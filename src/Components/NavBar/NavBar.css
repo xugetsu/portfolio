@@ -4,7 +4,7 @@
     z-index: 99;
     top: 0;
     left: 0;
-    height: 70px;
+    height: 50px;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -15,7 +15,6 @@
   .NavBar a{
     text-decoration: none;
     color: aliceblue;
-    padding: 15px;
     margin: 10px;
     font-family: monospace;
     border: 3px solid rgba(35, 141, 177, 0);
@@ -26,5 +25,5 @@
   .NavBar a:hover{
     /* animation: bordermove 2s ease-in-out alternate infinite; */
     /* box-shadow: 0 0 2px 2px rgb(56, 205, 255); */
-    color: gold;
+    color: rgb(0, 183, 255);
   }
