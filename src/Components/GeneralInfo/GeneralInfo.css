@@ -1,0 +1,16 @@
+.GeneralInfo{
+    margin-top:50px;
+    justify-content: left;
+    text-align: left;
+    background: rgb(40, 44, 49);
+    height: 400px;
+}
+.MyPhoto{
+    float: left;
+    clip-path: circle(100px at 150px 130px);
+}
+.Info{
+    float: left;
+    width: 500px;
+    color: rgb(215, 236, 255);
+}
