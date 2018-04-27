@@ -1,8 +1,10 @@
 import React from 'react';
 
 const logo = (props) => {
-    const style2 = {fill:'rgba(41,137,216,1)',stroke:'rgba(41,137,216,1)',strokeWidth:1};
-    const style3 = {fill:'white',stroke:'white',strokeWidth:1};
+    const colorFill1 = props.colorFill1; //'rgba(41,137,216,1)',
+    const colorFill2 = props.colorFill2; //'white'
+    const style2 = {fill: colorFill1, stroke: colorFill1, strokeWidth:1};
+    const style3 = {fill: colorFill2, stroke: colorFill2, strokeWidth:1};
     
 
     const h = props.logoHeight;
@@ -46,12 +48,11 @@ const logo = (props) => {
     //                 [x3 + width, y3 - height]]; // < / ">"                    
 
     return (
-    <svg className="RawLogo" height={height+5} width={width+h/25} >
-        <polygon points={poly2} style={style2}/>
-        <polygon points={poly11} style={style3}/>
-        <polygon points={poly21} style={style2}/>
-
-    </svg>
+        <svg className="RawLogo" height={height+5} width={width+h/25} >
+            <polygon points={poly2} style={style2}/>
+            <polygon points={poly11} style={style3}/>
+            <polygon points={poly21} style={style2}/>
+        </svg>
     );
 }
 
