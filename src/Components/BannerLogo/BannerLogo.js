@@ -19,21 +19,26 @@ class BannerLogo extends Component{
         else{this.setState({iconIndex: this.state.iconIndex + 1 === 5 ? 0 : this.state.iconIndex + 1, animationIteration: 0}); }
     } 
     render(){
-      const windowWidth =  window.innerWidth > 1000 ? 1000 : window.innerWidth*0.67 ;
-      const style = {height: windowWidth/3};
+      const windowWidth =  window.innerWidth > 1000 ? 1000 : window.innerWidth*0.8 ;
+      const style = {height: windowWidth/2};
+      const wrapper = (          
+                <div className={styles.Wrapper}>
+                    <h1 className={styles.H1} >I work with <span>React</span></h1>
+                    <MyLogo windowWidth = {windowWidth} iconIndex = {this.state.iconIndex} 
+                                          animationIteration = {this.state.animationIteration} 
+                                          switchIcon = {this.switchIcon} />
+                </div>);
       return (
         <div className={styles.BannerLogo} style={style}>
             <ParallaxBanner
-                className="ParallaxBanner"
+                className={styles.ParallaxBanner}
                 layers={[
                     {
-                        children:<MyLogo windowWidth = {windowWidth} iconIndex = {this.state.iconIndex} 
-                                          animationIteration = {this.state.animationIteration} 
-                                          switchIcon = {this.switchIcon} />,
-                        amount: 0.5,
-                        slowerScrollRate: true,
+                        children: wrapper,
+                        amount: 0.1,
+                        slowerScrollRate: false,
                         expanded:false
-                    },
+                    }
                 ]}
                 style={style}
             >
