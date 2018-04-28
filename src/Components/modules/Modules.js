@@ -16,7 +16,6 @@ import python from '../BannerLogo/BannerLogo/Logo/Icons/svgs/python.svg';
 const modules = () => {
     return (
         <section className= {styles.Modules}>
-            <h2>Technologies I'm familiar with</h2>
             <ul>
                 <li><img src={react} height={50} alt='react'/> <p>React</p></li>
                 <li><img src={HTML5} height={50} alt='HTML5'/> <p>HTML5</p></li>
