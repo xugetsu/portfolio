@@ -1,17 +1,17 @@
 import React from 'react';
 import styles from './Modules.css';
-import npm from '../BannerLogo/BannerLogo/Logo/Icons/npm.png';
-import gitlab from '../BannerLogo/BannerLogo/Logo/Icons/gitlab.png';
-import redux from '../BannerLogo/BannerLogo/Logo/Icons/redux.png';
-import webpack from '../BannerLogo/BannerLogo/Logo/Icons/svgs/webpack.svg';
-import react from '../BannerLogo/BannerLogo/Logo/Icons/svgs/react.svg';
-import git from '../BannerLogo/BannerLogo/Logo/Icons/svgs/git.svg';
-import github from '../BannerLogo/BannerLogo/Logo/Icons/svgs/github.svg';
-import reactRouter from '../BannerLogo/BannerLogo/Logo/Icons/svgs/react-router.svg';
-import JavaScript from '../BannerLogo/BannerLogo/Logo/Icons/svgs/javaScript.svg';
-import CSS3 from '../BannerLogo/BannerLogo/Logo/Icons/svgs/css3.svg';
-import HTML5 from '../BannerLogo/BannerLogo/Logo/Icons/svgs/html5.svg';
-import python from '../BannerLogo/BannerLogo/Logo/Icons/svgs/python.svg';
+import npm from '../../Assets/Icons/pngs/npm.png';
+import gitlab from '../../Assets/Icons/pngs/gitlab.png';
+import redux from '../../Assets/Icons/pngs/redux.png';
+import webpack from '../../Assets/Icons/svgs//webpack.svg';
+import react from '../../Assets/Icons/svgs//react.svg';
+import git from '../../Assets/Icons/svgs//git.svg';
+import github from '../../Assets/Icons/svgs//github.svg';
+import reactRouter from '../../Assets/Icons/svgs//react-router.svg';
+import JavaScript from '../../Assets/Icons/svgs/javaScript.svg';
+import CSS3 from '../../Assets/Icons/svgs/css3.svg';
+import HTML5 from '../../Assets/Icons/svgs/html5.svg';
+import python from '../../Assets/Icons/svgs/python.svg';
 
 const modules = () => {
     return (
@@ -32,7 +32,7 @@ const modules = () => {
                 <li> <p>create-react-app</p></li>
                 <li> <p>react-parallax</p></li>
                 <li> <p>react-axios</p></li>
-                <li> <p>react-axios</p></li>
+                <li> <p>react-css-variables</p></li>
             </ul>
         </section>
     );

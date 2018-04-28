@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './Icons.css';
-import reactpng from './react.png';
-import pythonpng from './python.png';
-import html5 from './svgs/html5.svg';
-import css3 from './svgs/css3.svg';
-import javaScript from './svgs/javaScript.svg';
-import python from './svgs/python.svg';
-import python2 from './svgs/python2.svg';
-import redux from './svgs/redux.svg';
+import reactpng from '../../../../../Assets/Icons/pngs/react.png';
+import pythonpng from '../../../../../Assets/Icons/pngs/python.png';
+import html5 from '../../../../../Assets/Icons/svgs/html5.svg';
+import css3 from '../../../../../Assets/Icons/svgs/css3.svg';
+import javaScript from '../../../../../Assets/Icons/svgs/javaScript.svg';
+import python from '../../../../../Assets/Icons/svgs/python.svg';
+import python2 from '../../../../../Assets/Icons/svgs/python2.svg';
+import redux from '../../../../../Assets/Icons/svgs/redux.svg';
 
 
 const icons = (props) => {
