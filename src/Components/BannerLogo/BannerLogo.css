@@ -1,12 +1,12 @@
 .BannerLogo{
     background: linear-gradient(45deg, rgb(0, 116, 131) 0%,rgb(55, 72, 95) 40%,rgb(11, 65, 109) 99%,rgba(125,185,232,1) 100%);
 }
-.ParallaxBanner{
+/* .ParallaxBanner{
     height: 50px;
-}
+} */
 
 .Wrapper {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     /* display: flex;
     flex-flow: column;
     justify-content: center; 
@@ -20,9 +20,7 @@
     justify-items: center; */
 }
 .H1{
-    margin: 0;
-    margin-top: 20px;
-
+   
     font-weight: 500;
     font-size: 35px;
     color: rgb(230, 230, 230);

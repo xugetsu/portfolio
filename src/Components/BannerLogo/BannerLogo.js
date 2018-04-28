@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MyLogo from './BannerLogo/Logo/MyLogo';
+import Modules from '../modules/Modules';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import styles from './BannerLogo.css';
 
@@ -23,10 +24,11 @@ class BannerLogo extends Component{
       const style = {height: windowWidth/2};
       const wrapper = (          
                 <div className={styles.Wrapper}>
-                    <h1 className={styles.H1} >I work with <span>React</span></h1>
-                    <MyLogo windowWidth = {windowWidth} iconIndex = {this.state.iconIndex} 
+                    <h1 className={styles.H1} >I'm familiar with ...</h1>
+                    <MyLogo windowWidth = {windowWidth*0.5} iconIndex = {this.state.iconIndex} 
                                           animationIteration = {this.state.animationIteration} 
                                           switchIcon = {this.switchIcon} />
+                    <Modules />,
                 </div>);
       return (
         <div className={styles.BannerLogo} style={style}>
@@ -36,7 +38,7 @@ class BannerLogo extends Component{
                     {
                         children: wrapper,
                         amount: 0.1,
-                        slowerScrollRate: false,
+                        slowerScrollRate: true,
                         expanded:false
                     }
                 ]}
