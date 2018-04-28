@@ -9,8 +9,20 @@
     background: #282c31;
     z-index: 2;
     padding-bottom: 50px;
+    overflow: hidden;
 }
-
+.Gear{
+    position: absolute;
+    z-index: 1;
+    bottom: -30%;
+    right: -30%;
+    animation: spin 10s infinite;
+}
+@keyframes spin{
+    0%{ transform: rotate(0deg)}
+    50%{ transform: rotate(180deg)}
+    100%{ transform: rotate(360deg)}
+}
 .Logo{
     position: absolute;
     z-index: 1;
