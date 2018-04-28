@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Icons.css';
-import reactpng from '../../../../../Assets/Icons/pngs/react.png';
+import reactpng from '../../../../../Assets/Icons/pngs/react2.png';
 import pythonpng from '../../../../../Assets/Icons/pngs/python.png';
 import html5 from '../../../../../Assets/Icons/svgs/html5.svg';
 import css3 from '../../../../../Assets/Icons/svgs/css3.svg';
