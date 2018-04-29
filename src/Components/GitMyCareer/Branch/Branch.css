@@ -1,0 +1,54 @@
+
+.Branch{
+    display: inline-block;
+    position: relative; 
+    z-index: 0;
+}
+
+
+
+.Branch span{
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 0px;
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
+    background: rgb(43, 43, 43);
+    border-radius: 10px;
+    border: 3px solid ghostwhite;
+    transition: all 0.2s ease-in-out;
+}
+
+.Branch span:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.Branch span .Details{
+    visibility: hidden;
+    position: absolute;
+    bottom: 20px;
+    right: -40px;
+    min-width: 80px;
+    height: 15px;
+    border-radius: 5px;
+    background: #1f88ff;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.Branch span:hover .Details{
+   visibility: visible;
+}
+.Branch span .Details::after{
+        content: '';
+        position: absolute;
+        bottom: -14px;
+        left: 50%;
+        margin-left: -7px;
+        border-width: 7px;
+        border-style: solid;
+        border-color: #1f88ff transparent transparent
+}  
