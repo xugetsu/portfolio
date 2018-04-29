@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import React from 'react';
-import style from 'A.css';
+import styles from './A.css';
 
 const a = () => {
     return (
