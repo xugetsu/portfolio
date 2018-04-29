@@ -1,5 +1,5 @@
 .Load p{
-    color: rgba(0, 0, 0, 0.589);
+    color: rgb(255, 255, 255);
     text-align: center;
     font-weight: bold;
     font-size: 26px;
@@ -15,10 +15,10 @@
   font-size: 10px;
   position: relative;
   text-indent: -9999em;
-  border-top: 1.1em solid rgb(109, 109, 109);
-  border-right: 1.1em solid rgb(109, 109, 109);
-  border-bottom: 1.1em solid rgb(109, 109, 109);
-  border-left: 1.1em solid #eeb416;
+  border-top: 1.1em solid #2e2e2e;
+  border-right: 1.1em solid #2e2e2e;
+  border-bottom: 1.1em solid #2e2e2e;
+  border-left: 1.1em solid #1cfff4;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
