@@ -7,7 +7,7 @@ const branch = (props) =>{
           color = props.color;
     return ( 
             <div className= {styles.Branch} >
-                    <img src={branch0} width={50} height={60}/>  
+                    <img draggable = {false}  src={branch0} width={50} height={60}/>  
                         <span onClick = {props.clicked}> 
                             <div  className= {styles.Details} >
                                 {props.content+'d29112017'}
