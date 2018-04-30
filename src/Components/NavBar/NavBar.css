@@ -1,5 +1,5 @@
 .NavBar{
-    background-color: rgb(34, 39, 39);/* rgb(56, 56, 56);*/
+    background-color: #222727;/* rgb(56, 56, 56);*/
     position: fixed;
     z-index: 99;
     top: 0;
@@ -27,3 +27,32 @@
     /* box-shadow: 0 0 2px 2px rgb(56, 205, 255); */
     color: rgb(0, 183, 255);
   }
+
+.RawLogoWrapper{
+  position: fixed;
+  z-index: 100;
+  /* left: -20px;
+  top: -20px; */
+  width: 100px;
+  height: 100px;
+  background: rgba(69, 70, 70, 0);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 45% 100%, 0% 100%);
+  transition: all 0.5s ease-in-out;
+  box-sizing: border-box; 
+  transform: scale(1);
+  top: -7px;
+  left: -7px;
+  background: #222727c5;
+  transform: scale(1.2);
+}
+.RawLogoWrapper:hover{
+  background: rgba(73, 73, 73, 0.651);
+  top: 10px;
+  left: 10px;
+  transform: scale(2);
+}
+.RawLogo{
+  display: inline-block;
+  margin: 22px 0 0 0;
+  transform: rotate(-45deg);
+}
