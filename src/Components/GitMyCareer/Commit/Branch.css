@@ -1,13 +1,11 @@
 
-.Branch{
+.Commit{
     display: inline-block;
     position: relative; 
     z-index: 0;
 }
 
-
-
-.Branch span{
+.Commit span{
     position: absolute;
     z-index: 10;
     right: 0;
@@ -21,12 +19,12 @@
     transition: all 0.2s ease-in-out;
 }
 
-.Branch span:hover{
+.Commit span:hover{
     transform: scale(1.2);
     cursor: pointer;
 }
 
-.Branch span .Details{
+.Commit span .Details{
     visibility: hidden;
     position: absolute;
     bottom: 20px;
@@ -39,10 +37,10 @@
     font-size: 12px;
     font-weight: 600;
 }
-.Branch span:hover .Details{
+.Commit span:hover .Details{
    visibility: visible;
 }
-.Branch span .Details::after{
+.Commit span .Details::after{
         content: '';
         position: absolute;
         bottom: -14px;
