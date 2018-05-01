@@ -5,7 +5,7 @@ import Draggable from 'react-draggable';
 import Commit from '../Commit/Commit';
 
 const graph = (props) => {
-    const gridWidth = 40; // grid Width
+    const gridWidth = 50; // grid Width
     const rowHeight = 55; // grid Height you can't change the height until you fix branch svg's relation between its height and width
     const layout = [
                     {i: 'c1', x: 0, y: 0, w: 1, h: 1, static: true, content:'123'},
