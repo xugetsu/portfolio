@@ -1,0 +1,21 @@
+.TrackVertical{
+   border-radius:5px !important;
+   bottom:2px;
+   position:absolute;
+   right:2px;
+   top:2px;
+   width:15px;
+}
+
+.ThumbVertical{
+  position: absolute;
+  right: 0;
+  width:6px;
+  background-color:#9acd32;
+  border-radius:5px !important;
+  transition: width 0.1s ease-in-out;
+}
+
+.TrackVertical:hover .ThumbVertical, .ThumbVertical:active{
+    width:100%;
+ }
