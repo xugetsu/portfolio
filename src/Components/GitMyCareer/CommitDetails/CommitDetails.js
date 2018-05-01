@@ -11,7 +11,7 @@ const commitDetails = (props) => {
     });
     return (
       <div className={styles.CommitDetails} >
-         <CustomScrollbars height={'100%'}>
+         <CustomScrollbars height={'100%'} zIndex={2}>
             <div className= {styles.Commit}>
                <h2 className={styles.Message}> {props.title} <span>{props.date}</span></h2>
                <Commit />

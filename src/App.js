@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className={styles.App}>
-         <CustomScrollbars height = {window.innerHeight }>
+         <CustomScrollbars height = {window.innerHeight } zIndex={3} >
             <NavBar />
             <GeneralInfo />
             <GitMyCareer />
