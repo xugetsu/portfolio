@@ -7,7 +7,7 @@ import CommitDetails from './CommitDetails/CommitDetails';
 import CommitData from './CommitsData';
 class GitMyCareer extends Component {
     state = {
-        hash: 5
+        hash: 1
     }
 
     loadCommitLog = (hash) =>   this.setState({hash: hash});
@@ -27,7 +27,7 @@ class GitMyCareer extends Component {
                 date= {CommitData[hash-1].content[1]} 
                 hash = {hash} /> 
 
-            <Graph layout = {CommitData} loadCommitLog = {(hash) => this.loadCommitLog(hash)}/>
+            <Graph currentHash = {hash} layout = {CommitData} loadCommitLog = {(hash) => this.loadCommitLog(hash)}/>
         </div>
         );
     }

@@ -13,7 +13,8 @@ const graph = (props) => {
                     <CommitElement commit = {commit} 
                             clicked = {() => props.loadCommitLog(+commit.i[1])}
                             width = {gridWidth}
-                            Height = {rowHeight}/>
+                            Height = {rowHeight}
+                            active = {commit.hash === props.currentHash}/>
                 </div>;
     });
     return (

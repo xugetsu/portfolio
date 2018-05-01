@@ -12,7 +12,9 @@ const commit = (props) =>{
     const inlineStyle = {borderBottomColor:color?color:'#ff7b00',width:width?width:'50px'};
     return (
         <div className= {classStyle.Commit} style={inlineStyle}>
-            <span onClick = {props.clicked}>
+            <span onClick = {props.clicked} 
+                  style={{background:props.active ? '#0099ff':'#2b2b2b',
+                          transform: props.active ? 'scale(1.2)':''}}>
                 <div  className= {classStyle.Details} >
                     {props.commit.content[1].slice(4)}
                 </div>
