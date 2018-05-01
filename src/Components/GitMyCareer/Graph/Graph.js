@@ -7,20 +7,7 @@ import CommitElement from './CommitElement/CommitElement';
 const graph = (props) => {
     const gridWidth = 50; // grid Width
     const rowHeight = 55; // grid Height you can't change the height until you fix branch svg's relation between its height and width
-    const layout = [
-                    {i: 'c1', x: 0, y: 0, w: 1, h: 1, static: true, content:'123'},
-                    {i: 'c2', x: 1, y: 0, w: 1, h: 1, static: true, content:'123'},
-                    {i: 'c3', x: 2, y: 0, w: 1, h: 1, static: true, content:'123'},
-                    {i: 'c4', x: 3, y: 0, w: 2, h: 1, static: true, content:'123'},
-                    {i: 'b5', x: 3, y: 1, w: 1, h: 1, static: true, content:'123'},
-                    {i: 'c6', x: 4, y: 1, w: 1, h: 1, static: true, content:'123'},
-                    {i: 'c7', x: 5, y: 1, w: 1, h: 1, static: true, content:'123'},
-                    {i: 'c8', x: 6, y: 1, w: 1, h: 1, static: true, content:'123'},
-                    {i: 'c9', x: 7, y: 1, w: 1, h: 1, static: true, content:'123'},
-                    {i: 'c10', x: 5, y: 0, w: 1, h: 1, static: true, content:'123'},
-                    {i: 'c11', x: 6, y: 0, w: 1, h: 1, static: true, content:'123'},
-                    {i: 'c12', x: 7, y: 0, w: 1, h: 1, static: true, content:'123'},
-    ];
+    const layout = props.layout;
     const commits = layout.map( commit => {
         return  <div key={commit.i}>
                     <CommitElement commit = {commit} 

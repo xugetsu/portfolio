@@ -4,17 +4,17 @@ import gitsvm from '../../Assets/Icons/pngs/gitsvm.png';
 import Grid from 'react-css-grid';
 import Graph from './Graph/Graph';
 import CommitDetails from './CommitDetails/CommitDetails';
-
+import CommitData from './CommitsData';
 class GitMyCareer extends Component {
     state = {
-        hash: 1
+        hash: 5
     }
 
     loadCommitLog = (hash) =>   this.setState({hash: hash});
 
     render () {
-        const title = 'Robot Design Improvement';
-        const date = 'On, Sun. Jan 1, 2017, 9:59 PM';
+
+        const hash =this.state.hash;
         return (
         <div className= {styles.GitMyCareer}>
         
@@ -23,11 +23,11 @@ class GitMyCareer extends Component {
             <h1>My Career Repository</h1>
 
             <CommitDetails 
-                title={title} 
-                date={date} 
-                hash = {this.state.hash} /> 
+                title={CommitData[hash-1].content[0]} 
+                date= {CommitData[hash-1].content[1]} 
+                hash = {hash} /> 
 
-            <Graph loadCommitLog = {(hash) => this.loadCommitLog(hash)}/>
+            <Graph layout = {CommitData} loadCommitLog = {(hash) => this.loadCommitLog(hash)}/>
         </div>
         );
     }
