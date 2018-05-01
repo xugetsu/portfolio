@@ -5,15 +5,16 @@
    right:2px;
    top:2px;
    width:15px;
+   background-color:#1d1d1db6;
+   z-index: 2;
 }
 
 .ThumbVertical{
-  position: absolute;
-  right: 0;
+  margin: 0 auto;
   width:6px;
-  background-color:#9acd32;
+  background-color:#328fcd;
   border-radius:5px !important;
-  transition: width 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .TrackVertical:hover .ThumbVertical, .ThumbVertical:active{
