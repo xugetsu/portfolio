@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Graph.css';
 import GridLayout from 'react-grid-layout';
 import Draggable from 'react-draggable';
-import Commit from '../Commit/Commit';
+import CommitElement from './CommitElement/CommitElement';
 
 const graph = (props) => {
     const gridWidth = 50; // grid Width
@@ -23,7 +23,7 @@ const graph = (props) => {
     ];
     const commits = layout.map( commit => {
         return  <div key={commit.i}>
-                    <Commit commit = {commit} 
+                    <CommitElement commit = {commit} 
                             clicked = {() => props.loadCommitLog(+commit.i[1])}
                             width = {gridWidth}
                             Height = {rowHeight}/>
