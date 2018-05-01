@@ -5,18 +5,18 @@ import robot3 from '../../../../Assets/Images/robot3.png';
 import RobotSketchFab from '../../../RobotSketchFab/RobotSketchFab';
 import CommitDetails from '../CommitDetails';
 const commit1 = () => {
-    const title = 'Robot Design Improvement';
-    const date = 'On, Sun. Jan 1, 2017, 9:59 PM';
+    const ImgStyle = {display:'block',margin:'0 auto',width:'80%'};
     return (
-        <CommitDetails title={title} date={date}>
+        <article>
             <p>Improving the robot design of the End of study project after graduation.<br/> Used CAD Software: SolidWorks.</p>
             <RobotSketchFab />
-            <p>Before:</p>
-            <img src={robot1} height={100} width={200} alt='robot before Improvements' />
-            <p>After:</p>
-            <img src={robot2} height={100} width={180} alt='robot after Improvements' />
-            <img style={{marginLeft:'10px'}} src={robot3} height={100} width={180} alt='robot after Improvements' />    
-        </CommitDetails>
+            <h2>Before:</h2>
+            <img style={ImgStyle} src={robot1} alt='robot before Improvements' />
+            <h2>After:</h2>
+            <img style={ImgStyle}src={robot2} alt='robot after Improvements' />
+            <br/>
+            <img style={ImgStyle} src={robot3} alt='robot after Improvements' />    
+        </article>
     );
 }
 export default commit1;
