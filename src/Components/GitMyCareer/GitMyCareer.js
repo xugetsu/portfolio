@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styles from './GitMyCareer.css';
 import gitsvm from '../../Assets/Icons/pngs/gitsvm.png';
-import Grid from 'react-css-grid';
+
 import Graph from './Graph/Graph';
 import CommitDetails from './CommitDetails/CommitDetails';
 import CommitData from './CommitsData';
@@ -18,7 +18,7 @@ class GitMyCareer extends Component {
         return (
         <div className= {styles.GitMyCareer}>
         
-            <img className= {styles.GitSvm} src={gitsvm} width={200} />
+            <img className= {styles.GitSvm} src={gitsvm} width={200} alt='Git'/>
 
             <h1>My Career Repository</h1>
 

@@ -3,7 +3,6 @@ import robot1 from '../../../../Assets/Images/robot1.png';
 import robot2 from '../../../../Assets/Images/robot2.png';
 import robot3 from '../../../../Assets/Images/robot3.png';
 import RobotSketchFab from '../../../RobotSketchFab/RobotSketchFab';
-import CommitDetails from '../CommitDetails';
 const commit1 = () => {
     const ImgStyle = {display:'block',margin:'0 auto',width:'80%'};
     return (

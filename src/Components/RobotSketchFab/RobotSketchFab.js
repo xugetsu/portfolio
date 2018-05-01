@@ -10,15 +10,13 @@ const robotSketchFab = () => {
         //             once
        //            /* placeholder = {spinner}*/>
             <iframe className= {styles.RobotSketchFab}
+                    title = "Robot SketchFab"
                     width={'95%'} 
                     height={400} 
                     src="https://sketchfab.com/models/27cadc08b84f4affa616d41cbb1d9ac1/embed" 
-                    frameborder="0" 
-                    allowvr 
-                    allowfullscreen ="true"
-                    mozallowfullscreen="true" 
-                    webkitallowfullscreen="true" 
-                    onmousewheel="">
+                    allowFullScreen
+                    mozallowfullscreen='true'
+                    webkitallowfullscreen='true'>
             </iframe> 
   //    </LazyLoad>
     );

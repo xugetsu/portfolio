@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './AboutMe.css';
-import LogoFragment1 from '../../LogoFragments/LogoFragment1/LogoFragment1';
 import LogoFragment2 from '../../LogoFragments/LogoFragment2/LogoFragment2';
-import LogoFragment3 from '../../LogoFragments/LogoFragment3/LogoFragment3';
 
 const aboutMe = () => {
     return (

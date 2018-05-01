@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Icons.css';
 import reactpng from '../../../../../Assets/Icons/pngs/react2.png';
-import pythonpng from '../../../../../Assets/Icons/pngs/python.png';
 import html5 from '../../../../../Assets/Icons/svgs/html5.svg';
 import css3 from '../../../../../Assets/Icons/svgs/css3.svg';
 import javaScript from '../../../../../Assets/Icons/svgs/javaScript.svg';
@@ -24,7 +23,6 @@ const icons = (props) => {
         <img src={javaScript} alt={'JavaScript'} style={{width:props.width/1.8}}/>, 
 
         ];
-  const title = ['React.js','HTML5','JavaScript','CSS','python3'];
 
   return(
       <div  className ={styles.Icons} 

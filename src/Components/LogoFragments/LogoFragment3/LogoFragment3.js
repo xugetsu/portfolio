@@ -8,7 +8,7 @@ const logoFragment3 = (props) => {
     const thikness = height/5;
     const width = h/2.825*1.2;
     const x0 = 0, y0 = 0; 
-    const x1 = x0, y1 = y0 + height*1.11765, y11 = y0 + height*1.11765 - h/500*130;
+    const x1 = x0, y11 = y0 + height*1.11765 - h/500*130;
     const poly11 = [[x1 - h/25, y11], 
                    [x1, y11 + thikness*0.8 ], 
                    [x1 + width + h/25, y11 + height*4/17 + thikness*0.8], 
