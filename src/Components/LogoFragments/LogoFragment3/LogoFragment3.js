@@ -19,8 +19,7 @@ const logoFragment3 = (props) => {
     <svg    className={styles.Fragment3}
             viewBox={viewBox}
             height={props.height} 
-            width={props.width}
-            style = {{left:-props.width/2}} >
+            width={props.width}>
 
         <defs>
             <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="50%">
