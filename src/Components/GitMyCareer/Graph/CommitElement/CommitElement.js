@@ -1,7 +1,7 @@
 import React from 'react';
-import CommitStyles from './Commit.css';
-import BranchStyles from './Branch.css';
-import newbranch from '../../../Assets/Icons/svgs/branch.svg';
+import CommitStyles from './CommitElement.css';
+import BranchStyles from './BranchElement.css';
+import newbranch from '../../../../Assets/Icons/svgs/branch.svg';
 
 const commit = (props) =>{
     const width = props.commit.w*props.width + 'px';
