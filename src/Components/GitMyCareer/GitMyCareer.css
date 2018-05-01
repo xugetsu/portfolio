@@ -1,19 +1,9 @@
 .GitMyCareer{
     position: relative;
-    height: 500px;
+    height: 600px;
     background: linear-gradient(to bottom, #1e3c72, #2a5298); 
     color: honeydew;
-    padding: 20px;
-}
-
-.Repository{
-    position: relative;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    padding:30px;
-    background: rgba(47, 79, 79, 0.486);
-    height: 300px;
+    padding: 20px 40px 20px 20px;
 }
 
 .GitSvm{
@@ -21,15 +11,4 @@
     top: 0;
     right: 0;
     z-index: 0;
-}
-
-.GitLog{
-    overflow: auto;
-    border-radius: 10px;
-    float: right;
-    margin: 20px auto;
-    background: rgba(0, 0, 0, 0.267);
-    width: 50%;
-    height: 400px;
-    clear: right;
 }
