@@ -13,6 +13,7 @@
 }
 .Gear{
     position: absolute;
+    user-select: none;
     z-index: 1;
     bottom: -30%;
     right: -30%;

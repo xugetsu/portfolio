@@ -15,7 +15,7 @@ const generalInfo = () => {
                         <MyLogoRaw colorFill1 = {'#23262b'} colorFill2 = {'#1f2227'} logoHeight = {900}/>
                 </div>   
                 <img  className= {styles.MyPhoto} src={myPhoto} height={200}/>
-                <img  className= {styles.Gear} src={gear} height={800}/>
+                <img  draggable = {false} className= {styles.Gear} src={gear} height={800}/>
                 <ul className= {styles.Info} >
                     <b>{'\{ '}</b>
                     <li><span>" FULL NAME " :</span> " Ali Othmani "<b> ,</b></li>
