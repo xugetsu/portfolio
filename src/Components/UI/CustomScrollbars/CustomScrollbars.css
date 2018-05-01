@@ -5,10 +5,12 @@
    right:0px;
    top:2px;
    width:15px;
-   background-color:#1d1d1db6;
-  /* z-index: 3;*/
+   background-color:#1d1d1d00;
+   transition: all 0.1s ease-in-out;
 }
-
+.TrackVertical:hover{
+  background-color:#1d1d1db6;
+}
 .ThumbVertical{
   margin: 0 auto;
   width:6px;
