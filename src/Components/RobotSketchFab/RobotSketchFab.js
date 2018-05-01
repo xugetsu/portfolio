@@ -1,20 +1,26 @@
 import React from 'react';
 import styles from './RobotSketchFab.css';
+import LazyLoad from 'react-lazyload';
+import Spinner from '../Spinner/Spinner';
 
 const robotSketchFab = () => {
+    const spinner = (props) =>  <div {...props}><Spinner/></div>;
     return (
-        <div className= {styles.RobotSketchFab}>
-            <iframe width="640" 
-                    height="480" 
+        <LazyLoad   height ={100}
+                    once
+                   /* placeholder = {spinner}*/>
+            <iframe className= {styles.RobotSketchFab}
+                    width={'95%'} 
+                    height={300} 
                     src="https://sketchfab.com/models/27cadc08b84f4affa616d41cbb1d9ac1/embed" 
                     frameborder="0" 
                     allowvr 
-                    allowfullscreen 
+                    allowfullscreen ="true"
                     mozallowfullscreen="true" 
                     webkitallowfullscreen="true" 
                     onmousewheel="">
             </iframe> 
-        </div>
+      </LazyLoad>
     );
 }
 export default robotSketchFab;
