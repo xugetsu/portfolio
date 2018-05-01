@@ -1,17 +1,17 @@
 import React from 'react';
 import styles from './RobotSketchFab.css';
-import LazyLoad from 'react-lazyload';
-import Spinner from '../Spinner/Spinner';
+//import LazyLoad from 'react-lazyload';
+//import Spinner from '../Spinner/Spinner';
 
 const robotSketchFab = () => {
-    const spinner = (props) =>  <div {...props}><Spinner/></div>;
+    //const spinner = (props) =>  <div {...props}><Spinner/></div>;
     return (
-        <LazyLoad   height ={100}
-                    once
-                   /* placeholder = {spinner}*/>
+        // <LazyLoad   height ={100}
+        //             once
+       //            /* placeholder = {spinner}*/>
             <iframe className= {styles.RobotSketchFab}
                     width={'95%'} 
-                    height={300} 
+                    height={400} 
                     src="https://sketchfab.com/models/27cadc08b84f4affa616d41cbb1d9ac1/embed" 
                     frameborder="0" 
                     allowvr 
@@ -20,7 +20,7 @@ const robotSketchFab = () => {
                     webkitallowfullscreen="true" 
                     onmousewheel="">
             </iframe> 
-      </LazyLoad>
+  //    </LazyLoad>
     );
 }
 export default robotSketchFab;
