@@ -17,10 +17,10 @@ class Logo extends Component{
             <div className={styles.MyLogo} id ='logo' style={{height:( height+ height/10 )}}>
                 <LogoFragment1  s = {s} d = {d} f = {f} width = {width}  height= {height}/>
                 <LogoFragment2  s = {s} x = {x} d = {d} f = {f}  width = {width} height= {height}/>
-                <LogoFragment3  s = {s} d = {d} f = {f} width = {width}  height= {height} x = {x}/>
+                <LogoFragment3  switchIcon = {this.props.switchIcon} s = {s} d = {d} f = {f} width = {width}  height= {height} x = {x}/>
                 <Icons 
                     iconIndex = {this.props.iconIndex} 
-                    switchIcon = {this.props.switchIcon}
+                    //switchIcon = {this.props.switchIcon}
                     width = {width} />
                 </div>
                 

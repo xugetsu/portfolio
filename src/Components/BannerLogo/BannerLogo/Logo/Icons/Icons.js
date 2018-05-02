@@ -27,7 +27,8 @@ const icons = (props) => {
   return(
       <div  className ={styles.Icons} 
             style={{right:-props.width/4}} 
-            onAnimationIteration = {props.switchIcon}>
+            //onAnimationIteration = {props.switchIcon} 
+            >
         {lolipop[props.iconIndex]}
       </div>
   );

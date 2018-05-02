@@ -17,6 +17,7 @@ const logoFragment3 = (props) => {
     const viewBox = [5, 0, 200, 210].join(' ');
     return (
     <svg    className={styles.Fragment3}
+            onAnimationIteration = {props.switchIcon}
             viewBox={viewBox}
             height={props.height} 
             width={props.width}

@@ -7,7 +7,7 @@ import styles from './BannerLogo.css';
 class BannerLogo extends Component{
     state = {
         iconIndex: 0,
-        animationIteration: 0,
+     //   animationIteration: 0,
     }
     componentDidMount () {  
         window.addEventListener("resize", () => this.forceUpdate());
@@ -16,8 +16,14 @@ class BannerLogo extends Component{
         window.removeEventListener("resize", () => this.forceUpdate());
     }
     switchIcon = (e) => {
-        if(this.state.animationIteration === 0){this.setState({ animationIteration: 1}); }
-        else{this.setState({iconIndex: this.state.iconIndex + 1 === 5 ? 0 : this.state.iconIndex + 1, animationIteration: 0}); }
+        console.log('switchIcon');
+        // if(this.state.animationIteration === 0){this.setState({ animationIteration: 1}); }
+        // else{
+            this.setState({
+                iconIndex: this.state.iconIndex + 1 === 5 ? 0 : this.state.iconIndex + 1,
+               // animationIteration: 0
+            }); 
+      //      }
     } 
     render(){
       const windowWidth =  window.innerWidth > 1000 ? 1000 : window.innerWidth*0.8 ;
@@ -25,10 +31,11 @@ class BannerLogo extends Component{
       const wrapper = (          
                 <div className={styles.Wrapper}>
                     <h1 className={styles.H1} >I'm familiar with ...</h1>
-                    <MyLogo windowWidth = {windowWidth*0.5} iconIndex = {this.state.iconIndex} 
-                                          animationIteration = {this.state.animationIteration} 
-                                          switchIcon = {this.switchIcon} />
-                    <Modules />,
+                    <MyLogo windowWidth = {windowWidth*0.5} 
+                            iconIndex = {this.state.iconIndex} 
+                            animationIteration = {this.state.animationIteration} 
+                            switchIcon = {this.switchIcon} />
+                    <Modules />
                 </div>);
       return (
         <div className={styles.BannerLogo} style={style}>
