@@ -11,7 +11,7 @@ const graph = (props) => {
     const commits = layout.map( commit => {
         return  <div key={commit.i}>
                     <CommitElement commit = {commit} 
-                            clicked = {() => props.loadCommitLog(+commit.i[1])}
+                            clicked = {() => props.loadCommitLog(commit.hash)}
                             width = {gridWidth}
                             Height = {rowHeight}
                             active = {commit.hash === props.currentHash}/>
