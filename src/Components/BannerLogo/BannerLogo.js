@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MyLogo from './BannerLogo/Logo/MyLogo';
-import Modules from '../modules/Modules';
+import Competence from '../Competence/Competence';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import styles from './BannerLogo.css';
 
@@ -35,7 +35,7 @@ class BannerLogo extends Component{
                             iconIndex = {this.state.iconIndex} 
                             animationIteration = {this.state.animationIteration} 
                             switchIcon = {this.switchIcon} />
-                    <Modules />
+                    <Competence />
                 </div>);
       return (
         <div className={styles.BannerLogo} style={style}>

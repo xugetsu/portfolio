@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Modules.css';
+import styles from './Competence.css';
 import npm from '../../Assets/Icons/pngs/npm.png';
 import gitlab from '../../Assets/Icons/pngs/gitlab.png';
 import redux from '../../Assets/Icons/pngs/redux.png';
@@ -13,9 +13,9 @@ import CSS3 from '../../Assets/Icons/svgs/css3.svg';
 import HTML5 from '../../Assets/Icons/svgs/html5.svg';
 import python from '../../Assets/Icons/svgs/python.svg';
 
-const modules = () => {
+const  competence  = () => {
     return (
-        <section className= {styles.Modules}>
+        <section className= {styles.Competence}>
             <ul>
                 <li><img src={react} height={50} alt='react'/> <p>React</p></li>
                 <li><img src={HTML5} height={50} alt='HTML5'/> <p>HTML5</p></li>
@@ -39,4 +39,4 @@ const modules = () => {
 }
 
 
-export default modules;
+export default competence;

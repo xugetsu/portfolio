@@ -1,12 +1,12 @@
 
-.Modules{
+.Competence{
     /* background: rgb(17, 27, 56); */
     padding: 10px;
     color: peru;
     font-weight: 400;
 
 }
-.Modules ul{
+.Competence ul{
     text-decoration: none;
     list-style: none;
     text-align: center;
@@ -15,7 +15,7 @@
     flex-basis: 10px;
 }
 
-.Modules ul li {
+.Competence ul li {
     display: inline-block;
     margin: 20px;
     color:rgb(232, 255, 175);
