@@ -1,22 +1,48 @@
 
 .Competence{
-    /* background: rgb(17, 27, 56); */
-    padding: 10px;
-    color: peru;
-    font-weight: 400;
-
+    padding: 5px;
 }
-.Competence ul{
+
+.Advanced, 
+.Basic{
+    font-weight: 500;
+    color: aliceblue;
+    padding: 20px 0;
+    border-radius: 30px;
+}
+.Dependencies{
+    background: rgba(0, 0, 0, 0.13);
+    border-radius: 30px;
+}
+.Advanced h2, 
+.Basic h2,
+.Dependencies h2{
+    font-weight: 500;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.Basic ul,
+.Advanced  ul,
+.Dependencies  ul{
     text-decoration: none;
     list-style: none;
     text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    flex-basis: 10px;
+    flex-flow: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 20px;
 }
 
-.Competence ul li {
-    display: inline-block;
-    margin: 20px;
+.Advanced ul li, 
+.Basic ul li{
+    align-self: baseline;
+    margin: 0 20px;
+    color:rgb(232, 255, 175);
+}
+.Dependencies ul li{
+    align-self: baseline;
+    margin: 0 20px;
     color:rgb(232, 255, 175);
 }
