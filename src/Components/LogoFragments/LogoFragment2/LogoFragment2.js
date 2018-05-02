@@ -4,7 +4,7 @@ import variables from 'react-css-variables';
 
 const logoFragment2 = (props) => { 
 
-    const h = 500;
+    const h = props.h;
     const height = h/2.825; 
     const thikness = height/4.5;
     const width = h/2.825*1.2;
