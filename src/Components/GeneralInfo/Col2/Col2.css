@@ -12,7 +12,7 @@
 .Col2 h1{
     position: relative;
     font-size: 50px;
-    border-bottom: 2px solid orangered;
+    /* border-bottom: 2px solid orangered; */
     margin: 10px auto;
     width: 480px;
 }

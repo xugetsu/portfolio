@@ -12,19 +12,19 @@ const col2 = () => {
     const iconSize = 35;
     return (
         <div  className= {styles.Col2}>
-            <h1>Hi, I'm Ali Othmani</h1>
+            <h1>Hi!, I'm Ali Othmani</h1>
             <h3><span><LogoFragment1/></span>
-                React.js Developper
+                React.js Web Developper
                 <span><LogoFragment3/></span>
                 Mechatronic Engineer
-                <span><LogoFragment2/></span>
+                <span><LogoFragment2 h={500}/></span>
             </h3>
             <ul  className= {styles.Social}>
-                <li><a href='https://www.linkedin.com/in/ali-othmani-11873707/'><img src={linkedin} height={iconSize} alt='linkedin'/></a></li>
-                <li><a href='https://gitlab.com/Xugetsu'><img src={gitlab} height={iconSize} alt='gitlab'/></a></li>
-                <li><a href='https://github.com/xugetsu'><img src={github} height={iconSize} alt='github'/></a></li>
-                <li><a href='https://www.facebook.com/people/Othmani-Ali/100007321429385'><img src={fb} height={iconSize} alt='Facebook'/></a></li>
-                <li><a href='https://plus.google.com/115571394054300448150'><img src={gplus} height={iconSize} alt='google Plus'/></a></li>
+                <li><a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/ali-othmani-11873707/'><img src={linkedin} height={iconSize} alt='linkedin'/></a></li>
+                <li><a target="_blank" rel="noopener noreferrer" href='https://gitlab.com/Xugetsu'><img src={gitlab} height={iconSize} alt='gitlab'/></a></li>
+                <li><a target="_blank" rel="noopener noreferrer" href='https://github.com/xugetsu'><img src={github} height={iconSize} alt='github'/></a></li>
+                <li><a target="_blank" rel="noopener noreferrer" href='https://www.facebook.com/people/Othmani-Ali/100007321429385'><img src={fb} height={iconSize} alt='Facebook'/></a></li>
+                <li><a target="_blank" rel="noopener noreferrer" href='https://plus.google.com/115571394054300448150'><img src={gplus} height={iconSize} alt='google Plus'/></a></li>
             </ul>
         </div>
     );
