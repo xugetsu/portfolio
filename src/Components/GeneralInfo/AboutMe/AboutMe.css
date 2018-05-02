@@ -12,21 +12,30 @@
     margin: 0 auto;
 }
 
-.AboutMe p {
-    z-index: 2;
-    text-align:left;
-    font-size: 18px;
-    line-height: 30px;
-    font-family: 'Karla'; /*Karla|Nunito|Rubik|Work+Sans*/
-}
 
-.AboutMe > ul{
+.AboutMe ul{
+    font-family: "Century Gothic";
     z-index: 2;
     list-style: none;
+    text-align:left;
+    font-size: 18px;
+    line-height: 24px;
+    /* font-family: 'Karla'; Karla|Nunito|Rubik|Work+Sans */
 }
-
+.AboutMe  ul li{
+    margin-top: 10px;
+}
+.AboutMe a {
+    text-decoration: none;
+    color: rgb(98, 232, 255);
+}
 .AboutMe  ul li span{
+    position: absolute;
     z-index: 2;
-    margin-left:-40px; 
-    margin-right: 10px;
+    margin: 0 10px 0 -40px;
+    transform: translate(0,-5px);
+}
+.AboutMe  ul li i{
+    color: goldenrod;
+    font-weight: 600;
 }
