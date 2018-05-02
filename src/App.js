@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className={styles.App}>
-        <CustomScrollbars scrollId={0} width = {'100vw'} height = {'100vh'} zIndex={3} >
+        <CustomScrollbars scrollId={0} width = {'100vw'} height = {'100vh'} zIndex={11} >
             <NavBar />
             <GeneralInfo />
             <GitMyCareer />
