@@ -1,10 +1,10 @@
 .TrackVertical{
    border-radius:5px !important;
-   bottom:2px;
    position:absolute;
-   right:0px;
-   top:2px;
-   width:15px;
+   top:0;
+   bottom:0;
+   right:0;
+   width:1vw;
    background-color:#1d1d1d00;
    transition: all 0.1s ease-in-out;
 }
@@ -12,13 +12,15 @@
   background-color:#1d1d1db6;
 }
 .ThumbVertical{
-  margin: 0 auto;
-  width:6px;
+  position:absolute;
+  left: calc(50% - 0.25vw);
+  width: 0.5vw;
   background-color:#328fcd;
   border-radius:5px !important;
   transition: all 0.1s ease-in-out;
 }
 
 .TrackVertical:hover .ThumbVertical, .ThumbVertical:active{
-    width:100%;
+    width:1vw;
+     left: calc(50% - 0.5vw); 
  }
