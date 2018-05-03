@@ -8,47 +8,12 @@
 .Portfolio h1{
     margin-bottom: 50px;
 }
-.Projects{
 
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-evenly;
-}
-.Project{
-    position: relative;
-    width: 300px;
-    height: 300px;
-}
-
-.Img, .Window{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-.Img{
-    z-index: 0;
-    width: 300px;
-    height: 300px;
-}
-.Window{
-    background-color: #000000a8;
+.Fixed{
+    position: fixed;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    z-index: 1;
-    transition: all 0.3s ease-in-out;
-    color: honeydew;
-    text-align: left;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.Window:hover{
-    opacity: 1;
+    background: rgba(30, 143, 255, 0.151);
 }
 /* 
 .blur {
