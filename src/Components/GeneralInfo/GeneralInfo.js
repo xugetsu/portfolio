@@ -17,13 +17,13 @@ const generalInfo = () => {
                 <img  className= {styles.MyPhoto} alt='ali othmani' src={myPhoto} height={200}/>
                 <img  draggable = {false} alt='' className= {styles.Gear} src={gear} height={800}/>
                 <ul className= {styles.Info} >
-                    <b>{'{'}</b>
+                    <li><b>{'"general-Info" : {'}</b></li>
                     <li><span>" FULL NAME " :</span> " Ali Othmani "<b> ,</b></li>
                     <li><span>" BORN " :</span> " [3, 9, 1992] "<b> ,</b></li>
-                    <li><span>" EMAIL " :</span> " othmanixali@gmail.com "<b> ,</b></li>
+                    <li><span>" EMAIL " :</span> " othmanixali@gmail.com "<b>,</b></li>
                     <li><span>" ADDRESS " :</span> " Sousse - TN "<b> ,</b></li>
                     <li><span>" PHONE " :</span> " parseInt('175CC0A', 16) "</li>
-                    <b>{'}'}</b>
+                    <li><b>{'}'}</b></li>
                 </ul>
                 <Col2 />
                 <AboutMe /> 

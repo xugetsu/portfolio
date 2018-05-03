@@ -7,9 +7,9 @@
     padding-top: 50px;
     text-align: start;
     background: #282c31;
-    
     padding-bottom: 50px;
     overflow: hidden;
+    font-family: "Century Gothic";
 }
 .Gear{
     position: absolute;
@@ -46,7 +46,7 @@
     grid-row: 1 / 2;
     z-index: 2;
     text-align: center;
-    justify-self: center;
+    justify-self: center; /* important*/
     clip-path: circle(100px at 120px 100px);
 }
 
@@ -56,23 +56,26 @@
     z-index: 2;
     list-style: none;
     color: mintcream;
-    justify-self: center;
+    justify-self: center; 
 }
 .Info b{
     color: rgb(255, 238, 0);
     font-size: 20px;
     z-index: 2;
-}
-
-.Info span{
-    list-style: none;
-    color: rgb(74, 183, 255);
-    font-weight: bold;
-    z-index: 2;
+    font-family: "Century Gothic";
+    font-weight: 500;
 }
 
 .Info li{
     margin-left: 20px;
     margin-top: 5px; 
+    z-index: 2;
+}
+
+.Info li span{
+    margin-left: 20px;
+    list-style: none;
+    color: rgb(74, 183, 255);
+    font-weight: bold;
     z-index: 2;
 }
