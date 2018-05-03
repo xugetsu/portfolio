@@ -1,26 +1,12 @@
 .BannerLogo{
     background: linear-gradient(45deg, rgb(0, 116, 131) 0%,rgb(55, 72, 95) 40%,rgb(11, 65, 109) 99%,rgba(125,185,232,1) 100%);
 }
-/* .ParallaxBanner{
-    height: 50px;
-} */
 
 .Wrapper {
-    /* margin-top: 50px; */
-    /* display: flex;
-    flex-flow: column;
-    justify-content: center; 
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-    /* background: linear-gradient(20deg, rgb(45, 97, 175) 0%,rgb(0, 68, 163) 30%,rgb(68, 0, 255) 99%,rgba(125,185,232,1) 100%); */
-    /* height: 400px; */
-    /* color: white;
-    display: flex;
-    /* padding: 40px 0 30px 0; 
-    flex-direction: column;
-    justify-items: center; */
+    height: 1000px;
 }
 .H1{
-   
+    margin: 30px 0 50px 0 ;
     font-weight: 500;
     font-size: 35px;
     color: rgb(230, 230, 230);
