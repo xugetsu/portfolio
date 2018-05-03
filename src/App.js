@@ -6,6 +6,7 @@ import GeneralInfo from './Components/GeneralInfo/GeneralInfo';
 import GitMyCareer from './Components/GitMyCareer/GitMyCareer';
 import Portfolio from './Components/Portfolio/Portfolio';
 import CustomScrollbars from './Components/UI/CustomScrollbars/CustomScrollbars';
+import Contact from './Components/Contact/Contact';
 class App extends Component {
   render() {
     return (
@@ -16,6 +17,7 @@ class App extends Component {
             <GitMyCareer />
             <BannerLogo />
             <Portfolio />
+            <Contact />
         </CustomScrollbars>
       </div>
     );
