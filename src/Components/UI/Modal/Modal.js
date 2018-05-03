@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Modal.css';
 import Backdrop from '../Backdrop/Backdrop';
-import A from '../../hoc/A/A';
+import CustomScrollbars from '../CustomScrollbars/CustomScrollbars';
 
 class Modal extends React.Component{
     shouldComponentUpdate(nextProps, nextState){
@@ -10,21 +10,20 @@ class Modal extends React.Component{
     }
     render(){
         return (
-            <A>
-                <Backdrop show = {this.props.show} clicked = {this.props.exit}/>
-                <div className = {styles.Modal}
-                    style = {{
-                        transform: this.props.show ? 'translateY(0)': 'translateY(-100vh)' ,
-                        opacity: this.props.show ?  '1':'0' 
-                    }}> 
-                    <div className = {styles.ExitBtn}  onClick = {this.props.exit}>
-                        <div className = {styles.A}></div>
-                        <div className = {styles.B}></div>
+             <Backdrop show = {this.props.show}  
+                   clicked = {this.props.exit}>
+                <CustomScrollbars 
+                    scrollId={3} width = {'100vw'} height = {'100vh'} zIndex={110}>
+                    <div className = {styles.Modal} 
+                         onMouseDown = { (e) => e.stopPropagation() }> 
+                        <div className = {styles.ExitBtn} onClick = {this.props.exit}>
+                            <div className = {styles.A}></div>
+                            <div className = {styles.B}></div>
+                        </div>
+                        {this.props.children}
                     </div>
-                    {this.props.children}
-                </div>
-            </A>
-    
+                </CustomScrollbars>                 
+           </Backdrop>
         );        
     }
 }
