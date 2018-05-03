@@ -8,9 +8,9 @@ const navBar = () => {
                     <RawLogo className={styles.RawLogo}logoHeight={130}/>
                 </div>
                 <nav className={styles.NavBar}>
-                    <a href='/'>Home</a>
-                    <a href='/'>About</a>
-                    <a href='/'>Portfolio</a>
+                    <a href='#GeneralInfo'>Home</a>
+                    <a href='#GitMyCareer'>My Career</a>
+                    <a href='#BannerLogo'>Portfolio</a>
                 </nav>    
             </div>
         );
