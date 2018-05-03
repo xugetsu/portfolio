@@ -27,7 +27,7 @@ class BannerLogo extends Component{
     } 
     render(){
       const windowWidth =  window.innerWidth > 1000 ? 1000 : window.innerWidth*0.8 ;
-      const style = {height: windowWidth/2};
+      const style = {height: 1000/*windowWidth/2*/};
       const wrapper = (          
                 <div className={styles.Wrapper}>
                     <h1 className={styles.H1} >I'm familiar with ...</h1>
