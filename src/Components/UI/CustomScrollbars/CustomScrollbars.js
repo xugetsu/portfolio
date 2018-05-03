@@ -3,24 +3,26 @@ import styles from './CustomScrollbars.css';
 import { Scrollbars } from 'react-custom-scrollbars';
 
 class CustomScrollbars extends Component{
-  // constructor(props) {
-  //   super(props);
-  //   //this.myRef = React.createRef();
-  // }
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
 
-  // componentDidMount = () =>{
+   componentDidMount = () =>{
+ //   this.myRef.current.scrollToBottom();
   //   const LastVerticalThumbPosition = this.getScrollLocalStorageData().scrollTop;
   //   if(LastVerticalThumbPosition) {this.myRef.current.scrollTop(LastVerticalThumbPosition);}
   //   console.log('LastVerticalThumbPosition',LastVerticalThumbPosition);
    // console.log( this.myRef.current.getValues());
    // console.log(this.getScrollLocalStorageData());
+  }
+  //componentDidUpdate = () => {
+    
+   // const LastVerticalThumbPosition = this.getScrollLocalStorageData().scrollTop;
+   // console.log('LastVerticalThumbPosition',LastVerticalThumbPosition);
+  //  console.log( this.myRef.current.getValues());
+  //  console.log(this.getScrollLocalStorageData());
   //}
-  // componentDidUpdate = () => {
-  //   const LastVerticalThumbPosition = this.getScrollLocalStorageData().scrollTop;
-  //  // console.log('LastVerticalThumbPosition',LastVerticalThumbPosition);
-  // //  console.log( this.myRef.current.getValues());
-  // //  console.log(this.getScrollLocalStorageData());
-  // }
   // componentWillUnmount = () =>{
   //   this.setScrollLocalStorageData(this.myRef.current.getValues())
   // }
@@ -34,15 +36,18 @@ class CustomScrollbars extends Component{
   //  }
 
   render() {
-    const VerticalThumb = (style,props) => <div {...props} 
+    const zIndex = this.props.zIndex;
+    const VerticalThumb = (defaultStyles, props) => <div {...props} 
+                                                onClick = { (e) => e.stopPropagation() }
                                                 className={styles.ThumbVertical} 
-                                                style={{...style}}/>
-    const VerticalTrack = (props) => <div {...props} 
+                                                style={{...defaultStyles,zIndex:zIndex}}/>
+    const VerticalTrack = (defaultStyles, props) => <div {...props} 
+                                          onClick = { (e) => e.stopPropagation() }
                                           className={styles.TrackVertical} 
-                                          style={style}/>
-    const style = {zIndex: this.props.zIndex};
+                                          style={{...defaultStyles,zIndex:zIndex+1}}/>
+    
     return (
-      <Scrollbars //ref={this.myRef} 
+      <Scrollbars ref={this.myRef} 
                   style={{ width:this.props.width, height: this.props.height}}
                   renderTrackVertical={VerticalTrack}    
                   renderThumbVertical={VerticalThumb}>       
