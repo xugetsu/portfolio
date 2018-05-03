@@ -1,14 +1,26 @@
 import React from 'react';
 import styles from './Project1.css';
-import game2048 from '../../../../Assets/Gifs/2048.gif';
+import Loadable from 'react-loadable';
+import Spinner from '../../../Spinner/Spinner';
 
 const project1 = () => {
+    const Gif = Loadable({
+        loader: () => import('./GifGame2048'),
+        loading: () => Spinner,
+        delay: 10,
+        });
+
     return (
         <div className= {styles.Project1}>
-            <img  src={game2048} alt='game 2048 ultra'/>
-            <h2>2048 Game Ultra</h2>
-            <p>This project was developped to put the knowledge and skills I've learned into practice</p>
-            <p>Inspired by the original, I've developped the game logic from scratch using the JavaScript library React.js</p> 
+            <div style={{height:'450px',width:'500px'}}>
+                <Gif />
+            </div>
+            <article>
+                <h2>2048 Game Ultra</h2>
+                <p>This project was developped to put the knowledge and skills I've learned into practice
+                <br/>Inspired by the <a target="_blank" rel="noopener noreferrer" href='http://2048game.com/'>original game</a>, I've developped my game logic from scratch using the JavaScript library React.js</p> 
+                <p><b>Development State : </b>Under construction</p>
+            </article>
         </div>
     );
 }
