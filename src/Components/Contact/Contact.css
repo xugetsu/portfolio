@@ -1,0 +1,40 @@
+.Contact{
+    display: grid;
+    grid-template-columns: 300px auto; 
+    grid-template-rows: 300px 120px 100px; 
+    padding: 20px;
+    text-align: start;
+    background: #202327;
+    font-family: "Century Gothic";
+    color: #f0fff0;
+}
+
+.Contact h1{
+    font-size: 50px;
+}
+
+.MyLogoRaw{
+    grid-column: 1 / 2;
+    grid-row: 2/ 4;
+}
+
+.Social{
+    grid-column: 2 / 3;
+    grid-row: 3/ 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.Social a {
+    float: left;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.Social a:hover{
+    transform: translate3d(-3px, -5px, 0px)  scale(1.2);
+}
+.Social a svg{
+    stroke:none;
+    fill:#ffffff;
+}
+
