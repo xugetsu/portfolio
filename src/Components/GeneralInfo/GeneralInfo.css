@@ -1,16 +1,32 @@
+.GeneralInfoWrapper{
+    position: relative;
+    height: 1050px;
+    background: #282c31;
+}
+.SkewMe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px; 
+    transform: skewY(-2deg);
+    background: #282c31;
+    overflow: hidden;
+}
 .GeneralInfo{
     display: grid;
-    position: relative;
+    position: absolute;
     grid-template-columns: auto auto; 
     grid-template-rows: 210px 230px auto; 
     margin-top:50px;
     padding-top: 50px;
     text-align: start;
-    background: #282c31;
     padding-bottom: 50px;
     overflow: hidden;
     font-family: "Century Gothic";
+    background: #282c31;
 }
+
+
 .Gear{
     position: absolute;
     user-select: none;
@@ -28,7 +44,7 @@
     position: absolute;
     z-index: 1;
     top: 40px;
-    left: calc(50% - 200px);
+    left: calc(50% - 250px);
 }
 .Logo2{
     position: absolute;
@@ -58,6 +74,7 @@
     color: mintcream;
     justify-self: center; 
 }
+
 .Info b{
     color: rgb(255, 238, 0);
     font-size: 20px;
@@ -78,4 +95,57 @@
     color: rgb(74, 183, 255);
     font-weight: bold;
     z-index: 2;
+}
+
+
+@media(max-width:985px){
+    .GeneralInfoWrapper{
+        height: calc(1700px - 50vw);
+    }
+    .GeneralInfo{
+        grid-template-columns: auto auto; 
+        grid-template-rows: 320px 250px auto  ; 
+    }
+    .MyPhoto{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .Info{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        justify-self: start;
+        padding: 0; 
+    }
+    .Info li{
+        margin-left: 0;}
+    .Logo{
+        top: 100px;
+    }
+}
+@media(max-width:720px){
+    .GeneralInfo{
+        grid-template-columns: auto 350px; 
+    }
+}
+@media(max-width:610px){
+    .GeneralInfo{
+        grid-template-columns: 0 auto; 
+        grid-template-rows: 300px 230px 230px auto ; 
+    }
+    .MyPhoto{
+        grid-column: 1 / 3;
+    }
+    .Info{
+        grid-row: 3 / 4;
+        justify-self: center;
+    }
+    .Logo{
+        top: 20px;
+    }
+}
+
+@media(max-width:620px){
+    .GeneralInfoWrapper{
+        height: calc(1900px - 50vw);
+    }
 }
