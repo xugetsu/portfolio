@@ -1,19 +1,21 @@
 import React, {Component} from 'react';
 import styles from './CustomScrollbars.css';
-import { Scrollbars } from 'react-custom-scrollbars';
 import NavBar from '../../NavBar/NavBar';
 import A from '../../../hoc/A/A';
+import SpringScrollbars from './SpringScrollbars ';
 
-class CustomScrollbars extends Component{
+class Scrollbars extends Component{
   constructor(props) {
     super(props);
     this.myRef = React.createRef();
   }
 
   navigateTo = (i) => {
+    const scrollbars = this.myRef.current;
     const elementIds = ['GeneralInfo','MyCareer','Competence','Portfolio','Contact'];
     const elementOffsetTop = document.getElementById(elementIds[i]).offsetTop;
-    this.myRef.current.scrollTop(elementOffsetTop - 50); // 50 is the height of the NavBar
+    const scrollHeight = scrollbars.getScrollHeight();
+        scrollbars.scrollTop(elementOffsetTop-50);// 5 0 is the height of the NavBar
   }
   render() {
     const zIndex = this.props.zIndex;
@@ -27,14 +29,14 @@ class CustomScrollbars extends Component{
                                           style={{...defaultStyles,zIndex:zIndex+1}}/>
     
     return (
-        <Scrollbars ref={this.myRef} 
+        <SpringScrollbars ref={this.myRef} 
                     style={{ width:this.props.width, height: this.props.height}}
                     renderTrackVertical={VerticalTrack}    
                     renderThumbVertical={VerticalThumb}
                     >       
             <NavBar navigateTo = {(i) => this.navigateTo(i)} />
             {this.props.children}
-        </Scrollbars>
+        </SpringScrollbars>
     );
   }   
 }
@@ -42,5 +44,5 @@ class CustomScrollbars extends Component{
  
 
 
-export default CustomScrollbars;
+export default Scrollbars;
 
