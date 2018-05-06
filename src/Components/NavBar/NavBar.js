@@ -4,8 +4,8 @@ import RawLogo from './MyLogoRaw2';
 const navBar = (props) => {
         return(
             <div>
-                <div className={styles.RawLogoWrapper}> 
-                    <RawLogo className={styles.RawLogo}logoHeight={130}/>
+                <div className={styles.RawLogoWrapper} onClick={() => props.navigateTo(0)}> 
+                    <RawLogo className={styles.RawLogo}logoHeight={130} />
                 </div>
                 <nav className={styles.NavBar}>
                     <button onClick={() => props.navigateTo(0)}>Home</button>

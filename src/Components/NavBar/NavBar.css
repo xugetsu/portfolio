@@ -42,16 +42,17 @@
   transition: all 0.5s ease-in-out;
   box-sizing: border-box; 
   transform: scale(1);
-  top: -7px;
-  left: -7px;
+  top: -5px;
+  left: -5px;
   background: #222727c5;
   transform: scale(1.2);
+  cursor: pointer;
 }
 .RawLogoWrapper:hover{
   background: rgba(73, 73, 73, 0.651);
-  top: 10px;
-  left: 10px;
-  transform: scale(2);
+  top: 0px;
+  left: 0px;
+  transform: scale(1.2);
 }
 .RawLogo{
   display: inline-block;
