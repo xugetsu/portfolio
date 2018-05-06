@@ -1,6 +1,6 @@
 .Portfolio{
     position: relative;
-    height: 600px;
+    height: auto;
     background: linear-gradient(135deg, rgba(70,183,217,1) 0%, rgba(189,133,49,1) 67%, rgba(189,154,49,1) 100%);
     color: honeydew;
     padding: 20px;
