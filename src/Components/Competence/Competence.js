@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Competence.css';
 import GridLayout from 'react-grid-layout';
-import npm from '../../Assets/Icons/pngs/npm.png';
+import npm from '../../Assets/Icons/svgs/npm.svg';
 import gitlab from '../../Assets/Icons/pngs/gitlab.png';
 import redux from '../../Assets/Icons/pngs/redux.png';
 import webpack from '../../Assets/Icons/svgs//webpack.svg';
@@ -27,26 +27,26 @@ const  competence  = () => {
             <div key="r" className={styles.Git}>
                 <h2>Git and hosting services</h2>
                 <ul> 
-                    <li><img src={git} height={60} alt='git'/> <p>GIT</p></li>
-                    <li><img src={gitlab} height={60} alt='gitlab'/> <p>gitlab</p></li>
-                    <li><img src={github} height={60} alt='github'/><p>github</p></li>  
+                    <li><img src={git}   alt='git'/> <p>GIT</p></li>
+                    <li><img src={gitlab}   alt='gitlab'/> <p>gitlab</p></li>
+                    <li><img src={github}   alt='github'/><p>github</p></li>  
                 </ul>              
             </div>
             <div key="b" className={styles.Basic}>
                 <h2>Basic Web Developpment Languages</h2>
                 <ul> 
-                    <li><img src={HTML5} height={100} alt='HTML5'/></li>
-                    <li><img src={CSS3} height={100} alt='CSS3'/></li>
-                    <li><img src={JavaScript} height={100} alt='JavaScript'/></li>
+                    <li><img src={HTML5}  alt='HTML5'/></li>
+                    <li><img src={CSS3}  alt='CSS3'/></li>
+                    <li><img src={JavaScript}   alt='JavaScript'/></li>
                 </ul>
             </div>               
             <div key="g" className={styles.Advanced}>
                 <h2>Libraries Related to<br/> JavaScript</h2>
                 <ul>
-                    <li><img src={react} height={60} alt='react'/> <p>React</p></li>
-                    <li><img src={redux} height={60} alt='redux'/> <p>Redux</p></li>
-                    <li><img src={webpack} height={60} alt='webpack'/> <p>WebPack</p></li>
-                    <li><img src={npm} height={30} alt='npm'/> <p>npm</p> </li>
+                    <li><img src={react}  alt='react'/> <p>React</p></li>
+                    <li><img src={redux}  alt='redux'/> <p>Redux</p></li>
+                    <li><img src={webpack}  alt='webpack'/> <p>WebPack</p></li>
+                    <li><img src={npm}  alt='npm'/> <p>npm</p> </li>
                 </ul>
             </div>
             <div key="y" className={styles.Dependencies}>

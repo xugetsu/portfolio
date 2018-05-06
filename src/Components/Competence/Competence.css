@@ -1,26 +1,11 @@
 
 .Competence{
-    padding: 0 5vw;
+    padding: 50px 5vw;
+    position: static;
     display:grid;
     grid-template-rows: auto auto; 
     grid-template-columns:  30vw 30vw 30vw; 
-}
-
-.Basic{
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-.Advanced{
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-}
-.Git{
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-}
-.Dependencies{
-    grid-column: 1 / 4;
-    grid-row: 2 / 3;
+    height: auto;
 }
 
 .Advanced, 
@@ -28,9 +13,34 @@
 .Basic,{
     font-weight: 500;
     color: aliceblue;
-    padding: 20px 0;
     border-radius: 30px;
+    grid-row: 1 / 2;
 }
+.Basic{
+    grid-column: 1 / 2; grid-row: 1 / 2;
+}
+
+.Advanced{
+    grid-column: 2 / 3; grid-row: 1 / 2;
+}
+.Git{
+    grid-column: 3 / 4; grid-row: 1 / 2;
+}
+
+.Basic ul img{
+    height: 70px;
+}
+.Advanced ul img{
+    height: 50px;
+}
+.Git ul img{
+    height: 50px;
+}
+.Dependencies{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+}
+
 .Dependencies{
     background: rgba(0, 0, 0, 0.13);
     border-radius: 30px;
@@ -48,12 +58,36 @@
     display: flex;
     flex-flow: wrap;
     justify-content: center;
-    margin-top: 10px;
-    padding: 20px;
+    margin-top: 50px;
+    padding-left: 0;
 }
 
 .Competence li{
     align-self: baseline;
     margin: 0 20px;
     color:rgb(232, 255, 175);
+}
+
+@media(max-width:760px){
+    .Basic{
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+    }
+    .Advanced{
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+    }
+    .Git{
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+    }
+    .Dependencies{
+        grid-column: 1 / 4;
+        grid-row: 4 / 5;
+    }
+    .Competence{
+        grid-template-rows: auto auto auto auto; 
+        grid-template-columns:  30vw 30vw 30vw; 
+        height: auto;
+    }
 }
