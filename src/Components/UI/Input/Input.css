@@ -8,16 +8,38 @@
     font-weight: bold;
     display: block;
     margin-bottom: 8px;
+    
+}
+
+.Input textarea{
+    resize: vertical;
+    display: block;
+    box-sizing: padding-box;
+    overflow: hidden;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px rgba(black, .3);
+    border: 0;
+}
+::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 1;  
 }
 .InputElement{
     outline: none;
-    background-color: wheat;
+    background-color: rgb(30, 144, 255) ;
     font:inherit;
     padding: 6px 10px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(0, 70, 182);
     width: 100%;
     display: block;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-family: "Century Gothic";
 }
 .InputElement:focus{
-    background-color: aquamarine;
+    background-color:rgb(0, 149, 175);
+    font-family: "Century Gothic";
 }
+
