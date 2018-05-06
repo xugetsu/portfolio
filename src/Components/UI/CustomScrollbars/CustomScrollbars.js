@@ -8,14 +8,24 @@ class CustomScrollbars extends Component{
     this.myRef = React.createRef();
   }
 
-   componentDidMount = () =>{
- //   this.myRef.current.scrollToBottom();
-  //   const LastVerticalThumbPosition = this.getScrollLocalStorageData().scrollTop;
+  // componentDidMount = () =>{
+  //   if(this.props.scrollId===0){
+     
+  //     const contactPos = document.getElementById('contact').offsetTop;
+  //     const prortfolioPos = document.getElementById('portfolio').offsetTop;
+  //     console.log('prortfolioPos',prortfolioPos);
+  //     console.log('contactPos',contactPos);
+  //     console.log('this.props.children',this.props.children[0].props);
+  //     this.myRef.current.scrollTop(prortfolioPos-50);
+   //   The HTMLElement.offsetTop read-only property returns the distance of the current element relative to the top of the offsetParent node.
+  //}
+    
+      //   const LastVerticalThumbPosition = this.getScrollLocalStorageData().scrollTop;
   //   if(LastVerticalThumbPosition) {this.myRef.current.scrollTop(LastVerticalThumbPosition);}
   //   console.log('LastVerticalThumbPosition',LastVerticalThumbPosition);
    // console.log( this.myRef.current.getValues());
    // console.log(this.getScrollLocalStorageData());
-  }
+  //}
   //componentDidUpdate = () => {
     
    // const LastVerticalThumbPosition = this.getScrollLocalStorageData().scrollTop;
@@ -50,7 +60,9 @@ class CustomScrollbars extends Component{
       <Scrollbars ref={this.myRef} 
                   style={{ width:this.props.width, height: this.props.height}}
                   renderTrackVertical={VerticalTrack}    
-                  renderThumbVertical={VerticalThumb}>       
+                  renderThumbVertical={VerticalThumb}
+                 // onScrollStop ={()=>console.log(this.myRef.current.getValues())}
+                  >       
         {this.props.children}
       </Scrollbars>
     );
