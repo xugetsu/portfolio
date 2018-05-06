@@ -25,21 +25,22 @@ export default class SpringScrollbars extends Component {
 
     getScrollTop() {
         return this.refs.scrollbars.getScrollTop();
-    }
+     }
 
     getScrollHeight() {
         return this.refs.scrollbars.getScrollHeight();
-    }
+     }
 
     getHeight() {
         return this.refs.scrollbars.getHeight();
-    }
+     }
 
+   
     scrollTop(top) {
         const { scrollbars } = this.refs;
         const scrollTop = scrollbars.getScrollTop();
         const scrollHeight = scrollbars.getScrollHeight();
-        const val = MathUtil.mapValueInRange(top, 0, scrollHeight, scrollHeight * 0.2, scrollHeight * 0.8);
+        const val = MathUtil.mapValueInRange(top, 0, top, top * 0.1, top);
         this.spring.setCurrentValue(scrollTop).setAtRest();
         this.spring.setEndValue(val);
     }
@@ -48,13 +49,12 @@ export default class SpringScrollbars extends Component {
         const { scrollbars } = this.refs;
         const val = spring.getCurrentValue();
         scrollbars.scrollTop(val);
+        
     }
 
     render() {
         return (
-            <Scrollbars
-                {...this.props}
-                ref="scrollbars"/>
+            <Scrollbars  {...this.props}   ref="scrollbars"/>
         );
     }
 }
