@@ -1,10 +1,31 @@
 
 .Competence{
-    padding: 5px;
+    padding: 0 5vw;
+    display:grid;
+    grid-template-rows: auto auto; 
+    grid-template-columns:  30vw 30vw 30vw; 
+}
+
+.Basic{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.Advanced{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.Git{
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+.Dependencies{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
 }
 
 .Advanced, 
-.Basic{
+.Git, 
+.Basic,{
     font-weight: 500;
     color: aliceblue;
     padding: 20px 0;
@@ -14,17 +35,13 @@
     background: rgba(0, 0, 0, 0.13);
     border-radius: 30px;
 }
-.Advanced h2, 
-.Basic h2,
-.Dependencies h2{
+.Competence h2{
     font-weight: 500;
     color: aliceblue;
     font-size: 20px;
 }
 
-.Basic ul,
-.Advanced  ul,
-.Dependencies  ul{
+.Competence ul{
     text-decoration: none;
     list-style: none;
     text-align: center;
@@ -35,13 +52,7 @@
     padding: 20px;
 }
 
-.Advanced ul li, 
-.Basic ul li{
-    align-self: baseline;
-    margin: 0 20px;
-    color:rgb(232, 255, 175);
-}
-.Dependencies ul li{
+.Competence li{
     align-self: baseline;
     margin: 0 20px;
     color:rgb(232, 255, 175);
