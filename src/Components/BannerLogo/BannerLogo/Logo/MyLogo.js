@@ -6,8 +6,8 @@ import LogoFragment3 from './LogoFragments/LogoFragment3/LogoFragment3';
 import Icons from './Icons/Icons';
 class Logo extends Component{
     render(){
-        const width = this.props.windowWidth/4;
-        const height = this.props.windowWidth/5;
+        const width = this.props.h/4*0.8;
+        const height = this.props.h/5*0.8;
         const d = width/8 + 'px';
         const f = width/2 + 'px';
         const x = -height/1.8 + 'px'

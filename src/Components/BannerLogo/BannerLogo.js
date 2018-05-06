@@ -16,42 +16,25 @@ class BannerLogo extends Component{
         window.removeEventListener("resize", () => this.forceUpdate());
     }
     switchIcon = (e) => {
-        console.log('switchIcon');
-        // if(this.state.animationIteration === 0){this.setState({ animationIteration: 1}); }
-        // else{
             this.setState({
                 iconIndex: this.state.iconIndex + 1 === 5 ? 0 : this.state.iconIndex + 1,
-               // animationIteration: 0
             }); 
-      //      }
     } 
     render(){
-      const windowWidth =  window.innerWidth > 1000 ? 1000 : window.innerWidth*0.8 ;
-      const style = {height: 1000/*windowWidth/2*/};
-      const wrapper = (          
-                <div className={styles.Wrapper}>
-                    <h1 className={styles.H1} >I'm familiar with ...</h1>
-                    <MyLogo windowWidth = {windowWidth*0.5} 
-                            iconIndex = {this.state.iconIndex} 
-                            animationIteration = {this.state.animationIteration} 
-                            switchIcon = {this.switchIcon} />
-                    <Competence />
-                </div>);
+        let h = 1000;
+        const innerWidth = window.innerWidth;
+        if (innerWidth>600){ h =950;}
+        else if (innerWidth>500){ h =800;}
+        else { h = 500;}
+
       return (
-        <div className={styles.BannerLogo} style={style}>
-            <ParallaxBanner
-                className={styles.ParallaxBanner}
-                layers={[
-                    {
-                        children: wrapper,
-                        amount: 0.1,
-                        slowerScrollRate: true,
-                        expanded:false
-                    }
-                ]}
-                style={style}
-            >
-            </ParallaxBanner>
+        <div className={styles.BannerLogo}>
+            <h1 className={styles.H1} >I'm familiar with ...</h1>
+            <MyLogo h = {h} 
+                    iconIndex = {this.state.iconIndex} 
+                    animationIteration = {this.state.animationIteration} 
+                    switchIcon = {this.switchIcon} />
+            <Competence />
         </div>
         );
 
