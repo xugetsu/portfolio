@@ -15,7 +15,12 @@ const contact = () => {
                 <h1>Contact</h1>
 
                 <ContactData />
-
+                <div className={styles.SomeInfos}>
+                    <h3>MAIL:</h3>
+                    <h4>othmanixali@gmail.com</h4>
+                    <h3>PHONE:</h3>
+                    <h4>(216) 24 49 71 62</h4>
+                </div>
                 <div className= {styles.MyLogoRaw}>
                     <MyLogoRaw colorFill1={'#1e90ff'} colorFill2={'#f0fff0'} logoHeight = {580}/>
                 </div>
@@ -28,6 +33,9 @@ const contact = () => {
                     <a href='https://www.facebook.com/people/Othmani-Ali/100007321429385' target="_blank" rel="noopener noreferrer" ><img src={facebook} height={iconSize} alt='facebook'/></a>
                     <a href='https://plus.google.com/115571394054300448150' target="_blank" rel="noopener noreferrer" ><img src={googelplus} height={iconSize} alt='googelplus'/></a>
                     <a href='https://stackoverflow.com/users/9393392/othmani-ali' target="_blank" rel="noopener noreferrer" ><img src={stackoverflow} height={iconSize} alt='stackoverflow'/></a>
+                </div>
+                <div className={styles.Footer}>
+                   Made with love - Ali Othmani - 2018
                 </div>
             </div>
         ); 
