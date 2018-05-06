@@ -28,7 +28,7 @@ class BannerLogo extends Component{
         else { h = 500;}
 
       return (
-        <div className={styles.BannerLogo}>
+        <div id='Competence' className={styles.BannerLogo}>
             <h1 className={styles.H1} >I'm familiar with ...</h1>
             <MyLogo h = {h} 
                     iconIndex = {this.state.iconIndex} 

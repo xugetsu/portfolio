@@ -16,7 +16,7 @@ class GitMyCareer extends Component {
 
         const hash =this.state.hash;
         return (
-        <div className= {styles.GitMyCareer}>
+        <div id='MyCareer' className= {styles.GitMyCareer}>
         
             <img className= {styles.GitSvm} src={gitsvm} alt='Git'/>
 

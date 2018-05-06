@@ -63,7 +63,7 @@ class ContactData extends Component{
 
         const iconSize = 80;
         return (
-            <div className= {styles.ContactData}>
+            <div id='Contact' className= {styles.ContactData}>
                 <h1>Send Me A Message</h1>
                     <form onSubmit = {this.SendHandler}>
                         <CustomScrollbars scrollId={3} height='360px' zIndex={10} width={'400px'}>

@@ -16,7 +16,7 @@ class Portfolio extends Component{
     }
     render (){
         return (
-            <div className= {styles.Portfolio}>
+            <div id='Portfolio' className= {styles.Portfolio}>
                     <Modal show={this.state.showModal} exit = {this.hideModalHandler}> 
                         <Project1 />
                     </Modal>

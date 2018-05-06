@@ -23,7 +23,7 @@ const  competence  = () => {
                     {i: 'y', x: 1, y: 4, w: 7, h: 3, static: true},
     ];
     return (
-        <div className={styles.Competence}>
+        <div id='Competences' className={styles.Competence}>
             <div key="r" className={styles.Git}>
                 <h2>Git and hosting services</h2>
                 <ul> 

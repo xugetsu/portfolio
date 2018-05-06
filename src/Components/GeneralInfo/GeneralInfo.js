@@ -11,7 +11,7 @@ const generalInfo = () => {
     
     return (
 
-        <div className= {styles.GeneralInfoWrapper}>
+        <div id='GeneralInfo' className= {styles.GeneralInfoWrapper}>
             <div className= {styles.SkewMe}></div>
             {/* <img  draggable = {false} alt='' className= {styles.Gear} src={gear} height={800}/> */}
             <div className= {styles.GeneralInfo}>
