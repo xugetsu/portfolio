@@ -13,7 +13,7 @@ class CustomScrollbars extends Component{
   navigateTo = (i) => {
     const elementIds = ['GeneralInfo','MyCareer','Competence','Portfolio','Contact'];
     const elementOffsetTop = document.getElementById(elementIds[i]).offsetTop;
-    this.myRef.current.scrollTop(elementOffsetTop-100);
+    this.myRef.current.scrollTop(elementOffsetTop - 50); // 50 is the height of the NavBar
   }
   render() {
     const zIndex = this.props.zIndex;
