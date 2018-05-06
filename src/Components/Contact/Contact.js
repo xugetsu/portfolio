@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styles from './Contact.css';
 import MyLogoRaw from '../MyLogoRAW/MyLogoRaw';
 import facebook from '../../Assets/Icons/svgs/facebook.svg';
@@ -6,15 +6,22 @@ import googelplus from '../../Assets/Icons/svgs/googleplus.svg';
 import linkedin2 from '../../Assets/Icons/svgs/linkedin2.svg';
 import stackoverflow from '../../Assets/Icons/svgs/stackoverflow.svg';
 import github2 from '../../Assets/Icons/svgs/github2.svg';
-class Contact extends Component{
-    render(){
-        const iconSize = 80;
+import ContactData from './ContactData/ContactData';
+
+const contact = () => {
+        const iconSize = 50;
         return (
             <div className= {styles.Contact}>
                 <h1>Contact</h1>
+
+                <ContactData />
+
                 <div className= {styles.MyLogoRaw}>
                     <MyLogoRaw colorFill1={'#1e90ff'} colorFill2={'#f0fff0'} logoHeight = {580}/>
                 </div>
+
+                <div className={styles.Bar}></div>
+
                 <div className= {styles.Social}>
                     <a href='https://www.linkedin.com/in/ali-othmani-11873707/' target="_blank" rel="noopener noreferrer" ><img src={linkedin2} height={iconSize} alt='linkedin'/></a>
                     <a href='https://github.com/xugetsu' target="_blank" rel="noopener noreferrer" ><img src={github2} height={iconSize} alt='github'/></a>
@@ -23,9 +30,7 @@ class Contact extends Component{
                     <a href='https://stackoverflow.com/users/9393392/othmani-ali' target="_blank" rel="noopener noreferrer" ><img src={stackoverflow} height={iconSize} alt='stackoverflow'/></a>
                 </div>
             </div>
-        );
-    }    
+        ); 
 }
-
-export default Contact;
+export default contact;
 
