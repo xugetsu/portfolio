@@ -11,4 +11,18 @@
     top: 0;
     right: 0;
     z-index: 0;
+    width: 200px;
+}
+
+
+@media(max-width:740px){
+    .GitSvm{
+        width: 150px;
+    }  
+}
+
+@media(max-width:640px){
+    .GitSvm{
+        width: 100px;
+    }  
 }

@@ -18,7 +18,7 @@ class GitMyCareer extends Component {
         return (
         <div className= {styles.GitMyCareer}>
         
-            <img className= {styles.GitSvm} src={gitsvm} width={200} alt='Git'/>
+            <img className= {styles.GitSvm} src={gitsvm} alt='Git'/>
 
             <h1>My Career Repository</h1>
 
