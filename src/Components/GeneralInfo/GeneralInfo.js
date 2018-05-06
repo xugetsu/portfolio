@@ -10,9 +10,10 @@ import MyLogoRaw from '../MyLogoRAW/MyLogoRaw';
 const generalInfo = () => {
     
     return (
+
         <div className= {styles.GeneralInfoWrapper}>
             <div className= {styles.SkewMe}></div>
-            <img  draggable = {false} alt='' className= {styles.Gear} src={gear} height={800}/>
+            {/* <img  draggable = {false} alt='' className= {styles.Gear} src={gear} height={800}/> */}
             <div className= {styles.GeneralInfo}>
                     <div className= {styles.Logo} >
                             <MyLogoRaw colorFill1 = {'#23262b'} colorFill2 = {'#1f2227'} logoHeight = {1200}/>
@@ -24,7 +25,7 @@ const generalInfo = () => {
                         <li><span>" BORN " :</span> " [3, 9, 1992] "<b> ,</b></li>
                         <li><span>" EMAIL " :</span> " othmanixali@gmail.com "<b>,</b></li>
                         <li><span>" ADDRESS " :</span> " Sousse - TN "<b> ,</b></li>
-                        <li><span>" PHONE " :</span> " parseInt('175CC0A', 16) "</li>
+                        <li><span>" PHONE " :</span> "24497162"</li>{/*parseInt('175CC0A', 16)*/}
                         <li><b>{'}'}</b></li>
                     </ul>
                     <Col2 />
