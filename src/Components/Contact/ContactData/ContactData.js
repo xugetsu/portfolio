@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styles from './ContactData.css';
 import Input from '../../UI/Input/Input';
-
+import CustomScrollbars from '../../UI/CustomScrollbars/CustomScrollbars';
 class ContactData extends Component{
     state = {
         orderForm: {                   // the price need to be calculated in the server !!
@@ -30,7 +30,7 @@ class ContactData extends Component{
                 value: ''
             },
             message: {
-                elementType: 'input',
+                elementType: 'textarea',
                 elementConfig: {
                     type: 'textarea',
                     placeholder: 'Message'
@@ -65,10 +65,12 @@ class ContactData extends Component{
         return (
             <div className= {styles.ContactData}>
                 <h1>Send Me A Message</h1>
-                <form onSubmit = {this.SendHandler}>
-                    {inputs}
-                    <button >Send</button>
-                </form>
+                    <form onSubmit = {this.SendHandler}>
+                        <CustomScrollbars scrollId={3} height='360px' zIdex={10} width={'400px'}>
+                            {inputs}
+                        </CustomScrollbars>
+                        <button className={styles.Button}>Send</button>
+                    </form>
             </div>
         );
     }    

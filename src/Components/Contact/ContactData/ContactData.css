@@ -1,3 +1,28 @@
 .ContactData{
-    width: 300px;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    width: 400px;
+    justify-self: center; 
+    align-self: center;
+    font-family: "Century Gothic";
+}
+
+.ContactData h1{
+    font-size: 25px;
+    font-family: "Century Gothic";
+}
+.Button{
+    outline: none;
+    border: none;
+    font-size: 20px;
+    padding: 5px 40px;
+    background: rgb(0, 121, 143);
+    color: rgb(255, 255, 255);
+    margin: 10px 0 0 10px; 
+    border-radius: 5px;
+    font-family: "Century Gothic";
+}
+
+.Button:hover{
+    background: rgb(0, 149, 175);
 }
