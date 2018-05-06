@@ -10,9 +10,8 @@
     width: 80%;
     background: rgba(95, 158, 160, 0.068);
     margin: 0 auto;
-    font-family: inherit;
+    font-family: "Century Gothic";
     box-sizing: border-box;
-    font-weight: normal;
     /* clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); */
     
 }
@@ -30,7 +29,10 @@
     z-index: 2;
 }
 .AboutMe  ul li{
-    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 15px;
     z-index: 2;
 }
 .AboutMe a {
@@ -45,11 +47,13 @@
     transform: translate(0,-5px);
 }
 .AboutMe  ul li b{
-    color: goldenrod;
-    font-weight: 600;
+    color: rgb(255, 199, 58);
+    font-weight: 300;
     z-index: 2;
 }
-
+.AboutMe  ul li strong{
+    font-weight: 500;
+}
 @media(max-width:985px){
     .AboutMe{ grid-row: 4/ 5;
     }
