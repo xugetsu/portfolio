@@ -35,3 +35,11 @@
     padding: 10px 20px 50px 20px ;
     text-align: left;
 }
+
+@media(max-width:740px){
+    .CommitDetails{
+        float: none;
+        width: 95%;
+        margin: 0 auto;
+    }
+}

@@ -23,3 +23,12 @@
     touch-action: none;
     user-select: none;
 }
+
+@media(max-width:740px){
+    .Graph{
+        width: 95%;
+        float: none;
+        height: 150px;
+        margin: 0 auto;
+    }
+}

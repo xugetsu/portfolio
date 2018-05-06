@@ -1,9 +1,9 @@
 .GitMyCareer{
     position: relative;
-    height: 600px;
     background: linear-gradient(to bottom, #1e3c72, #2a5298); 
     color: honeydew;
-    padding: 20px 40px 40px 20px;
+    padding: 20px;
+    height: 600px;
 }
 
 .GitSvm{
@@ -14,11 +14,13 @@
     width: 200px;
 }
 
-
 @media(max-width:740px){
     .GitSvm{
         width: 150px;
     }  
+    .GitMyCareer{
+        height:auto;
+    }
 }
 
 @media(max-width:640px){

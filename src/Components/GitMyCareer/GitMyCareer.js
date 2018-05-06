@@ -21,13 +21,15 @@ class GitMyCareer extends Component {
             <img className= {styles.GitSvm} src={gitsvm} alt='Git'/>
 
             <h1>My Career Repository</h1>
-
+            <Graph currentHash = {hash} 
+                  layout = {CommitData} 
+                  loadCommitLog = {(hash) => this.loadCommitLog(hash)}/>
             <CommitDetails 
                 title={CommitData[hash-1].content[0]} 
                 date= {CommitData[hash-1].content[1]} 
                 hash = {hash} /> 
 
-            <Graph currentHash = {hash} layout = {CommitData} loadCommitLog = {(hash) => this.loadCommitLog(hash)}/>
+
         </div>
         );
     }
