@@ -44,7 +44,7 @@
   transform: scale(1);
   top: -5px;
   left: -5px;
-  background: #222727c5;
+  background: #36383a9a;
   transform: scale(1.2);
   cursor: pointer;
 }
@@ -56,6 +56,6 @@
 }
 .RawLogo{
   display: inline-block;
-  margin: 22px 0 0 0;
+  margin: 15px 0 0 0;
   transform: rotate(-45deg);
 }

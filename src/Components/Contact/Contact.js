@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Contact.css';
-import MyLogoRaw from '../MyLogoRAW/MyLogoRaw';
+import MyLogo from '../MyLogoRAW/MyLogo';
 import facebook from '../../Assets/Icons/svgs/facebook.svg';
 import googelplus from '../../Assets/Icons/svgs/googleplus.svg';
 import linkedin2 from '../../Assets/Icons/svgs/linkedin2.svg';
@@ -22,7 +22,10 @@ const contact = () => {
                     <h4>(216) 24 49 71 62</h4>
                 </div>
                 <div className= {styles.MyLogoRaw}>
-                    <MyLogoRaw colorFill1={'#1e90ff'} colorFill2={'#f0fff0'} logoHeight = {580}/>
+                    <MyLogo height = {200} width={250} id={2}
+                                openTagStopColor1='#2989d8'  openTagStopColor2='#2bade7'
+                                closeTagStopColor1='#00bcf2' closeTagStopColor2='#2bade7'
+                                slashStopColor1='#ebebeb'    slashStopColor2='#888888' />
                 </div>
 
                 <div className={styles.Bar}></div>

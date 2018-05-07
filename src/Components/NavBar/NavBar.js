@@ -1,11 +1,15 @@
 import React from 'react';
 import styles from './NavBar.css';
-import RawLogo from './MyLogoRaw2';
+import MyLogo from '../MyLogoRAW/MyLogo';
 const navBar = (props) => {
         return(
             <div>
                 <div className={styles.RawLogoWrapper} onClick={() => props.navigateTo(0)}> 
-                    <RawLogo className={styles.RawLogo}logoHeight={130} />
+                    <span className={styles.RawLogo} ><MyLogo  height = {60} width={100} id={2}
+                                openTagStopColor1='#2989d8'  openTagStopColor2='#2bade7'
+                                closeTagStopColor1='#00bcf2' closeTagStopColor2='#2bade7'
+                                slashStopColor1='#ebebeb'    slashStopColor2='#888888' />
+                    </span>
                 </div>
                 <nav className={styles.NavBar}>
                     <button onClick={() => props.navigateTo(0)}>Home</button>

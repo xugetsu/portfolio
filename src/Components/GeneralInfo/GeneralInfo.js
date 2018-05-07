@@ -4,7 +4,7 @@ import myPhoto from '../../Assets/Images/ali.jpg';
 import gear from '../../Assets/Icons/svgs/gear.svg';
 import Col2 from './Col2/Col2';
 import AboutMe from './AboutMe/AboutMe';
-import MyLogoRaw from '../MyLogoRAW/MyLogoRaw';
+import MyLogo from '../MyLogoRAW/MyLogo';
 // import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 const generalInfo = () => {
@@ -16,7 +16,10 @@ const generalInfo = () => {
             {/* <img  draggable = {false} alt='' className= {styles.Gear} src={gear} height={800}/> */}
             <div className= {styles.GeneralInfo}>
                     <div className= {styles.Logo} >
-                            <MyLogoRaw colorFill1 = {'#23262b'} colorFill2 = {'#1f2227'} logoHeight = {1200}/>
+                        <MyLogo height = {400} width={500} id={1}
+                                openTagStopColor1='#202324'  openTagStopColor2='#202324'
+                                closeTagStopColor1='#1f2324' closeTagStopColor2='#202324'
+                                slashStopColor1='#202324'    slashStopColor2='#36383a9a' />
                     </div>   
                     <img  className= {styles.MyPhoto} alt='ali othmani' src={myPhoto} height={200}/>
                     <ul className= {styles.Info} >
