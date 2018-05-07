@@ -14,7 +14,7 @@ const spinner = (props) => {
         // When the loader has taken longer than the delay
         return (<div className={classes.Spinner}>
                     <div className={classes.Loader}></div>
-                    <p>Loading...</p>
+                    <p>{props.send? 'Sending...' : 'Loading...'}</p>
                 </div>);       
     }else{
         // When the loader has just started
