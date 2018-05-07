@@ -22,8 +22,12 @@
     }
 }
 .ContactData h1{
-    font-size: 25px;
+    font-size: 30px;
     font-family: "Century Gothic";
+}
+.ContactData h2{
+    font-family: "Century Gothic";
+    color: rgb(0, 121, 143);
 }
 
 .Button{
