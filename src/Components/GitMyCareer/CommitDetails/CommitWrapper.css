@@ -1,4 +1,4 @@
-.CommitDetails{
+.CommitWrapper{
     overflow: hidden;
     border-radius: 10px;
     float: left;
@@ -9,7 +9,7 @@
     box-sizing: border-box;  
 }
 
-.CommitDetails h2{
+.CommitWrapper h2{
     margin-left:20px;
     margin-right:20px;
 }
@@ -29,7 +29,7 @@
     left: 0;
 }
 
-.CommitDetails article{
+.CommitWrapper article{
     display: block;
     background: rgba(0, 0, 0, 0.246);
     padding: 10px 20px 50px 20px ;
@@ -37,7 +37,7 @@
 }
 
 @media(max-width:740px){
-    .CommitDetails{
+    .CommitWrapper{
         float: none;
         width: 95%;
         margin: 0 auto;

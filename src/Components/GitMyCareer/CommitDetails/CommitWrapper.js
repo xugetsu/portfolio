@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './CommitDetails.css';
+import styles from './CommitWrapper.css';
 import CustomScrollbars from '../../UI/CustomScrollbars/CustomScrollbars';
 import Loadable from 'react-loadable';
 import Spinner from '../../Spinner/Spinner';
 
-const commitDetails = (props) => {
+const commitWrapper = (props) => {
     const Commit = Loadable({
         loader: () => import('./Commits/Commit' + props.hash),
         //.catch( error => console.log('Handled Error :',error) ),
@@ -22,7 +22,7 @@ const commitDetails = (props) => {
     });
     const date= props.date;
     return (
-        <div className={styles.CommitDetails} >                
+        <div className={styles.CommitWrapper} >                
             <h2 className={styles.Message}> {props.title} 
                 <span>
                     {'On, '+date.slice(0,3)+'. '+date.slice(4,6)+' '+date.slice(7,10)+', '+date.slice(11)}
@@ -32,5 +32,5 @@ const commitDetails = (props) => {
         </div>
     );      
 }
-export default commitDetails;
+export default commitWrapper;
 
