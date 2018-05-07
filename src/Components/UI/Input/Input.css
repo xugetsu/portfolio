@@ -43,3 +43,7 @@
     font-family: "Century Gothic";
 }
 
+.Invalid, .Invalid:focus{
+    background-color: rgb(255, 116, 101);
+    border: 1px solid red;
+}
