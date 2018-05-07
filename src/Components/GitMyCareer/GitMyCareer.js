@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import styles from './GitMyCareer.css';
 import gitsvm from '../../Assets/Icons/pngs/gitsvm.png';
 
-import Graph from './Graph/Graph';
-import CommitDetails from './CommitDetails/CommitDetails';
-import CommitData from './CommitsData';
+import CommitsGraph from './CommitsGraph/CommitsGraph';
+import CommitWrapper from './CommitDetails/CommitWrapper';
+import CommitData from './CommitDetails/CommitsData';
 class GitMyCareer extends Component {
     state = {
-        hash: 1
+        hash: 5
     }
 
     loadCommitLog = (hash) =>   this.setState({hash: hash});
@@ -21,10 +21,10 @@ class GitMyCareer extends Component {
             <img className= {styles.GitSvm} src={gitsvm} alt='Git'/>
 
             <h1>My Career Repository</h1>
-            <Graph currentHash = {hash} 
+            <CommitsGraph currentHash = {hash} 
                   layout = {CommitData} 
                   loadCommitLog = {(hash) => this.loadCommitLog(hash)}/>
-            <CommitDetails 
+            <CommitWrapper 
                 title={CommitData[hash-1].content[0]} 
                 date= {CommitData[hash-1].content[1]} 
                 hash = {hash} /> 

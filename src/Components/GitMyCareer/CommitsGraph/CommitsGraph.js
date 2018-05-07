@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Graph.css';
+import styles from './CommitsGraph.css';
 import GridLayout from 'react-grid-layout';
 import Draggable from 'react-draggable';
 import CommitElement from './CommitElement/CommitElement';
 
-const graph = (props) => {
+const commitsGraph = (props) => {
     const gridWidth = 50; // grid Width
     const rowHeight = 55; // grid Height you can't change the height until you fix branch svg's relation between its height and width
     const layout = props.layout;
@@ -18,7 +18,7 @@ const graph = (props) => {
                 </div>;
     });
     return (
-        <div className={styles.Graph} >
+        <div className={styles.CommitsGraph} >
             <Draggable  handle=".handle"
                         defaultPosition={{x: -100, y: 0 }}
                         bounds={{bottom: 0, left: -100, right: 0, top: -100}}
@@ -39,5 +39,5 @@ const graph = (props) => {
         </div>
     );
 }
-export default graph;
+export default commitsGraph;
 

@@ -1,4 +1,4 @@
-.Graph{
+.CommitsGraph{
     margin: 20px auto;
     width: calc(45% - 10px);
     float: right;
@@ -25,7 +25,7 @@
 }
 
 @media(max-width:740px){
-    .Graph{
+    .CommitsGraph{
         width: 95%;
         float: none;
         height: 150px;
