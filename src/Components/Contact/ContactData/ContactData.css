@@ -6,11 +6,26 @@
     align-self: center;
     font-family: "Century Gothic";
 }
-
+@media(max-width:950px){
+    .ContactData{
+        grid-column: 2/4;
+        grid-row: 1/4;
+        justify-self: center;
+    }
+}
+@media(max-width:712px){
+    .ContactData{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        align-self: flex-start;
+        width: 90%;
+    }
+}
 .ContactData h1{
     font-size: 25px;
     font-family: "Century Gothic";
 }
+
 .Button{
     outline: none;
     border: none;

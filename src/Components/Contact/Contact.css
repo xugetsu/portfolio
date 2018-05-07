@@ -1,6 +1,6 @@
 .Contact{
     display: grid;
-    grid-template-columns: 30vw 40vw 20vw; 
+    grid-template-columns: 30vw 400px 20vw; 
     grid-template-rows: 50px 200px 220px 80px 40px; 
     padding: 20px 20px 0 20px;
     text-align: start;
@@ -8,6 +8,7 @@
     font-family: "Century Gothic";
     color: #f0fff0;
 }
+
 .Footer{
     grid-column: 1 / 5;
     grid-row: 5 / 6;
@@ -29,6 +30,7 @@
     grid-column: 3 / 4;
     grid-row: 2 / 4;
     padding: 10px;
+    margin-left: 5px;
     font-weight: 300;
     font-family: "Century Gothic";
 }
@@ -73,7 +75,50 @@
     grid-column: 3/4;
     grid-row: 1/5;
     width:2x;
-    height: 60%;
+    height: 70%;
     border-left: 1px solid rgb(100, 100, 100);
     align-self: center;
+    float: left;
+}
+@media(max-width:950px){
+    .Contact{
+        display: grid;
+        grid-template-columns: 40vw 50vw 0; 
+        grid-template-rows: 50px 200px 220px 80px 40px; 
+    }
+    .SomeInfos{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .Bar{
+        display: none;
+    }
+}
+@media(max-width:712px){
+    .Contact{
+        display: grid;
+        grid-template-columns: 80vw 0 0; 
+        grid-template-rows: 50px 200px 450px  80px 200px; 
+    }
+    .Contact h1{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .SomeInfos{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .Social{
+        grid-column: 1 / 2;
+        grid-row: 4/ 5;
+    }
+    .MyLogoRaw{
+        grid-column: 1 / 2;
+        grid-row: 5/ 6;
+        align-self: flex-end;
+    }
+    .Footer{
+        grid-column: 1 / 2;
+        grid-row: 6 / 7 ;
+    }
 }

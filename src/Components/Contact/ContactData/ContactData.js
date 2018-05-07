@@ -66,7 +66,7 @@ class ContactData extends Component{
             <div id='Contact' className= {styles.ContactData}>
                 <h1>Send Me A Message</h1>
                     <form onSubmit = {this.SendHandler}>
-                        <CustomScrollbars scrollId={3} height='360px' zIndex={10} width={'400px'}>
+                        <CustomScrollbars scrollId={3} height='360px' zIndex={10} width={'100%'}>
                             {inputs}
                         </CustomScrollbars>
                         <button className={styles.Button}>Send</button>
