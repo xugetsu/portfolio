@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.3.2",
     "react-css-grid": "^2.0.0-0",
     "react-css-variables": "^2.0.1",
