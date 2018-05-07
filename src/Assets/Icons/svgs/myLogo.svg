@@ -1,0 +1,19 @@
+<svg viewBox="5 0 200 210" height="200" width="250">
+    <defs>
+        <linearGradient id="openTag2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color: rgb(41, 137, 216); stop-opacity: 1;"></stop>
+            <stop offset="100%" style="stop-color: rgb(43, 173, 231); stop-opacity: 1;"></stop>
+        </linearGradient>
+        <linearGradient id="closeTag2" x1="0%" y1="50%" x2="80%" y2="20%">
+            <stop offset="0%" style="stop-color: rgb(0, 188, 242); stop-opacity: 1;"></stop>
+            <stop offset="100%" style="stop-color: rgb(43, 173, 231); stop-opacity: 1;"></stop>
+        </linearGradient>
+        <linearGradient id="slash2" x1="0%" y1="0%" x2="80%" y2="80%">
+            <stop offset="0%" style="stop-color: rgb(235, 235, 235); stop-opacity: 1;"></stop>
+            <stop offset="100%" style="stop-color: rgb(136, 136, 136); stop-opacity: 1;"></stop>
+        </linearGradient>
+    </defs>
+    <polygon points="106.19469026548673,55,0,201.99115044247787,0,165.99115044247787,106.19469026548673,25,212.38938053097345,171.99115044247787,212.38938053097345,201.99115044247787" fill="url(#closeTag2)"></polygon>
+    <polygon points="-22.123893805309734,80.45052292839902,0,110.45052292839902,234.5132743362832,145.8487530168946,212.38938053097345,115.84875301689459" fill="url(#slash2)"></polygon>
+    <polygon points="106.19469026548673,30,0,176.99115044247787,0,140.99115044247787,106.19469026548673,0,212.38938053097345,146.99115044247787,212.38938053097345,176.99115044247787" fill="url(#openTag2)"></polygon>
+</svg>
