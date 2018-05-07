@@ -3,7 +3,7 @@ import styles from './App.css';
 import BannerLogo from './Components/BannerLogo/BannerLogo';
 import NavBar from './Components/NavBar/NavBar';
 import GeneralInfo from './Components/GeneralInfo/GeneralInfo';
-import GitMyCareer from './Components/GitMyCareer/GitMyCareer';
+import MyCareer from './Components/MyCareer/MyCareer';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Scrollbar from './Components/UI/CustomScrollbars/Scrollbar';
 import Contact from './Components/Contact/Contact';
@@ -13,7 +13,7 @@ class App extends Component {
       <div className={styles.App}>
         <Scrollbar scrollId={0} width = {'100vw'} height = {'100vh'} zIndex={11} >
             <GeneralInfo />
-            <GitMyCareer />
+            <MyCareer />
             <BannerLogo />
             <Portfolio />
             <Contact />

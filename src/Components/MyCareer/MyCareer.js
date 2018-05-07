@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import styles from './GitMyCareer.css';
+import styles from './MyCareer.css';
 import gitsvm from '../../Assets/Icons/pngs/gitsvm.png';
 
 import CommitsGraph from './CommitsGraph/CommitsGraph';
 import CommitWrapper from './CommitDetails/CommitWrapper';
 import CommitData from './CommitDetails/CommitsData';
-class GitMyCareer extends Component {
+class MyCareer extends Component {
     state = {
         hash: 5
     }
@@ -16,7 +16,7 @@ class GitMyCareer extends Component {
 
         const hash =this.state.hash;
         return (
-        <div id='MyCareer' className= {styles.GitMyCareer}>
+        <div id='MyCareer' className= {styles.MyCareer}>
         
             <img className= {styles.GitSvm} src={gitsvm} alt='Git'/>
 
@@ -35,4 +35,4 @@ class GitMyCareer extends Component {
     }
 }
 
-export default GitMyCareer;
+export default MyCareer;

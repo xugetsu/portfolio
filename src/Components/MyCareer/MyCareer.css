@@ -1,4 +1,4 @@
-.GitMyCareer{
+.MyCareer{
     position: relative;
     background: linear-gradient(to bottom, #1e3c72, #2a5298); 
     color: honeydew;
@@ -18,7 +18,7 @@
     .GitSvm{
         width: 150px;
     }  
-    .GitMyCareer{
+    .MyCareer{
         height:auto;
     }
 }
