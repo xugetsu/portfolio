@@ -1,13 +1,22 @@
+header{
+  display: grid;
+  grid-template-columns: 100px auto;
+  position: fixed;
+  background-color: #222727;/* rgb(56, 56, 56);*/
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s ease-in-out;
+}
+.Shrink{
+  height: 50px;
+}
 .NavBar{
-    background-color: #222727;/* rgb(56, 56, 56);*/
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    height: 50px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    grid-column: 2 / 3;
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -31,7 +40,7 @@
   .NavBar button:active{
     color: rgb(0, 183, 255);
 }
-
+/* 
 .RawLogoWrapper{
   position: fixed;
   z-index: 100;
@@ -53,9 +62,19 @@
   top: 0px;
   left: 0px;
   transform: scale(1.2);
+} */
+.LogoWrapper{
+  grid-column: 1 / 2;
+  margin: 5px 0 0 0;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row;
+  align-content: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-45deg) scale(1.5) translate(0,20px);
 }
-.RawLogo{
-  display: inline-block;
-  margin: 15px 0 0 0;
-  transform: rotate(-45deg);
+
+.ShrinkLogo{
+  transform: rotate(0) scale(1) translate(0,0);
 }
