@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import classes from './Layout.css';
-import styles from './CustomScrollbars.css';
 import SideDrawer from '../SideDrawer/SideDrawer';
 import NavBar from '../../NavBar/NavBar';
 import SpringScrollbars from '../CustomScrollbars/SpringScrollbars';
