@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { SpringSystem } from 'rebound';
-
+import styles from './CustomScrollbars.css';
 export default class SpringScrollbars extends Component {
 
     componentDidMount() {
@@ -36,8 +36,21 @@ export default class SpringScrollbars extends Component {
     }
 
     render() {
+        const zIndex = this.props.zIndex;
+        const VerticalThumb = (defaultStyles, props) => <div {...props} 
+                                                    onClick = { (e) => e.stopPropagation() }
+                                                    className={styles.ThumbVertical} 
+                                                    style={{...defaultStyles,zIndex:zIndex}}/>
+        const VerticalTrack = (defaultStyles, props) => <div {...props} 
+                                              onClick = { (e) => e.stopPropagation() }
+                                              className={styles.TrackVertical} 
+                                              style={{...defaultStyles,zIndex:zIndex+1}}/>
+        
         return (
-            <Scrollbars  {...this.props} ref="scrollbars"/>
+            <Scrollbars  {...this.props} ref="scrollbars"
+                    style={{ width:this.props.width, height: this.props.height}}
+                    renderTrackVertical={VerticalTrack}    
+                    renderThumbVertical={VerticalThumb}/>
         );
     }
 }
