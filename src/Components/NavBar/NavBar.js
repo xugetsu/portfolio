@@ -27,7 +27,7 @@ const navBar = (props) => {
                     <button onClick={() => props.navigateTo(3)}>Portfolio</button>
                     <button onClick={() => props.navigateTo(4)}>Contact</button>
                 </nav>
-                <div className={SideDrawerBtnStyles.join(' ')}>
+                <div className={SideDrawerBtnStyles.join(' ')} onClick = {props.showDrawer}>
                     <div></div>
                     <div></div>
                     <div></div>

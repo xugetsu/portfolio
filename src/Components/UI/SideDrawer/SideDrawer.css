@@ -1,4 +1,5 @@
 .SideDrawer{
+    display: none;
     position: fixed;
     width: 280px;
     max-width: 70%;
@@ -6,15 +7,41 @@
     left: 0;
     top: 0;
     z-index: 1000;
-    background-color: snow;
+    background-color: rgb(34, 34, 34);
     padding: 32px 16px;
     box-sizing: border-box;
     transition: transform 0.3s ease-out; 
 }
 
-@media (min-width: 500px){
+.SideDrawer nav{
+    display: flex;
+    flex-flow: column;
+    align-content: space-between;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.SideDrawer nav button{
+    border-style: none;
+    color:rgb(255, 255, 255);
+    font-family: "Century Gothic";
+    font-size: 20px;
+    margin: 20px 10px;
+    padding: 10px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.SideDrawer nav button:hover{
+    color:rgb(104, 217, 255);
+}
+
+
+@media (max-width: 700px){
     .SideDrawer{
-        display: none;
+        display: flex;
+        flex-flow: column;
+        align-content: space-between;
     }
 }
 

@@ -46,8 +46,12 @@ class Layout extends Component{
                                 height = {'100vh'} 
                                 zIndex={11} >     
             {/*----------------------Children-------------------------*/}   
-                <NavBar navigateTo = {(i) => this.navigateTo(i)} shrink = {this.state.shrink} />
-                <SideDrawer open={this.state.open} closeSideDrawer={this.closeSideDrawerHandler}/>
+                <NavBar navigateTo = {(i) => this.navigateTo(i)} 
+                        shrink = {this.state.shrink} 
+                        showDrawer = {this.openSideDrawerHandler}/>
+                <SideDrawer open={this.state.open} 
+                            navigateTo = {(i) => this.navigateTo(i)}
+                            closeSideDrawer={this.closeSideDrawerHandler}/>
                 {this.props.children}
             {/*-------------------------------------------------------*/}
             </SpringScrollbars>

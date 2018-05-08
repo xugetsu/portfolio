@@ -69,6 +69,7 @@ header{
   top: 20px;
   left: 20px;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .SideDrawerBtn div{
@@ -98,7 +99,7 @@ header{
     grid-template-columns: auto 0 100px;
   }
   .LogoWrapper{
-    transform: rotate(45deg) scale(1.5) translate(-10px,35px);
+    transform: rotate(45deg) scale(1.5) translate(-15px,30px);
     grid-column: 3 / 4;
     justify-self: flex-end;
     margin: 5px 0 0 0;
