@@ -8,6 +8,9 @@ class Scrollbars extends Component{
   constructor(props) {
     super(props);
     this.myRef = React.createRef();
+    this.state = {
+      shrink: false
+    }
   }
 
   navigateTo = (i) => {
@@ -17,6 +20,17 @@ class Scrollbars extends Component{
     const scrollHeight = scrollbars.getScrollHeight();
         scrollbars.scrollTop(elementOffsetTop-50);// 5 0 is the height of the NavBar
   }
+
+  HandelScroll = () => {
+    const scrollbars = this.myRef.current;
+    if(scrollbars.getScrollTop() > 50 && !this.state.shrink){
+      this.setState({shrink:true});
+    }
+    if(scrollbars.getScrollTop() < 50 && this.state.shrink){
+      this.setState({shrink:false});
+    }
+  }
+
   render() {
     const zIndex = this.props.zIndex;
     const VerticalThumb = (defaultStyles, props) => <div {...props} 
@@ -33,8 +47,9 @@ class Scrollbars extends Component{
                     style={{ width:this.props.width, height: this.props.height}}
                     renderTrackVertical={VerticalTrack}    
                     renderThumbVertical={VerticalThumb}
+                    onScroll = {this.HandelScroll}
                     >       
-            <NavBar navigateTo = {(i) => this.navigateTo(i)} />
+            <NavBar navigateTo = {(i) => this.navigateTo(i)} shrink = {this.state.shrink} />
             {this.props.children}
         </SpringScrollbars>
     );
