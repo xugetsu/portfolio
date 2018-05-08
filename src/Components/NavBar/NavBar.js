@@ -3,15 +3,18 @@ import styles from './NavBar.css';
 import MyLogo from '../MyLogoRAW/MyLogo';
 const navBar = (props) => {
         const logoWrapperStyles = [styles.LogoWrapper];
+        const SideDrawerBtnStyles = [styles.SideDrawerBtn];
         const headerStyles = [''];
         if(props.shrink){
             logoWrapperStyles.push(styles.ShrinkLogo);
             headerStyles.push(styles.Shrink);
+            SideDrawerBtnStyles.push(styles.SideDrawerBtnShrink);
         }
         return(
             <header className ={headerStyles.join(' ')}>
                 <div className={logoWrapperStyles.join(' ')} onClick={() => props.navigateTo(0)} >
-                    <span className={styles.RawLogo} > <MyLogo  height = {40} width={50} id={2}
+                    <span> 
+                        <MyLogo  height = {40} width={50} id={2}
                             openTagStopColor1='#2989d8'  openTagStopColor2='#2bade7'
                             closeTagStopColor1='#00bcf2' closeTagStopColor2='#2bade7'
                             slashStopColor1='#ebebeb'    slashStopColor2='#888888' />
@@ -23,7 +26,12 @@ const navBar = (props) => {
                     <button onClick={() => props.navigateTo(2)}>Competence</button>
                     <button onClick={() => props.navigateTo(3)}>Portfolio</button>
                     <button onClick={() => props.navigateTo(4)}>Contact</button>
-                </nav>    
+                </nav>
+                <div className={SideDrawerBtnStyles.join(' ')}>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>    
             </header>
         );
     

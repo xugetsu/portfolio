@@ -21,11 +21,11 @@ header{
     flex-flow: row;
     justify-content: center;
   }
-  .NavBar button{
+.NavBar button{
     cursor: pointer;
     outline: none;
     color: aliceblue;
-    margin: 10px;
+    margin: 2px 10px;
     font-family: monospace;
     border: 3px solid rgba(35, 141, 177, 0);
     font-size: 20px;
@@ -40,29 +40,7 @@ header{
   .NavBar button:active{
     color: rgb(0, 183, 255);
 }
-/* 
-.RawLogoWrapper{
-  position: fixed;
-  z-index: 100;
-  width: 100px;
-  height: 100px;
-  background: rgba(69, 70, 70, 0);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 45% 100%, 0% 100%);
-  transition: all 0.5s ease-in-out;
-  box-sizing: border-box; 
-  transform: scale(1);
-  top: -5px;
-  left: -5px;
-  background: #36383a9a;
-  transform: scale(1.2);
-  cursor: pointer;
-}
-.RawLogoWrapper:hover{
-  background: rgba(73, 73, 73, 0.651);
-  top: 0px;
-  left: 0px;
-  transform: scale(1.2);
-} */
+
 .LogoWrapper{
   grid-column: 1 / 2;
   margin: 5px 0 0 0;
@@ -77,4 +55,65 @@ header{
 
 .ShrinkLogo{
   transform: rotate(0) scale(1) translate(0,0);
+}
+
+.SideDrawerBtn{
+  grid-column: 1 / 2;
+  display: none;
+  flex-flow: column;
+  align-content: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.SideDrawerBtn div{
+  width: 45px;
+  background-color: white;
+  margin-top: 10px; 
+  height: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.SideDrawerBtnShrink{
+  top: -3px; 
+  left: 10px;
+}
+
+.SideDrawerBtnShrink div{
+  width: 35px;
+  background-color: white;
+  margin-top: 7px; 
+  height: 4px;
+}
+
+
+@media(max-width:700px){
+  header{
+    display: grid;
+    grid-template-columns: auto 0 100px;
+  }
+  .LogoWrapper{
+    transform: rotate(45deg) scale(1.5) translate(-10px,35px);
+    grid-column: 3 / 4;
+    justify-self: flex-end;
+    margin: 5px 0 0 0;
+  }
+  .ShrinkLogo{
+    transform: rotate(0) scale(1) translate(-10px,0);
+  }
+  .NavBar{
+    grid-column: 2 / 3;
+    display: none;
+    overflow: hidden;
+    width: 100px;
+    position: absolute;
+  }
+  .SideDrawerBtn{
+    display: flex;
+  }
 }
