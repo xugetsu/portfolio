@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
-import { SpringSystem, MathUtil } from 'rebound';
+import { SpringSystem } from 'rebound';
 
 export default class SpringScrollbars extends Component {
 
-    constructor(props, ...rest) {
-        super(props, ...rest);
-        this.handleSpringUpdate = this.handleSpringUpdate.bind(this);
-    }
-
     componentDidMount() {
         this.springSystem = new SpringSystem();
-        this.spring = this.springSystem.createSpring();
+        this.spring = this.springSystem.createSpring(1, 8);
         this.spring.addListener({ onSpringUpdate: this.handleSpringUpdate });
     }
-
+   // more about springsystem :  https://tympanus.net/codrops/2016/03/08/spring-loaders-rebound-canvas/
     componentWillUnmount() {
         this.springSystem.deregisterSpring(this.spring);
         this.springSystem.removeAllListeners();
@@ -23,38 +18,26 @@ export default class SpringScrollbars extends Component {
         this.spring = undefined;
     }
 
-    getScrollTop() {
-        return this.refs.scrollbars.getScrollTop();
-     }
-
-    getScrollHeight() {
-        return this.refs.scrollbars.getScrollHeight();
-     }
-
-    getHeight() {
-        return this.refs.scrollbars.getHeight();
-     }
-
+    getScrollTop    = () => this.refs.scrollbars.getScrollTop();
+    getScrollHeight = () => this.refs.scrollbars.getScrollHeight();
+    getHeight       = () => this.refs.scrollbars.getHeight();
    
     scrollTop(top) {
         const { scrollbars } = this.refs;
-        const scrollTop = scrollbars.getScrollTop();
-        const scrollHeight = scrollbars.getScrollHeight();
-        const val = MathUtil.mapValueInRange(top, 0, top, top * 0.1, top);
-        this.spring.setCurrentValue(scrollTop).setAtRest();
-        this.spring.setEndValue(val);
+        const currentscrollPosition = scrollbars.getScrollTop();
+        this.spring.setCurrentValue(currentscrollPosition).setAtRest();
+        this.spring.setEndValue(top);
     }
 
-    handleSpringUpdate(spring) {
+    handleSpringUpdate = (spring) => {
         const { scrollbars } = this.refs;
         const val = spring.getCurrentValue();
         scrollbars.scrollTop(val);
-        
     }
 
     render() {
         return (
-            <Scrollbars  {...this.props}   ref="scrollbars"/>
+            <Scrollbars  {...this.props} ref="scrollbars"/>
         );
     }
 }

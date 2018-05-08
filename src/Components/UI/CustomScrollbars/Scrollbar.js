@@ -16,9 +16,8 @@ class Scrollbars extends Component{
   navigateTo = (i) => {
     const scrollbars = this.myRef.current;
     const elementIds = ['GeneralInfo','MyCareer','Competence','Portfolio','Contact'];
-    const elementOffsetTop = document.getElementById(elementIds[i]).offsetTop;
-    const scrollHeight = scrollbars.getScrollHeight();
-        scrollbars.scrollTop(elementOffsetTop-50);// 5 0 is the height of the NavBar
+    const elementOffsetTop =document.getElementById(elementIds[i]).offsetTop;
+        scrollbars.scrollTop(elementOffsetTop - 50); // 50 is the height of the NavBar
   }
 
   HandelScroll = () => {
