@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SideDrawer.css';
 import Backdrop from '../../UI/Backdrop/Backdrop';
-import A from '../../../hoc/Auxx';
+import A from '../../../hoc/A/A';
 
 const sideDrawer = (props) => {
     const SideDrawerStyles = [styles.SideDrawer, (props.open? styles.Open : styles.Close)].join(' ');
