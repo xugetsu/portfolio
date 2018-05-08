@@ -5,19 +5,19 @@ import NavBar from './Components/NavBar/NavBar';
 import GeneralInfo from './Components/GeneralInfo/GeneralInfo';
 import MyCareer from './Components/MyCareer/MyCareer';
 import Portfolio from './Components/Portfolio/Portfolio';
-import Scrollbar from './Components/UI/CustomScrollbars/Scrollbar';
+import Layout from './Components/UI/Layout/Layout';
 import Contact from './Components/Contact/Contact';
 class App extends Component {
   render() {
     return (
       <div className={styles.App}>
-        <Scrollbar scrollId={0} width = {'100vw'} height = {'100vh'} zIndex={11} >
-            <GeneralInfo />
-            <MyCareer />
-            <BannerLogo />
-            <Portfolio />
-            <Contact />
-        </Scrollbar>
+			<Layout>
+				<GeneralInfo />
+				<MyCareer />
+				<BannerLogo />
+				<Portfolio />
+				<Contact />
+			</Layout>
       </div>
     );
   }
