@@ -41,10 +41,10 @@ class Layout extends Component{
         return (
             <SpringScrollbars   ref={this.myRef}  
                                 onScroll = {this.HandelScroll} 
-                                scrollId={0} 
+                                scrollid={0} 
                                 width = {'100vw'} 
                                 height = {'100vh'} 
-                                zIndex={11} >     
+                                zindex={11} >     
             {/*----------------------Children-------------------------*/}   
                 <NavBar navigateTo = {(i) => this.navigateTo(i)} 
                         shrink = {this.state.shrink} 
