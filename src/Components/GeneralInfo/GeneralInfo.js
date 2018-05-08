@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './GeneralInfo.css';
 import myPhoto from '../../Assets/Images/ali.jpg';
-import gear from '../../Assets/Icons/svgs/gear.svg';
+// import gear from '../../Assets/Icons/svgs/gear.svg';
 import Col2 from './Col2/Col2';
 import AboutMe from './AboutMe/AboutMe';
 import MyLogo from '../MyLogoRAW/MyLogo';

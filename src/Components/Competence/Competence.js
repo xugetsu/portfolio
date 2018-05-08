@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Competence.css';
-import GridLayout from 'react-grid-layout';
+// import GridLayout from 'react-grid-layout';
 import npm from '../../Assets/Icons/svgs/npm.svg';
 import gitlab from '../../Assets/Icons/pngs/gitlab.png';
 import redux from '../../Assets/Icons/pngs/redux.png';
@@ -8,20 +8,20 @@ import webpack from '../../Assets/Icons/svgs//webpack.svg';
 import react from '../../Assets/Icons/svgs//react.svg';
 import git from '../../Assets/Icons/svgs//git.svg';
 import github from '../../Assets/Icons/svgs//github.svg';
-import reactRouter from '../../Assets/Icons/svgs//react-router.svg';
+// import reactRouter from '../../Assets/Icons/svgs//react-router.svg';
 import JavaScript from '../../Assets/Icons/svgs/javaScript.svg';
 import CSS3 from '../../Assets/Icons/svgs/css3.svg';
 import HTML5 from '../../Assets/Icons/svgs/html5.svg';
-import python from '../../Assets/Icons/svgs/python.svg';
+// import python from '../../Assets/Icons/svgs/python.svg';
 
 const  competence  = () => {
     // layout is an array of objects, see the demo for more complete usage
-    const layout = [
-                    {i: 'b', x: 0, y: 0, w: 3, h: 4, static: true},
-                    {i: 'g', x: 3, y: 0, w: 3, h: 4, static: true},
-                    {i: 'r', x: 6, y: 0, w: 3, h: 4, static: true},
-                    {i: 'y', x: 1, y: 4, w: 7, h: 3, static: true},
-    ];
+    // const layout = [
+    //                 {i: 'b', x: 0, y: 0, w: 3, h: 4, static: true},
+    //                 {i: 'g', x: 3, y: 0, w: 3, h: 4, static: true},
+    //                 {i: 'r', x: 6, y: 0, w: 3, h: 4, static: true},
+    //                 {i: 'y', x: 1, y: 4, w: 7, h: 3, static: true},
+    //];
     return (
         <div id='Competences' className={styles.Competence}>
             <div key="r" className={styles.Git}>

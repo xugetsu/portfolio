@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Projects.css';
 import game2048 from '../../../Assets/Images/2048b.PNG';
-import pportfolio from '../../../Assets/Images/portfolio.PNG';
+// import pportfolio from '../../../Assets/Images/portfolio.PNG';
 import zoom from '../../../Assets/Icons/svgs/zoom.svg';
 import burger from '../../../Assets/Images/burgerbuilder.PNG';
 import career from '../../../Assets/Images/career.PNG';

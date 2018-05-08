@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styles from './App.css';
 import BannerLogo from './Components/BannerLogo/BannerLogo';
-import NavBar from './Components/NavBar/NavBar';
 import GeneralInfo from './Components/GeneralInfo/GeneralInfo';
 import MyCareer from './Components/MyCareer/MyCareer';
 import Portfolio from './Components/Portfolio/Portfolio';

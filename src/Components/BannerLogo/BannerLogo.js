@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MyLogo from './BannerLogo/Logo/MyLogo';
 import Competence from '../Competence/Competence';
-import { ParallaxBanner } from 'react-scroll-parallax';
+// import { ParallaxBanner } from 'react-scroll-parallax';
 import styles from './BannerLogo.css';
 
 class BannerLogo extends Component{
