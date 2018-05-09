@@ -17,7 +17,7 @@ const project1 = () => {
             </div>
             <article>
                 <h2>2048 Game Ultra</h2>
-                <p>This project was developped to put the knowledge and skills I've learned into practice
+                <p>This project was developed to put the knowledge and skills I've learned into practice
                 <br/>Inspired by the <a target="_blank" rel="noopener noreferrer" href='http://2048game.com/'>original game</a>, I've developped my game logic from scratch using the JavaScript library React.js</p> 
                 <p><b>Development State : </b>Under construction</p>
             </article>
