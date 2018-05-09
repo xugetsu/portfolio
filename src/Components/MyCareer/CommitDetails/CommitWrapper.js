@@ -6,7 +6,7 @@ import Spinner from '../../Spinner/Spinner';
 
 const commitWrapper = (props) => {
     const Commit = Loadable({
-        loader: () => import('./Commits/Commit' + props.hash),
+        loader: () => import('./Commits/'+props.hash[0]+'/'+props.hash[1]),
         //.catch( error => console.log('Handled Error :',error) ),
         loading: Spinner,
         // Issue to fix : Unhandled Rejection when import failed...
