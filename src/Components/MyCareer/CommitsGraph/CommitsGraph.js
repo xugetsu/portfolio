@@ -35,7 +35,7 @@ const commitsGraph = (props) => {
         const commitInfo = {hash:commit.i,content:commit.content};
         const commita1 = commit.i === 'm13' ? commitElementa1 : null;    
         const commita3 = commit.i === 'm15' ? commitElementa3 : null; 
-        const commitx  = (commit.i === 'a1' || commit.i === 'a3' )?
+        const commitx  = (commit.i === 'a01' || commit.i === 'a03' )?
                             null
                             : <CommitElement  commit = {commit} 
                                         clicked = {() => props.loadCommitLog(commitInfo)}

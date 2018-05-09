@@ -8,7 +8,7 @@ import CommitsData from './CommitDetails/CommitsData';
 class MyCareer extends Component {
     state = {
         currentCommit:{
-            hash:'w1',
+            hash:'w01',
             content:['Robot Design Improvement','Sun/01/Jan/2017']
         },
     }
