@@ -1,7 +1,7 @@
 import React from 'react';
-import CommitStyles from './CommitElement.css';
-import BranchStyles from './BranchElement.css';
-import Branch from './branch';
+import NormalType from './NormalType/NormalType';
+import BranchType from './BranchType/BranchType';
+
 const commit = (props) =>{
 
     let color = null;
@@ -12,25 +12,23 @@ const commit = (props) =>{
         default: color = '#111';
     }
     const inlineStyle = {borderBottomColor:color, width: props.width};
-
-    let classStyle = CommitStyles;
-    let newBranch = null;
+    let commitElement = null;
     if(props.elementForm !== "normal"){
-        classStyle =  BranchStyles;
-        newBranch = <Branch color = {color} width={props.width} branchType={props.elementForm}/>;
+        commitElement = <BranchType key={props.key}
+                                    inlineStyle = {inlineStyle}
+                                    color = {color}
+                                    branchType = {props.elementForm}
+                                    active  = {props.active}
+                                    clicked = {props.clicked}
+                                    content = {props.commit.content[1].slice(4)}/>;
+    }else{
+        commitElement = <NormalType key={props.key}
+                                    inlineStyle = {inlineStyle} 
+                                    active  = {props.active}
+                                    clicked = {props.clicked}
+                                    content = {props.commit.content[1].slice(4)}/>;
     }
-   
-    return (
-        <div key={props.key} className= {classStyle.Commit} style={inlineStyle}>
-            <span onClick = {props.clicked} 
-                  style={{background:props.active ? '#0099ff':'#2b2b2b',
-                          transform: props.active ? 'scale(1.2)':''}}>
-                <div  className= {classStyle.Details} >
-                    {props.commit.content[1].slice(4)}
-                </div>
-            </span>
-            {newBranch}
-        </div> );
+    return commitElement;
 } 
 export default commit;
 
