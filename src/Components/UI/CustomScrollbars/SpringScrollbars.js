@@ -6,7 +6,7 @@ export default class SpringScrollbars extends Component {
 
     componentDidMount() {
         this.springSystem = new SpringSystem();
-        this.spring = this.springSystem.createSpring(1, 8);
+        this.spring = this.springSystem.createSpring(100, 13);
         this.spring.addListener({ onSpringUpdate: this.handleSpringUpdate });
     }
    // more about springsystem :  https://tympanus.net/codrops/2016/03/08/spring-loaders-rebound-canvas/
