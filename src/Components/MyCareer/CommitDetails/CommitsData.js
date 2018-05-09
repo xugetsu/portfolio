@@ -6,6 +6,11 @@ const commitsData = {
             m3:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
             m4:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
             m5:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
+            m6:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
+            m7:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
+            m8:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
+            m9:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
+            m10:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
         },
         config:{
             branchType: 'master',
@@ -17,11 +22,17 @@ const commitsData = {
         commits:{
             w1:{title:'Start learning HTML', date:'Thu/16/Nov/2017'},
             w2:{title:'Start learning CSS',  date:'Mon/20/Nov/2017'},
-            w3:{title:'First time developing a website / project portfolio', date:'Fri/1/Dec/2017'},
-            w4:{title:'Full-Stack Track - One Million Arab Coders - Python', date:'Fra/26/Feb/2018'},
-            w5:{title:'Full-Stack Track - One Million Arab Coders - Git', date:'Sun/18/Mar/2018'},
-            w6:{title:'Full-Stack Track - One Million Arab Coders - Final Assessment', date:'Mon/02/Apr/2018'},
-            w7:{title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018'},
+            w3:{title:'First time developing a website / project portfolio', date:'Fri/01/Dec/2017'},
+            w4:{title:'Start learning JavaScript', date:'Sat/02/Jan/2018'},
+            w5:{title:'Start Learning Es6', date:'Mon/15/Jan/2018'},
+            w6:{title:'Start Learning React', date:'Wed/17/Jan/2018'},
+            w7:{title:'Start Developing my first project with react', date:'Wed/24/Jan/2018'},
+            w8:{title:'Start Learning Python via Udacity NanoDegree Full-Stack Track - One Million Arab Coders', date:'Fra/26/Feb/2018'},
+            w9:{title:'Start Learning Git (Full-Stack Track - One Million Arab Coders)', date:'Sun/18/Mar/2018'},
+            w10:{title:'Taking The Final Assessment (Full-Stack Track - One Million Arab Coders) ', date:'Mon/02/Apr/2018'},
+            w11:{title:'Start Developping A React App through tutorials', date:'Wed/04/Apr/2018'},
+            w12:{title:'Start Developping My web Page', date:'Thu/26/Apr/2018'},
+            w13:{title:'Start Looking for a Job !', date:'Thu/26/Apr/2018'},
         },
         config:{
             branchType: 'branchUp',
@@ -31,13 +42,14 @@ const commitsData = {
     },
     amideast:{
         commits:{
-            a1:{title:'Start learning HTML', date:'Thu/16/Nov/2017'},
-            a2:{title:'Start learning CSS',  date:'Mon/20/Nov/2017'},
+            a1:{title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018'},
+            a2:{title:'English Language Training in AMIDEAST - Exam',  date:'Mon/20/Nov/2017'},
+            a3:{title:'English Language Training in AMIDEAST - Certification',  date:'Mon/20/Nov/2017'},
         },
         config:{
             branchType: 'branchDown',
-            startPoint:5,
-            rowLevel:1
+            startPoint:6,
+            rowLevel: 1
         } 
     },
 };
@@ -50,6 +62,7 @@ export default commitsData;
 //     {i:'c2',x:1,y:1,w:1,h:1,content:['Robot Design Improvement','Sun/01/Jan/2017'],hash:2,static:true},
 //     {i:'c3',x:2,y:1,w:1,h:1,content:['Robot Design Improvement','Sun/01/Jan/2017'],hash:3,static:true},
 //     {i:'c4',x:3,y:1,w:2,h:1,content:['Robot Design Improvement','Sun/01/Jan/2017'],hash:4,static:true},
+
 //     {i:'b5',x:3,y:2,w:1,h:1,content:['Start learning HTML','Thu/16/Nov/2017'],hash:5,static:true},
 //     {i:'c6',x:4,y:2,w:1,h:1,content:['Start learning CSS','Mon/20/Nov/2017'],hash:6,static:true},
 //     {i:'c7',x:5,y:2,w:1,h:1,content:['First time developing a website / project portfolio','Fri/1/Dec/2017'],hash:7,static:true},
@@ -60,6 +73,7 @@ export default commitsData;
 //     {i:'c12',x:10,y:2,w:1,h:1,content:['Full-Stack Track - One Million Arab Coders - Python','Fra/26/Feb/2018'],hash:12,static:true},
 //     {i:'c13',x:11,y:2,w:1,h:1,content:['Full-Stack Track - One Million Arab Coders - Git','Sun/18/Mar/2018'],hash:13,static:true},
 //     {i:'c14',x:12,y:2,w:1,h:1,content:['Full-Stack Track - One Million Arab Coders - Final Assessment','Mon/02/Apr/2018'],hash:14,static:true},
+
 //     {i:'c15',x:8,y:0,w:1,h:1,content:['English Language Training in AMIDEAST','Mon/05/Mar/2018'],hash:15,static:true},
 //     {i:'c16',x:5,y:1,w:1,h:1,content:['English Language Training in AMIDEAST','Mon/05/Mar/2018'],hash:15,static:true},
 //     ];
