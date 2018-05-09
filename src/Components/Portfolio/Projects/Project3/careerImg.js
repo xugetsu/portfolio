@@ -1,6 +1,6 @@
 import React from 'react';
 import career from '../../../../Assets/Images/career.PNG';
-const career = () => <img style={{maxWidth:'500px'}} src={career} alt='game 2048 ultra'/>;
+const careerImg = () => <img  style={{maxWidth:'100%'}}  src={career} alt='game 2048 ultra'/>;
 
-export default gifGame2048;
+export default careerImg;
 
