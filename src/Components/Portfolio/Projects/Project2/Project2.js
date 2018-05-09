@@ -15,16 +15,17 @@ const project1 = () => {
             <div style={{height:'500px',width:'500px'}}>
                 <Gif />
             </div>
-            <article>
+            <article className= {styles.Article}>
                 <div className= {styles.TryIt}>
-                    <a  rel='noopener noreferrer' target='_blank' href='https://xugetsu.github.io/Burger-Builder/'><img  src={redirect} /></a>
-                    <span>try it!</span>
+                    <a  rel='noopener noreferrer' target='_blank' href='https://xugetsu.github.io/Burger-Builder/'><img  src={redirect} />
+                    <span>proceed to the project</span></a>
                 </div>
                 <h2>Burger Builder App</h2>  
-                <p>This project was developed through a  
-                    <a rel='noopener noreferrer' target='_blank' href='https://www.udemy.com/react-the-complete-guide-incl-redux/?couponCode=ACADEMIND_REACT'> React tutorial</a> made by the react developer 
+                <p>I have built this project throughout a  
+                    <a rel='noopener noreferrer' target='_blank' href='https://www.udemy.com/react-the-complete-guide-incl-redux/?couponCode=ACADEMIND_REACT'> React Course</a> made by the react developer 
                     <a rel='noopener noreferrer' target='_blank' href='https://www.udemy.com/user/maximilian-schwarzmuller/'> Maximilian Schwarzmüller</a> 
                 </p>
+                <p>This project is a great evidence of my skills in using React with advanced features like form validation, routing, single page application, redux and how to reach out to the web with react applications.</p>
                 <p><b>Development State : </b>Under construction</p>
             </article>
         </div>
