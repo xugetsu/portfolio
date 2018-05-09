@@ -7,26 +7,32 @@ import CommitWrapper from './CommitDetails/CommitWrapper';
 import CommitsData from './CommitDetails/CommitsData';
 class MyCareer extends Component {
     state = {
-        hash: 'w5'
+        commitInfo:{
+            hash:'m1',
+            content:['Robot Design Improvement','Sun/01/Jan/2017']
+        }
     }
 
-    loadCommitLog = (hash) =>   this.setState({hash: hash});
-    generateBranchData = (branchName, branchData, type = 'master', x0, y0, _w0 = 1, h0 = 1) => {
+    loadCommitLog = (commitInfo) =>   this.setState({commitInfo: commitInfo});
+    generateBranchData = (branchName, branchData, type = 'master', x0, _y0, _w0 = 1, h0 = 1) => {
             const branch = Object.keys(branchData).map(
                 (commitKey, index, kayArray) => {
-                    let w0 = _w0;
+                    let y0 = _y0;
                     let commitForm = 'normal';
                     const date = branchData[commitKey].date;
                     const title = branchData[commitKey].title;
                     if(type !== 'master' && (index === 0 || index === (kayArray.length - 1))) {
-                        w0 = 2;
-                        commitForm = type === 'newBranchUp' ? index === 0 ? 'branch0' : 'branch1'
-                                                            : index === 0 ? 'branch1' : 'branch0'; }
+             
+                        commitForm = type === 'branchUp' ? index === 0 ? 'branch1' : 'branch0'
+                                                         : index === 0 ? 'branch0' : 'branch1';
+
+                        y0 = (type === 'branchUp') ? _y0  : _y0 + 1;
+                    }                                  
                     return {branchName: branchName,
                             i: commitKey, 
                             content: [title,date],
                             commitForm: commitForm, 
-                            x:x0+index, y:y0, w:w0, h:h0, 
+                            x:x0+index, y:y0, w:_w0, h:h0, 
                             static: true}
             });
         return branch;
@@ -51,11 +57,11 @@ class MyCareer extends Component {
             <h1>My Career Repository</h1>
             <CommitsGraph   currentHash = {hash} 
                             layout = {this.generateLayoutData(CommitsData)} 
-                            loadCommitLog = {(hash) => this.loadCommitLog(hash)}/>
-            {/* <CommitWrapper 
-                title={CommitsData[hash-1].content[0]} 
-                date= {CommitsData[hash-1].content[1]} 
-                hash = {hash} />  */}
+                            loadCommitLog = {(commitInfo) => this.loadCommitLog(commitInfo)}/>
+            <CommitWrapper 
+                title={this.state.commitInfo.content[0]} 
+                date= {this.state.commitInfo.content[1]} 
+                hash = {this.state.commitInfo.hash} /> 
         </div>
         );
     }
