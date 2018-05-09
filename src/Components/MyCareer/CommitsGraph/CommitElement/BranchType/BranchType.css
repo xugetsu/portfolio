@@ -3,6 +3,7 @@
     display: inline-block;
     position: relative; 
     margin-bottom: 0px; 
+    margin-right: 20px;
     z-index: 0;
 }
 
@@ -12,9 +13,19 @@
     right: -13px;
     top: 12px;
 }
+
 .BranchButtonBottom{
     position: absolute;
     z-index: 10;
-    right: -2px;
+    right: 2px;
     bottom: -1px;
 }
+
+.FlipX{
+  transform:rotateX(180deg);
+}
+
+.FlipXY{
+  transform: rotateX(180deg) rotateY(180deg);
+}
+

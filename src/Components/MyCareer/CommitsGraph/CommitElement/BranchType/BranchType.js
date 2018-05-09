@@ -17,11 +17,12 @@ const branchType = (props) => {
                                                 content = {props.content} 
                                                 active  = {props.active}
                                                 clicked = {props.clicked} /> 
-    const flip = {transform: (props.branchType === 'branch1' ? 'rotateX(0)' : 'rotateX(180deg)')};
+    const imgStyles = [styles.ImgBranch, (props.branchType ==='branch1' ? styles.FlipXY : styles.FlipX)].join(' ');// loool flipxy this how it works for the best branch chape  shhhh...
+
     return( 
         <div key={props.key} className= {styles.Branch} style={props.inlineStyle}>
             {_Button}
-            <div style={flip}>
+            <div className={imgStyles}>
                 <img    draggable = {false}  
                         alt='' 
                         src={branchsrc} 

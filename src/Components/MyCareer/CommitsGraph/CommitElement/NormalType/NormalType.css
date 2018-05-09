@@ -9,6 +9,6 @@
 .NormalButton{
     position: absolute;
     z-index: 10;
-    right: 0;
+    right: 2px;
     bottom: -10px;
 }
