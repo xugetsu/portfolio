@@ -9,7 +9,10 @@ const spinner = (props) => {
         return <div>Error!</div>;
     }else if(props.timedOut) {
         // When the loader has taken longer than the timeout
-        return <div>Taking a long time...</div>;
+        return (<div className={classes.Spinner}>
+                    <div className={classes.Loader}></div>
+                    <div>Taking a long time to load ...</div>
+                </div>);
     }else if(props.pastDelay) {
         // When the loader has taken longer than the delay
         return (<div className={classes.Spinner}>
