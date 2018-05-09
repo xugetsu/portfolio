@@ -3,7 +3,7 @@
     width: 500px;
 }
 .Project1 article {
-    background: rgba(26, 26, 26, 0.534);
+    background: rgb(27, 27, 27);
     padding: 20px;
 }
 .Project1 article b {
@@ -21,3 +21,20 @@
     object-fit: fill;
     margin: 0 auto;
   }
+
+  .TryIt{
+    float: right;
+    cursor: pointer;
+}
+.TryIt span{
+   visibility: hidden;
+   opacity: 0;
+   transition: all 0.5s ease-in-out;
+}
+.TryIt img{
+    height: 30px;
+}
+.TryIt:hover span{
+    opacity: 1;
+    visibility: visible;
+}
