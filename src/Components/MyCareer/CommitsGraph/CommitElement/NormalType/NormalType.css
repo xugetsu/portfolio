@@ -1,0 +1,14 @@
+.NormalType{
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    box-sizing: border-box;
+    border-bottom: 5px solid #ff7b00;
+}
+
+.NormalButton{
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: -10px;
+}
