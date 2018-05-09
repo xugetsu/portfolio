@@ -3,38 +3,48 @@
     width: 500px;
 }
 .Project1 article {
-    background: rgb(27, 27, 27);
+    background: rgb(26, 26, 26);
     padding: 20px;
 }
 .Project1 article b {
-    color: rgb(0, 231, 193);
+    color: #008cff
 }
 .Project1 h2{
   margin-top: 0; 
 }
 .Project1 a{
     text-decoration: none;
-    color: darkseagreen;
+    color: rgb(255, 208, 0);
+}
+.Project1 a span{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
 .Project1 img {
     display: block;
     object-fit: fill;
     margin: 0 auto;
   }
-
-  .TryIt{
-    float: right;
+.Article{
+    position: relative;
+}
+.Article h2{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.TryIt{
+    position: absolute;
+    right: 20px;
+    top: 20px; 
     cursor: pointer;
+    border: 1px solid white;
+    transition: all 0.3s ease-in-out;
+    padding: 5px;
 }
-.TryIt span{
-   visibility: hidden;
-   opacity: 0;
-   transition: all 0.5s ease-in-out;
-}
+
 .TryIt img{
     height: 30px;
 }
-.TryIt:hover span{
-    opacity: 1;
-    visibility: visible;
+.TryIt:hover{
+    border: 1px solid #008cff;
 }

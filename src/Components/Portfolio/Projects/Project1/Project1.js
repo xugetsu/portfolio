@@ -15,10 +15,10 @@ const project1 = () => {
             <div style={{height:'450px',width:'500px'}}>
                 <Gif />
             </div>
-            <article>
+            <article className= {styles.Article}>
                 <div className= {styles.TryIt}>
-                <a  rel='noopener noreferrer' target='_blank' href='https://my-2048-game-with-react.firebaseapp.com/'><img  src={redirect} /></a>
-                    <span>try it!</span>
+                    <a  rel='noopener noreferrer' target='_blank' href='https://my-2048-game-with-react.firebaseapp.com/'><img  src={redirect} />
+                    <span>proceed to the project</span></a>
                 </div>
                 <h2>2048 Game Ultra</h2>
                 <p>This project was developed to put the knowledge and skills I've learned into practice
