@@ -7,13 +7,13 @@ import CommitWrapper from './CommitDetails/CommitWrapper';
 import CommitsData from './CommitDetails/CommitsData';
 class MyCareer extends Component {
     state = {
-        commitInfo:{
+        currentCommit:{
             hash:'w1',
             content:['Robot Design Improvement','Sun/01/Jan/2017']
-        }
+        },
     }
 
-    loadCommitLog = (commitInfo) =>   this.setState({commitInfo: commitInfo});
+    loadCommitLog = (currentCommit) => this.setState({currentCommit: currentCommit});
     generateBranchData = (branchName, branchData, type = 'master', _x0, _y0, _w0 = 1, h0 = 1) => {
             const branch = Object.keys(branchData).map(
                 (commitKey, index, kayArray) => {
@@ -52,20 +52,19 @@ class MyCareer extends Component {
         return layout;
     }
     render () {
-        const hash =this.state.hash;
         return (
         <div id='MyCareer' className= {styles.MyCareer}>
         
             <img className= {styles.GitSvm} src={gitsvm} alt='Git'/>
 
             <h1>My Career Repository</h1>
-            <CommitsGraph   currentHash = {hash} 
+            <CommitsGraph   currentHash = {this.state.currentCommit.hash} 
                             layout = {this.generateLayoutData(CommitsData)} 
-                            loadCommitLog = {(commitInfo) => this.loadCommitLog(commitInfo)}/>
+                            loadCommitLog = {(currentCommit) => this.loadCommitLog(currentCommit)}/>
             <CommitWrapper 
-                title={this.state.commitInfo.content[0]} 
-                date= {this.state.commitInfo.content[1]} 
-                hash = {this.state.commitInfo.hash} /> 
+                title={this.state.currentCommit.content[0]} 
+                date= {this.state.currentCommit.content[1]} 
+                hash = {this.state.currentCommit.hash} /> 
         </div>
         );
     }
