@@ -1,17 +1,27 @@
 import React from 'react';
 import CommitStyles from './CommitElement.css';
 import BranchStyles from './BranchElement.css';
-import newbranch from '../../../../Assets/Icons/svgs/branch.svg';
-
+import Branch from './branch';
 const commit = (props) =>{
-    const width = props.commit.w*props.width + 'px';
-    const color = props.commit.y ? (commit.y === 1 ? '#ff3c00' : '#ff5c50' ) : null;  
-    const classStyle = (props.commit.i[0] === 'c') ? CommitStyles : BranchStyles;
-    const newBranch = (props.commit.i[0] === 'c') ? null :
-                  <img draggable = {false}  alt='' src={newbranch} width={props.width} height={60}/>;
-    const inlineStyle = {borderBottomColor:color?color:'#ff7b00',width:width?width:'50px'};
+
+    let color = null;
+    switch (props.commit.branchName){
+        case  "master": color = '#ffa600'; break;
+        case  "webDev": color = '#ff3c00'; break;
+        case  "amideast": color = '#0077ff'; break;
+        default: color = '#111';
+    }
+    const inlineStyle = {borderBottomColor:color, width: props.width};
+
+    let classStyle = CommitStyles;
+    let newBranch = null;
+    if(props.elementForm !== "normal"){
+        classStyle =  BranchStyles;
+        newBranch = <Branch color = {color} width={props.width} branchType={props.elementForm}/>;
+    }
+   
     return (
-        <div className= {classStyle.Commit} style={inlineStyle}>
+        <div key={props.key} className= {classStyle.Commit} style={inlineStyle}>
             <span onClick = {props.clicked} 
                   style={{background:props.active ? '#0099ff':'#2b2b2b',
                           transform: props.active ? 'scale(1.2)':''}}>
@@ -23,3 +33,4 @@ const commit = (props) =>{
         </div> );
 } 
 export default commit;
+
