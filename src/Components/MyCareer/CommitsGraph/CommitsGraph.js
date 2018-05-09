@@ -3,7 +3,7 @@ import styles from './CommitsGraph.css';
 import GridLayout from 'react-grid-layout';
 import Draggable from 'react-draggable';
 import CommitElement from './CommitElement/CommitElement';
-import Branch from './CommitElement/branch';
+
 const commitsGraph = (props) => {
     const gridWidth = 50; // grid Width
     const rowHeight = 55; // grid Height you can't change the height until you fix branch svg's relation between its height and width
