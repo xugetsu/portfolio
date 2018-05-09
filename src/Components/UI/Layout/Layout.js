@@ -11,15 +11,20 @@ class Layout extends Component{
         this.myRef = React.createRef();
         this.state = {
           shrink: false,
-          open: false
+          open: false,
+          elementOffsetTop: null,
+          currentActive: -1,
         }
+    }
+    componentDidMount(){
+        const elementOffsetTop = ['GeneralInfo','MyCareer','Competence','Portfolio','Contact'].map(
+            id => document.getElementById(id).offsetTop);
+            this.setState({elementOffsetTop:elementOffsetTop});
     }
 
     navigateTo = (i) => {
         const scrollbars = this.myRef.current;
-        const elementIds = ['GeneralInfo','MyCareer','Competence','Portfolio','Contact'];
-        const elementOffsetTop =document.getElementById(elementIds[i]).offsetTop;
-            scrollbars.scrollTop(elementOffsetTop - 50); // 50 is the height of the NavBar
+        scrollbars.scrollTop(this.state.elementOffsetTop[i] - 50); // 50 is the height of the NavBar
     }
 
     HandelScroll = () => {
@@ -30,6 +35,17 @@ class Layout extends Component{
         if(scrollbars.getScrollTop() < 50 && this.state.shrink){
             this.setState({shrink:false});
         }
+        // if(scrollbars.getScrollTop() < this.state.elementOffsetTop[2] && scrollbars.getScrollTop() > this.state.elementOffsetTop[1] && this.state.currentActive !== 1){
+        //     this.setState({currentActive:1});
+        // }else if(scrollbars.getScrollTop() < this.state.elementOffsetTop[3] && scrollbars.getScrollTop() > this.state.elementOffsetTop[2] && this.state.currentActive !== 2){
+        //     this.setState({currentActive:2});
+        // }else if(scrollbars.getScrollTop() < this.state.elementOffsetTop[4] && scrollbars.getScrollTop() > this.state.elementOffsetTop[3] && this.state.currentActive !== 3){
+        //     this.setState({currentActive:3});
+        // }else if( scrollbars.getScrollTop() > this.state.elementOffsetTop[4] && this.state.currentActive !== 4){
+        //     this.setState({currentActive:4});
+        // }else{
+        //     null;
+        // }
     }
     closeSideDrawerHandler = () => {
         this.setState({open: false});
@@ -38,6 +54,7 @@ class Layout extends Component{
         this.setState({open: true});
     }
     render(){
+        // console.log(this.state.currentActive);
         return (
             <SpringScrollbars   ref={this.myRef}  
                                 onScroll = {this.HandelScroll} 
@@ -48,6 +65,7 @@ class Layout extends Component{
             {/*----------------------Children-------------------------*/}   
                 <NavBar navigateTo = {(i) => this.navigateTo(i)} 
                         shrink = {this.state.shrink} 
+                        currentActive = {this.state.currentActive}
                         showDrawer = {this.openSideDrawerHandler}/>
                 <SideDrawer open={this.state.open} 
                             navigateTo = {(i) => this.navigateTo(i)}
