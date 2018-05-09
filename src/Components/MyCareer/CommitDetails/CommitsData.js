@@ -2,15 +2,13 @@ const commitsData = {
     master:{ 
         commits:{
             m1:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
-            m2:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
-            m3:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
-            m4:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
-            m5:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
-            m6:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
-            m7:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
-            m8:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
-            m9:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
-            m10:{title:'Robot Design Improvement', date:'Sun/01/Jan/2017'},
+            m2:{title:'Robot path optimization ', date:'Sun/01/Jan/2017'},
+            m3:{title:'Robot command Algorithme optimization ', date:'Sun/01/Jan/2017'},
+            m4:{title:'Robot Animation and mouvement validation', date:'Sun/01/Jan/2017'},
+            m5:{title:'Start Learning Java ', date:'Sun/01/Jan/2017'},
+            m6:{title:'Start Developping A Java Software for Robot mouvement data generation', date:'Sun/01/Jan/2017'},
+            m7:{title:'Start Learning Java 3D ', date:'Sun/01/Jan/2017'},
+            m8:{title:'Start Developping A Java Software for 3D Robot mouvement Simulation', date:'Sun/01/Jan/2017'},
         },
         config:{
             branchType: 'master',
