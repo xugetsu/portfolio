@@ -5,7 +5,7 @@ import Spinner from '../../../Spinner/Spinner';
 
 const project1 = () => {
     const Gif = Loadable({
-        loader: () => import('./GifGame2048'),
+        loader: () => import('./careerImg'),
         loading: () => Spinner,
         delay: 10,
         });
