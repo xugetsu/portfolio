@@ -1,10 +1,11 @@
 import React from 'react';
-const commit9 = () => {
+import omac from '../../../../../Assets/Images/omac.png';
+const commit = () => {
     return (
         <article>
-            <p>Start Learning Python via Udacity NanoDegree Full-Stack Track - One Million Arab Coders.
-            <br /> <br />More details coming soon.</p>
+            <p><br /> <br />More details coming soon.</p>
+            <img style={{height:'250px',display:'block',margin:'10px auto 50px auto'}}src={omac} />
         </article>
     );
 }
-export default commit9;
+export default commit;

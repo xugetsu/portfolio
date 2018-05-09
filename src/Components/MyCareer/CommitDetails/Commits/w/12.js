@@ -4,8 +4,8 @@ import html5 from '../../../../../Assets/Icons/pngs/html5.png';
 const commit1 = () => {
     return (
         <article>
-            <p>Start Developping My web Page.           
-                <br /> <br />More details coming soon.</p>
+            <p>          
+                <br /> <br />Good News !! Your are already inside my website :D</p>
         </article>
     );
 }

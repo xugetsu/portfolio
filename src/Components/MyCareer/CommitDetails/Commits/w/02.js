@@ -5,7 +5,7 @@ const commit6 = () => {
         <article>
             <p>Starting learning Cascading Style Sheets (CSS).
             <br /> <br />Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
-            <img style={{display:'block',margin:'10px auto'}} src={css3} height={200} alt='css3' />
+            <img style={{height:'150px',display:'block',margin:'10px auto'}} src={css3} height={200} alt='css3' />
         </article>
     );
 }
