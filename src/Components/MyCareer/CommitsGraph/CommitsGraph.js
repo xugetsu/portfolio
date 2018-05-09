@@ -16,7 +16,7 @@ const commitsGraph = (props) => {
     const commitInfoa3 = {hash:commita3.i,content:commita3.content};
     const commitElementa1  = <CommitElement commit = {commita1} 
                                             clicked = {() => props.loadCommitLog(commitInfoa1)}
-                                            width = { commita1.w * gridWidth + 'px'}
+                                            width = { commita1.w* gridWidth + 'px'}
                                             Height = {rowHeight}
                                             active = {commita1.i === props.currentHash}
                                             elementForm = {commita1.commitForm}/>;
@@ -29,19 +29,22 @@ const commitsGraph = (props) => {
 
     const commits = layout.map( commit => {
         let elementWidth = commit.w * gridWidth + 'px';
-        if( commit.i === 'a2'  ){
-             elementWidth = 2* gridWidth + 'px' ;
-        }
+        // if( commit.i === 'a2'  ){
+        //      elementWidth = 2* gridWidth + 'px' ;
+        // }
         const commitInfo = {hash:commit.i,content:commit.content};
-        const commita1 = commit.i === 'm7' ? commitElementa1 : null;    
-        const commita3 = commit.i === 'm10' ? commitElementa3 : null; 
-        const commitx  = (commit.i === 'a1' || commit.i === 'a3' )? null : <CommitElement  commit = {commit} 
-                                                        clicked = {() => props.loadCommitLog(commitInfo)}
-                                                        width = {elementWidth}
-                                                        Height = {rowHeight}
-                                                        active = {commit.i === props.currentHash}
-                                                        elementForm = {commit.commitForm}
-                                                        />
+        const commita1 = commit.i === 'm13' ? commitElementa1 : null;    
+        const commita3 = commit.i === 'm15' ? commitElementa3 : null; 
+        const commitx  = (commit.i === 'a1' || commit.i === 'a3' )?
+                            null
+                            : <CommitElement  commit = {commit} 
+                                        clicked = {() => props.loadCommitLog(commitInfo)}
+                                        width = {elementWidth}
+                                        Height = {rowHeight}
+                                        Btn = {commit.btn}
+                                        active = {commit.i === props.currentHash}
+                                        elementForm = {commit.commitForm}
+                            />
         return  <div key={commit.i} style={{position:'relative'}}>
                     <div style={{position:'absolute',bottom:'-5px'}}>{commita1}</div>
                     <div style={{position:'absolute',bottom:'-8px'}}>{commita3}</div>
@@ -53,7 +56,7 @@ const commitsGraph = (props) => {
         <div className={styles.CommitsGraph} >
             <Draggable  handle=".handle"
                         defaultPosition={{x: -100, y: 0 }}
-                        bounds={{bottom: 0, left: -400, right: 0, top: 0}}
+                        bounds={{bottom: 0, left: -1000, right: 0, top: -50}}
                         position={null}
                         onStart={this.handleStart} 
                         onDrag={this.handleDrag} 

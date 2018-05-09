@@ -17,6 +17,7 @@ const commit = (props) =>{
         commitElement = <BranchType key={props.key}
                                     inlineStyle = {inlineStyle}
                                     color = {color}
+                                    Btn = {props.Btn}
                                     branchType = {props.elementForm}
                                     active  = {props.active}
                                     clicked = {props.clicked}
@@ -24,6 +25,7 @@ const commit = (props) =>{
     }else{
         commitElement = <NormalType key={props.key}
                                     inlineStyle = {inlineStyle} 
+                                    Btn = {props.Btn}
                                     active  = {props.active}
                                     clicked = {props.clicked}
                                     content = {props.commit.content[1].slice(4)}/>;

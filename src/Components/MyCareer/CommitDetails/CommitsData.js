@@ -5,10 +5,19 @@ const commitsData = {
             m2:{title:'Robot path optimization ', date:'Sun/01/Jan/2017'},
             m3:{title:'Robot command Algorithme optimization ', date:'Sun/01/Jan/2017'},
             m4:{title:'Robot Animation and mouvement validation', date:'Sun/01/Jan/2017'},
-            m5:{title:'Start Learning Java ', date:'Sun/01/Jan/2017'},
-            m6:{title:'Start Developping A Java Software for Robot mouvement data generation', date:'Sun/01/Jan/2017'},
-            m7:{title:'Start Learning Java 3D ', date:'Sun/01/Jan/2017'},
-            m8:{title:'Start Developping A Java Software for 3D Robot mouvement Simulation', date:'Sun/01/Jan/2017'},
+            m5:{title:'Start Learning Java ', date:'Sat/04/Mar/2017'},
+            m6:{title:'Start Developping A Java Software for Robot mouvement data generation', date:'Tue/04/Apr/2017'},
+            m7:{title:'Start Learning Java 3D ', date:'Sun/09/Sep/2017'},
+            m8:{title:'SOLIDWORKS - CSWP CERTIFICATE - ', date:'Fri/06/Oct/2017'},
+            m9:{title:'Start Developping A Java Software for 3D Robot mouvement Simulation', date:'Thu/12/Oct/2017'},
+            m10:{title:'SOLIDWORKS PROFESSIONAL - Mold Making CERTIFICATE - ', date:'Mon/04/Dec/2017'},
+            m11:{title:'SOLIDWORKS PROFESSIONAL - Weldments CERTIFICATE - ', date:'Tue/27/Feb/2018'},
+            m12:{title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018',w:6},
+            m13:{title:'', date:'',x:17,w:1,btn:false},
+            m14:{title:'', date:'',x:18,w:1,btn:false},
+            m15:{title:'', date:'',x:19,w:1,btn:false},
+            m16:{title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018',x:20,w:1},
+            m17:{title:'English Language Training in AMIDEAST - Certification', date:'Wed/02/May/2018',x:21,w:2},
         },
         config:{
             branchType: 'master',
@@ -30,23 +39,23 @@ const commitsData = {
             w10:{title:'Taking The Final Assessment (Full-Stack Track - One Million Arab Coders) ', date:'Mon/02/Apr/2018'},
             w11:{title:'Start Developping A React App through tutorials', date:'Wed/04/Apr/2018'},
             w12:{title:'Start Developping My web Page', date:'Thu/26/Apr/2018'},
-            w13:{title:'Start Looking for a Job !', date:'Thu/26/Apr/2018'},
+            w13:{title:'Start Looking for a Job !', date:'Thu/10/May/2018',btn:false},
         },
         config:{
             branchType: 'branchUp',
-            startPoint:5,
+            startPoint:9,
             rowLevel:3
         }
     },
     amideast:{
         commits:{
             a1:{title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018'},
-            a2:{title:'English Language Training in AMIDEAST - Exam',  date:'Mon/20/Nov/2017'},
-            a3:{title:'English Language Training in AMIDEAST - Certification',  date:'Mon/20/Nov/2017'},
+            a2:{title:'English Language Training in AMIDEAST - Exam',  date:'Tue/24/Apr/2018'},
+            a3:{title:'English Language Training in AMIDEAST - Certification',  date:'Wed/02/May/2018',btn:false},
         },
         config:{
             branchType: 'branchDown',
-            startPoint:6,
+            startPoint:17,
             rowLevel: 1
         } 
     },

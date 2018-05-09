@@ -2,6 +2,7 @@
 .Branch{
     display: inline-block;
     position: relative; 
+    margin-bottom: 0px; 
     z-index: 0;
 }
 
@@ -9,11 +10,11 @@
     position: absolute;
     z-index: 10;
     right: -13px;
-    top: 13px;
+    top: 12px;
 }
 .BranchButtonBottom{
     position: absolute;
     z-index: 10;
-    right: 0;
-    bottom: -2px;
+    right: -2px;
+    bottom: -1px;
 }

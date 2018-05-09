@@ -13,15 +13,14 @@ const branchType = (props) => {
         case '#0077ff': branchsrc = branchSVGBlue;   break;
         default: branchsrc = branchSVGYellow;  break;
     }
+    const _Button = !props.Btn ? null: <Button className= {props.branchType === 'branch1' ? styles.BranchButtonBottom : styles.BranchButtonTop}
+                                                content = {props.content} 
+                                                active  = {props.active}
+                                                clicked = {props.clicked} /> 
     const flip = {transform: (props.branchType === 'branch1' ? 'rotateX(0)' : 'rotateX(180deg)')};
     return( 
         <div key={props.key} className= {styles.Branch} style={props.inlineStyle}>
-
-            <Button className= {props.branchType === 'branch1' ? styles.BranchButtonBottom : styles.BranchButtonTop}
-                    content = {props.content} 
-                    active  = {props.active}
-                    clicked = {props.clicked} /> 
-
+            {_Button}
             <div style={flip}>
                 <img    draggable = {false}  
                         alt='' 

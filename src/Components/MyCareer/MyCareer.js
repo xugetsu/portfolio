@@ -8,16 +8,19 @@ import CommitsData from './CommitDetails/CommitsData';
 class MyCareer extends Component {
     state = {
         commitInfo:{
-            hash:'m1',
+            hash:'w1',
             content:['Robot Design Improvement','Sun/01/Jan/2017']
         }
     }
 
     loadCommitLog = (commitInfo) =>   this.setState({commitInfo: commitInfo});
-    generateBranchData = (branchName, branchData, type = 'master', x0, _y0, _w0 = 1, h0 = 1) => {
+    generateBranchData = (branchName, branchData, type = 'master', _x0, _y0, _w0 = 1, h0 = 1) => {
             const branch = Object.keys(branchData).map(
                 (commitKey, index, kayArray) => {
                     let y0 = _y0;
+                    const btn = branchData[commitKey].btn === undefined ? true : false;
+                    const x0 = branchData[commitKey].x === undefined ? _x0 + index :  branchData[commitKey].x;
+                    const w0 = branchData[commitKey].w === undefined ? _w0 : branchData[commitKey].w ;
                     let commitForm = 'normal';
                     const date = branchData[commitKey].date;
                     const title = branchData[commitKey].title;
@@ -32,7 +35,8 @@ class MyCareer extends Component {
                             i: commitKey, 
                             content: [title,date],
                             commitForm: commitForm, 
-                            x:x0+index, y:y0, w:_w0, h:h0, 
+                            x:x0, y:y0, w:w0, h:h0, 
+                            btn: btn,
                             static: true}
             });
         return branch;
