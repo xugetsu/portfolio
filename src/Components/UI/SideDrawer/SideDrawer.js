@@ -18,7 +18,7 @@ const sideDrawer = (props) => {
                     <button onClick={() => props.navigateTo(4)}>Contact</button>
                 </nav>
                 <div className= {styles.MyLogoRaw}>
-                    <MyLogo height = {200} width={250} id={2}
+                    <MyLogo height = {150} width={200} id={2}
                                 openTagStopColor1='#2989d8'  openTagStopColor2='#2bade7'
                                 closeTagStopColor1='#00bcf2' closeTagStopColor2='#2bade7'
                                 slashStopColor1='#ebebeb'    slashStopColor2='#888888' />

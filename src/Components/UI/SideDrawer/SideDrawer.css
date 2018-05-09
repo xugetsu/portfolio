@@ -12,7 +12,9 @@
     box-sizing: border-box;
     transition: transform 0.3s ease-out; 
 }
-
+.MyLogoRaw{
+    width: 80%;
+}
 .SideDrawer nav{
     display: flex;
     flex-flow: column;

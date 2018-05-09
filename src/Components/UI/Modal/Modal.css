@@ -50,3 +50,12 @@
       opacity: 1;
     }
   }
+
+  
+@media(max-width:500px){
+    .Modal{
+        width: 90%;
+        left: 5%;
+    }  
+    
+}

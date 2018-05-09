@@ -6,6 +6,15 @@
     align-self: center;
     font-family: "Century Gothic";
 }
+
+.ContactData h1{
+    font-size: 30px;
+    font-family: "Century Gothic";
+}
+.ContactData h2{
+    font-family: "Century Gothic";
+    color: rgb(0, 121, 143);
+}
 @media(max-width:950px){
     .ContactData{
         grid-column: 2/4;
@@ -21,15 +30,11 @@
         width: 90%;
     }
 }
-.ContactData h1{
-    font-size: 30px;
-    font-family: "Century Gothic";
+@media(max-width:430px){
+    .ContactData h1{
+        font-size: 25px;
+    }
 }
-.ContactData h2{
-    font-family: "Century Gothic";
-    color: rgb(0, 121, 143);
-}
-
 .Button{
     outline: none;
     border: none;

@@ -1,7 +1,7 @@
 .Contact{
     display: grid;
     grid-template-columns: 30vw 400px 20vw; 
-    grid-template-rows: 50px 200px 220px 80px 40px; 
+    grid-template-rows: 50px 200px 300px 100px 40px; 
     padding: 20px 20px 0 20px;
     text-align: start;
     background: #282c31;
@@ -98,7 +98,7 @@
     .Contact{
         display: grid;
         grid-template-columns: 80vw 0 0; 
-        grid-template-rows: 50px 200px 450px  80px 200px; 
+        grid-template-rows: 50px 200px 500px  80px 200px; 
     }
     .Contact h1{
         grid-column: 1 / 2;
@@ -120,5 +120,8 @@
     .Footer{
         grid-column: 1 / 2;
         grid-row: 6 / 7 ;
+    }
+    .Social a{
+        margin: 3px;
     }
 }

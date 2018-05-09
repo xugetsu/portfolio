@@ -12,15 +12,15 @@ const project1 = () => {
 
     return (
         <div className= {styles.Project1}>
-            <div style={{height:'450px',width:'500px'}}>
+            <div style={{height:'100%',width:'100%'}}>
                 <Gif />
             </div>
             <article className= {styles.Article}>
+                <h2>2048 Game Ultra</h2>
                 <div className= {styles.TryIt}>
                     <a  rel='noopener noreferrer' target='_blank' href='https://my-2048-game-with-react.firebaseapp.com/'><img  src={redirect} />
                     <span>proceed to the project</span></a>
                 </div>
-                <h2>2048 Game Ultra</h2>
                 <p>This project was developed to put the knowledge and skills I've learned into practice
                 <br/>Inspired by the <a target="_blank" rel="noopener noreferrer" href='http://2048game.com/'>original game</a>, I've developped my own game logic from scratch using the JavaScript library React.js</p> 
                 <p><b>Development State : </b>Under construction</p>

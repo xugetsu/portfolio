@@ -12,7 +12,7 @@ const project1 = () => {
 
     return (
         <div className= {styles.Project1}>
-            <div style={{height:'500px',width:'500px'}}>
+            <div style={{height:'100%',width:'100%'}}>
                 <Gif />
             </div>
             <article className= {styles.Article}>

@@ -2,6 +2,7 @@
     text-align: left;
     width: 500px;
 }
+
 .Project1 article {
     background: rgb(26, 26, 26);
     padding: 20px;
@@ -16,10 +17,7 @@
     text-decoration: none;
     color: rgb(255, 208, 0);
 }
-.Project1 a span{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
+
 .Project1 img {
     display: block;
     object-fit: fill;
@@ -37,14 +35,37 @@
     right: 20px;
     top: 20px; 
     cursor: pointer;
-    border: 1px solid white;
+    border: 1px solid #ccc9c9;
+    color: #ccc9c9;
     transition: all 0.3s ease-in-out;
     padding: 5px;
 }
-
+.TryIt span{
+    transition: all 0.3s ease-in-out;
+    color: #ccc9c9;
+}
+.TryIt:hover span{
+    color: #ffffff;
+}
 .TryIt img{
     height: 30px;
 }
 .TryIt:hover{
-    border: 1px solid #008cff;
+    border: 1px solid #ffffff;
+}
+
+@media(max-width:500px){
+    .Project1{
+        width: 100%;
+    }  
+    .TryIt{
+        border: none;
+    }
+    .TryIt span{
+        display: none;
+    }
+    .Article h2{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 }
