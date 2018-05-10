@@ -1,19 +1,41 @@
 import React, {Component} from 'react';
 import styles from './MyCareer.css';
 import gitsvm from '../../Assets/Icons/pngs/gitsvm.png';
-
 import CommitsGraph from './CommitsGraph/CommitsGraph';
 import CommitWrapper from './CommitDetails/CommitWrapper';
 import CommitsData from './CommitDetails/CommitsData';
 class MyCareer extends Component {
+
     state = {
+        loading:true,
         currentCommit:{
+            rank:10,
             hash:'w01',
-            content:['Robot Design Improvement','Sun/01/Jan/2017']
+            content:['Start learning HTML','Thu/16/Nov/2017']
         },
+        layout:null,
+        commitsLog: null,
     }
 
-    loadCommitLog = (currentCommit) => this.setState({currentCommit: currentCommit});
+    componentDidMount(){
+        const layout = this.generateLayoutData(CommitsData);
+        const commitsLog = this.generateCommitsLog(layout);
+        this.setState({
+            loading: false,
+            layout: layout,
+            commitsLog: commitsLog,
+        });
+    }
+
+    generateCommitsLog = (layout) => {
+        const commitsLog = Array(27).fill();
+        for( let i = 1; i <= 27; i++ ){
+            const commit = layout.find( e => e.rank === i);
+            commitsLog[i] = {content:commit.content, hash:commit.i, rank:i};
+        }
+        return commitsLog.slice(1);
+    }
+    loadCommitLog = (rank) =>  this.setState({currentCommit: this.state.commitsLog[rank-1]});
     generateBranchData = (branchName, branchData, type = 'master', _x0, _y0, _w0 = 1, h0 = 1) => {
             const branch = Object.keys(branchData).map(
                 (commitKey, index, kayArray) => {
@@ -33,6 +55,7 @@ class MyCareer extends Component {
                     }                                  
                     return {branchName: branchName,
                             i: commitKey, 
+                            rank: branchData[commitKey].rank,
                             content: [title,date],
                             commitForm: commitForm, 
                             x:x0, y:y0, w:w0, h:h0, 
@@ -51,20 +74,43 @@ class MyCareer extends Component {
         ).reduce( (currentElement, outputArray) => outputArray.concat(currentElement) ,[]);
         return layout;
     }
+
+    nextCommitHandler = () => {
+        if(this.state.currentCommit.rank === 27){
+            return null;
+        }else{
+            this.setState({
+                currentCommit: this.state.commitsLog[this.state.currentCommit.rank]
+            });
+        }
+    }
+
+    prevCommitHandler = () => {
+        if(this.state.currentCommit.rank === 1){
+            return null;
+        }else{
+            this.setState({
+                currentCommit: this.state.commitsLog[this.state.currentCommit.rank - 2]
+            });
+        }
+    }
     render () {
+        console.log(this.state.currentCommit);
+        const commitGraph = this.state.loading ? null 
+            : <CommitsGraph currentHash = {this.state.currentCommit.hash} 
+                            layout = {this.state.layout} 
+                            loadCommitLog = {(currentCommit) => this.loadCommitLog(currentCommit)}/>;
         return (
         <div id='MyCareer' className= {styles.MyCareer}>
-        
             <img className= {styles.GitSvm} src={gitsvm} alt='Git'/>
-
             <h1>My Career Repository</h1>
-            <CommitsGraph   currentHash = {this.state.currentCommit.hash} 
-                            layout = {this.generateLayoutData(CommitsData)} 
-                            loadCommitLog = {(currentCommit) => this.loadCommitLog(currentCommit)}/>
+            {commitGraph}
             <CommitWrapper 
                 title={this.state.currentCommit.content[0]} 
                 date= {this.state.currentCommit.content[1]} 
-                hash = {this.state.currentCommit.hash} /> 
+                hash = {this.state.currentCommit.hash} 
+                prevCommit = {this.prevCommitHandler}
+                nextCommit = {this.nextCommitHandler}/> 
         </div>
         );
     }

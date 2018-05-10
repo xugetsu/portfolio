@@ -3,6 +3,8 @@ import styles from './CommitWrapper.css';
 import CustomScrollbars from '../../UI/CustomScrollbars/CustomScrollbars';
 import Loadable from 'react-loadable';
 import Spinner from '../../Spinner/Spinner';
+import next from '../../../Assets/Icons/svgs/next.svg';
+import prev from '../../../Assets/Icons/svgs/prev.svg';
 
 const commitWrapper = (props) => {
     const Commit = Loadable({
@@ -22,7 +24,11 @@ const commitWrapper = (props) => {
     });
     const date= props.date;
     return (
-        <div className={styles.CommitWrapper} >                
+        <div className={styles.CommitWrapper} >            
+            <div className={styles.ButtonWrapper} >
+                <button onClick={props.prevCommit}><img width='30px' src={prev}/></button>  
+                <button onClick={props.nextCommit}><img width='30px' src={next}/></button>         
+            </div>    
             <h2 className={styles.Message}> {props.title} 
                 <span>
                     {'On, '+date.slice(0,3)+'. '+date.slice(4,6)+' '+date.slice(7,10)+', '+date.slice(11)}

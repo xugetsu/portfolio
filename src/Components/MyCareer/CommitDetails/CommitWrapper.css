@@ -1,4 +1,5 @@
 .CommitWrapper{
+    position: relative;
     overflow: hidden;
     border-radius: 10px;
     float: left;
@@ -36,6 +37,34 @@
     text-align: left;
 }
 
+.ButtonWrapper{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+}
+.ButtonWrapper button{
+    border-style: none;
+    background: #00000023;
+    cursor: pointer;
+    padding: 5px 20px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    
+}
+.ButtonWrapper button:hover{
+    background: #52525238;
+}
+/* .ButtonWrapper button:hover::after{
+   content: 'dd';
+   position: absolute;
+   bottom: -10px;
+   left: 20px;
+} */
+.ButtonWrapper button:active{
+    transform: translate(2px,2px);
+}
 @media(max-width:740px){
     .CommitWrapper{
         float: none;
