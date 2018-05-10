@@ -11,7 +11,8 @@ class MyCareer extends Component {
         currentCommit:{
             rank:10,
             hash:'w01',
-            content:['Start learning HTML','Thu/16/Nov/2017']
+            content:['Start learning HTML','Thu/16/Nov/2017'],
+            x: 10
         },
         layout:null,
         commitsLog: null,
@@ -33,7 +34,7 @@ class MyCareer extends Component {
         const commitsLog = Array(27).fill();
         for( let i = 1; i <= 27; i++ ){
             const commit = layout.find( e => e.rank === i);
-            commitsLog[i] = {content:commit.content, hash:commit.i, rank:i};
+            commitsLog[i] = {content:commit.content, hash:commit.i, rank:i,x:commit.x };
         }
         return commitsLog.slice(1);
     }
@@ -100,6 +101,7 @@ class MyCareer extends Component {
        // console.log(this.state.currentCommit);
         const commitGraph = this.state.loading ? null 
             : <CommitsGraph currentHash = {this.state.currentCommit.hash} 
+                            currentCommit = {this.state.currentCommit} 
                             layout = {this.state.layout} 
                             loadCommitLog = {(currentCommit) => this.loadCommitLog(currentCommit)}/>;
         return (
