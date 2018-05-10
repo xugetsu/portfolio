@@ -20,6 +20,8 @@ class MyCareer extends Component {
     componentDidMount(){
         const layout = this.generateLayoutData(CommitsData);
         const commitsLog = this.generateCommitsLog(layout);
+       // console.log('layout',layout);
+        //console.log('commitsLog',commitsLog);
         this.setState({
             loading: false,
             layout: layout,
@@ -95,7 +97,7 @@ class MyCareer extends Component {
         }
     }
     render () {
-        console.log(this.state.currentCommit);
+       // console.log(this.state.currentCommit);
         const commitGraph = this.state.loading ? null 
             : <CommitsGraph currentHash = {this.state.currentCommit.hash} 
                             layout = {this.state.layout} 

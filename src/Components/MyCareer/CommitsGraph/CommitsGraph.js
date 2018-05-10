@@ -36,6 +36,7 @@ const commitsGraph = (props) => {
         let isActive = commit.i === props.currentHash;
         if(commit.i === 'm12' ){isActive = props.currentHash === 'a01' ? true : false };
         if(commit.i === 'm16' ){isActive = props.currentHash === 'a03' ? true : false };
+        if(commit.i === 'm17' ){isActive = props.currentHash === 'w13' ? true : false };
         const commitx  = (commit.i === 'a01' || commit.i === 'a03' )?
                             null
                             : <CommitElement  commit = {commit} 
