@@ -24,6 +24,7 @@
     display: flex;
     align-content: center;
     justify-content: flex-start;
+    transition: margin 0.3s ease-in-out;
 }
 .Draggable{
     display: flex;

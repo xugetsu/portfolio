@@ -53,7 +53,7 @@ const commitsGraph = (props) => {
                     {commitx}
                 </div>;
      });
-
+    const currentDraggableXPosition = props.currentCommit.x < 3 ? 0 : - 50*(props.currentCommit.x - 3);
     return (
         <div className={styles.CommitsGraph} >
             <Draggable  handle=".handle"
@@ -63,12 +63,15 @@ const commitsGraph = (props) => {
                         onStart={this.handleStart} 
                         onDrag={this.handleDrag} 
                         onStop={this.handleStop}>
-                <div className={['handle', styles.Handle].join(' ')}>
+                <div className={['handle', styles.Handle].join(' ')}
+                style={{marginLeft:currentDraggableXPosition}}
+                >
                     <GridLayout margin = {[0,0]} 
                                 layout = {layout} 
                                 cols = {layout.length} 
                                 rowHeight = {rowHeight} 
                                 width = {layout.length*gridWidth} >
+                                
                         {commits}
                     </GridLayout>   
                 </div>
