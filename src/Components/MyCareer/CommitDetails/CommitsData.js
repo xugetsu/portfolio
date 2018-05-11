@@ -22,7 +22,7 @@ const commitsData = {
         config:{
             branchType: 'master',
             startPoint:0,
-            rowLevel:2
+            rowLevel:1
         }
     },
     webDev:{
@@ -44,7 +44,7 @@ const commitsData = {
         config:{
             branchType: 'branchUp',
             startPoint:9,
-            rowLevel:3
+            rowLevel:2
         }
     },
     amideast:{
@@ -56,7 +56,7 @@ const commitsData = {
         config:{
             branchType: 'branchDown',
             startPoint:17,
-            rowLevel: 1
+            rowLevel: 0
         } 
     },
 };
