@@ -19,7 +19,7 @@ const project1 = () => {
                 <h2>My Creer Repository</h2>
                 <p>A creative way to represent my career progress
                 <br/><br/>
-                I just started developping this project (started in 1 May 2018) 
+                 I started developping this project in 1 May 2018
                  and it will have more awsome updates very soon. Stay tuned ;) ..
                  <br/><br/><b>Development State : </b>Under construction<br/></p>
             </article>
