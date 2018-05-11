@@ -1,11 +1,14 @@
 .CommitWrapper{
+    grid-column: 1/2;
+    grid-row: 2/4;
+    height: 300px;
+    width: 50vw;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     float: left;
     margin: 20px auto;
-    width: 55%;
-    height: 500px;
+    height: 550px;
     background: rgba(70, 70, 70, 0.267);
     box-sizing: border-box;  
 }
