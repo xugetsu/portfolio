@@ -63,4 +63,6 @@
 }
 @media(max-width:450px){
     .AboutMe ul{font-size: 15px;}
+    .AboutMe { width: 100%;}
+    
 }

@@ -15,6 +15,11 @@
     height: 100%;
     background: rgba(30, 143, 255, 0.151);
 }
+@media(max-width:400px){
+    .Portfolio{
+        padding: 20px 0;
+    }
+}
 /* 
 .blur {
     box-shadow: 0 0 10px 0.1px;

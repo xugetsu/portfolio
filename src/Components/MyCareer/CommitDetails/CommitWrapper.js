@@ -17,7 +17,7 @@ const commitWrapper = (props) => {
         timeout: 10000, // 10 seconds
         render(loaded, props){
             let LoadedComponent = loaded.default;
-            return  (<CustomScrollbars scrollId={props.hash} width = {'100%'} height={'380px'} zIndex={2} >
+            return  (<CustomScrollbars scrollId={props.hash} width = {'auto'} height={'380px'} zIndex={2} >
                         <LoadedComponent />
                     </CustomScrollbars>);
         }

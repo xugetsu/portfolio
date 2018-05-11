@@ -26,5 +26,8 @@
 @media(max-width:640px){
     .GitSvm{
         width: 100px;
-    }  
+    } 
+    .MyCareer{
+        padding: 20px 0;
+    } 
 }

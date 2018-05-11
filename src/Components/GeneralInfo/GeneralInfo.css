@@ -2,6 +2,7 @@
 .GeneralInfoWrapper{
     position: relative;
     background: #282c31;
+    overflow-y: hidden;
 }
 
 .GeneralInfo{
@@ -125,10 +126,19 @@
         justify-self: center;
     }
     .Logo{
-        top: 20px;
+        top: 50px;
     }
 }
-
+@media(max-width:500px){
+    .Logo{
+        transform: scale(0.7);
+    }
+}
+@media(max-width:360px){
+    .Logo{
+        transform: scale(0.5);
+    }
+}
 /* @media(max-width:620px){
     .GeneralInfoWrapper{
         height: calc(1900px - 50vw);
