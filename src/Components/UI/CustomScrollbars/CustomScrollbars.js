@@ -46,7 +46,7 @@ class CustomScrollbars extends Component{
   //  }
 
   render() {
-    const zIndex = this.props.zIndex;
+    const zIndex = this.props.zindex;
     const VerticalThumb = (defaultStyles, props) => <div {...props} 
                                                 onClick = { (e) => e.stopPropagation() }
                                                 className={styles.ThumbVertical} 
