@@ -17,7 +17,7 @@ const commitWrapper = (props) => {
         timeout: 10000, // 10 seconds
         render(loaded, props){
             let LoadedComponent = loaded.default;
-            return  (<CustomScrollbars scrollId={props.hash} width = {'auto'} height={'380px'} zIndex={2} >
+            return  (<CustomScrollbars scrollId={props.hash} width = {'auto'} height={'380px'} zindex={2} >
                         <LoadedComponent />
                     </CustomScrollbars>);
         }
@@ -26,8 +26,8 @@ const commitWrapper = (props) => {
     return (
         <div className={styles.CommitWrapper} >            
             <div className={styles.ButtonWrapper} >
-                <button onClick={props.prevCommit}><img width='30px' src={prev}/></button>  
-                <button onClick={props.nextCommit}><img width='30px' src={next}/></button>         
+                <button onClick={props.prevCommit}><img width='30px' alt='prev' src={prev}/></button>  
+                <button onClick={props.nextCommit}><img width='30px' alt='next' src={next}/></button>         
             </div>    
             <h2 className={styles.Message}> {props.title} 
                 <span>
