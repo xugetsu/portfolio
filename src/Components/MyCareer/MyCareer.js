@@ -4,6 +4,8 @@ import gitsvm from '../../Assets/Icons/pngs/gitsvm.png';
 import CommitsGraph from './CommitsGraph/CommitsGraph';
 import CommitWrapper from './CommitDetails/CommitWrapper';
 import CommitsData from './CommitDetails/CommitsData';
+import GitLog from './GitLog/GitLog';
+
 class MyCareer extends Component {
 
     state = {
@@ -115,6 +117,10 @@ class MyCareer extends Component {
                 hash = {this.state.currentCommit.hash} 
                 prevCommit = {this.prevCommitHandler}
                 nextCommit = {this.nextCommitHandler}/> 
+            <GitLog commitsLog={this.state.commitsLog} 
+                    clicked = {(rank) => this.loadCommitLog(rank)}
+                    currentrank = {this.state.currentCommit.rank} 
+                    />
         </div>
         );
     }
