@@ -29,15 +29,13 @@
         width: 150px;
     }  
     .MyCareer{
-        height:auto;
-    }
+        grid-template-columns: 95vw ;
+        grid-template-rows: 100px 200px 570px 350px;
+    } 
 }
 
 @media(max-width:640px){
     .GitSvm{
         width: 100px;
-    } 
-    .MyCareer{
-        padding: 20px 0;
     } 
 }

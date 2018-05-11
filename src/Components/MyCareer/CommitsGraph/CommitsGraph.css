@@ -38,10 +38,9 @@
 
 @media(max-width:740px){
     .CommitsGraph{
-        width: 95%;
-        float: none;
-        height: 200px;
-        margin: 0 auto;
+        grid-column: 1/3;
+        grid-row: 2/3;
+        width: 95vw;
     }
     .Handle{
         margin-top: -30px; 

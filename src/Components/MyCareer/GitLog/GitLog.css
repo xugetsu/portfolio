@@ -26,3 +26,11 @@
 .Commit:hover{
     background-color: rgba(59, 59, 59, 0.226);
     color: rgba(255, 255, 255, 0.918);}
+
+    @media(max-width:740px){
+        .GitLog{
+            grid-column: 1/3;
+            grid-row: 4/5;
+            width: 95vw;
+        }
+    }
