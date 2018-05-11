@@ -58,7 +58,7 @@ const commitsGraph = (props) => {
         <div className={styles.CommitsGraph} >
             <Draggable  handle=".handle"
                         defaultPosition={{x: 0, y: 0 }}
-                        bounds={{bottom: 0, left: -1000, right: 0, top: -50}}
+                        bounds={{bottom: 0, left: -100, right: 100, top: -50}}
                         position={null}
                         onStart={this.handleStart} 
                         onDrag={this.handleDrag} 

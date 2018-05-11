@@ -5,7 +5,7 @@
     height: 300px;
     overflow: hidden;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.267);
+    background: rgb(40, 40, 43);
     border-left: 10px solid #34486ee0;
     border-right: 10px solid #2a416ca8;
     border-top: 10px solid #2a416c;
@@ -24,7 +24,8 @@
     display: flex;
     align-content: center;
     justify-content: flex-start;
-    transition: margin 0.3s ease-in-out;
+    padding-left: 100px; 
+    transition: margin 0.5s ease-in-out;
 }
 .Draggable{
     display: flex;
@@ -36,7 +37,7 @@
     .CommitsGraph{
         width: 95%;
         float: none;
-        height: 150px;
+        height: 200px;
         margin: 0 auto;
     }
 }
