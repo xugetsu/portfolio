@@ -140,7 +140,7 @@ class ContactData extends Component{
                     });
             contentToDisplay = <form onSubmit = {this.SendMessageHandler}>
                                     <h1>Send Me A Message</h1>
-                                    <CustomScrollbars scrollId={3} height='360px' zIndex={10} width={'100%'}>
+                                    <CustomScrollbars scrollId={3} height='360px' zindex={10} width={'100%'}>
                                         {inputs}
                                     </CustomScrollbars>
                                     <button className={styles.Button}>Send</button>
