@@ -1,8 +1,8 @@
 import React from 'react';
-import branch1 from '../../../../../../Assets/Icons/svgs/branch1.svg';
-import branch2 from '../../../../../../Assets/Icons/svgs/branch2.svg';
-import branch3 from '../../../../../../Assets/Icons/svgs/branch3.svg';
-import branch4 from '../../../../../../Assets/Icons/svgs/branch4.svg';
+import branch1 from '../../../../../../Assets/Icons/svgs/branch0.svg';
+import branch2 from '../../../../../../Assets/Icons/svgs/branch.svg';
+import branch3 from '../../../../../../Assets/Icons/svgs/branch2.svg';
+import branch4 from '../../../../../../Assets/Icons/svgs/branch1.svg';
 import styles from './BranchType.css';
 import Button from '../Button/Button';
 
