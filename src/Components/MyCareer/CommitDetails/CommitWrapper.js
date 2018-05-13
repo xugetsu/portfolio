@@ -26,8 +26,8 @@ const commitWrapper = (props) => {
     return (
         <div className={styles.CommitWrapper} >            
             <div className={styles.ButtonWrapper} >
-                <button onClick={props.prevCommit}><img width='30px' alt='prev' src={prev}/></button>  
-                <button onClick={props.nextCommit}><img width='30px' alt='next' src={next}/></button>         
+                <button onClick={props.prevCommit}><img width='20px' alt='prev' src={prev}/></button>  
+                <button onClick={props.nextCommit}><img width='20px' alt='next' src={next}/></button>         
             </div>    
             <h2 className={styles.Message}> {props.title} 
                 <span>
