@@ -11,8 +11,9 @@ const commit = (props) =>{
         case  "amideast": color = '#0077ff'; break;
         default: color = '#111';
     }
-    const inlineStyle = {borderBottomColor:color, width: props.width};
+    const inlineStyle = {backgroundColor:color, width: props.width};
     let commitElement = null;
+   
     if(props.elementForm !== "normal"){
         commitElement = <BranchType key={props.key}
                                     inlineStyle = {inlineStyle}

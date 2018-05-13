@@ -2,7 +2,7 @@
     position: absolute;
     z-index: 10;
     right: 0;
-    bottom: 0;
+    bottom: 5px;
     width: 15px;
     height: 15px;
     box-sizing: border-box;
@@ -19,6 +19,7 @@
 .Button .Details{
     visibility: hidden;
     position: absolute;
+    z-index: 20;
     bottom: 20px;
     right: -40px;
     min-width: 80px;
@@ -38,6 +39,7 @@
 .Button .Details::after{
         content: '';
         position: absolute;
+        z-index: 20;
         bottom: -14px;
         left: 50%;
         margin-left: -7px;

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styles from './MyCareer.css';
 import gitsvm from '../../Assets/Icons/pngs/gitsvm.png';
-import CommitsGraph from './CommitsGraph/CommitsGraph';
+import Graph from './Graph/Graph';
 import CommitWrapper from './CommitDetails/CommitWrapper';
 import CommitsData from './CommitDetails/CommitsData';
 import GitLog from './GitLog/GitLog';
@@ -14,7 +14,7 @@ class MyCareer extends Component {
             rank:10,
             hash:'w01',
             content:['Start learning HTML','Thu/16/Nov/2017'],
-            x: 10
+            p: 10
         },
         layout:null,
         commitsLog: null,
@@ -36,7 +36,7 @@ class MyCareer extends Component {
         const commitsLog = Array(27).fill();
         for( let i = 1; i <= 27; i++ ){
             const commit = layout.find( e => e.rank === i);
-            commitsLog[i] = {content:commit.content, hash:commit.i, rank:i,x:commit.x };
+            commitsLog[i] = {content:commit.content, hash:commit.i, rank:i,p:(commit.x+commit.w) };
         }
         return commitsLog.slice(1);
     }
@@ -44,7 +44,6 @@ class MyCareer extends Component {
     generateBranchData = (branchName, branchData, type = 'master', _x0, _y0, _w0 = 1, h0 = 1) => {
             const branch = Object.keys(branchData).map(
                 (commitKey, index, kayArray) => {
-                    let y0 = _y0;
                     const btn = branchData[commitKey].btn === undefined ? true : false;
                     const x0 = branchData[commitKey].x === undefined ? _x0 + index :  branchData[commitKey].x;
                     const w0 = branchData[commitKey].w === undefined ? _w0 : branchData[commitKey].w ;
@@ -52,18 +51,16 @@ class MyCareer extends Component {
                     const date = branchData[commitKey].date;
                     const title = branchData[commitKey].title;
                     if(type !== 'master' && (index === 0 || index === (kayArray.length - 1))) {
-             
-                        commitForm = type === 'branchUp' ? index === 0 ? 'branch1' : 'branch0'
-                                                         : index === 0 ? 'branch0' : 'branch1';
+                        commitForm = type === 'branchUp' ? index === 0 ? 'branch0Up' : 'branch1Up'
+                                                         : index === 0 ? 'branch1Down' : 'branch0Down';
 
-                        y0 = (type === 'branchUp') ? _y0  : _y0 + 1;
                     }                                  
                     return {branchName: branchName,
                             i: commitKey, 
                             rank: branchData[commitKey].rank,
                             content: [title,date],
                             commitForm: commitForm, 
-                            x:x0, y:y0, w:w0, h:h0, 
+                            x:x0, y:_y0, w:w0, h:h0, 
                             btn: btn,
                             static: true}
             });
@@ -102,10 +99,10 @@ class MyCareer extends Component {
     render () {
        // console.log(this.state.currentCommit);
         const commitGraph = this.state.loading ? null 
-            : <CommitsGraph currentHash = {this.state.currentCommit.hash} 
-                            currentCommit = {this.state.currentCommit} 
-                            layout = {this.state.layout} 
-                            loadCommitLog = {(currentCommit) => this.loadCommitLog(currentCommit)}/>;
+            : <Graph  currentHash = {this.state.currentCommit.hash} 
+                    currentCommit = {this.state.currentCommit} 
+                    layout = {this.state.layout} 
+                    loadCommitLog = {(currentCommit) => this.loadCommitLog(currentCommit)}/>;
         return (
         <div id='MyCareer' className= {styles.MyCareer}>
             <img className= {styles.GitSvm} src={gitsvm} alt='Git'/>

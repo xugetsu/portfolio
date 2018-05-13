@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" 
+    xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" 
+    width="50" height="55">                                                           
+    <g>
+        <path fill="none" stroke="#ff3c00" stroke-width="6" stroke-linecap="bevel" stroke-linejoin="bevel" opacity="1" 
+            d="M 14.832091331481934 2.6423487663269043 L 10.428183555603027 2.6423487663269043" 
+            transform="matrix(1 0 0 1 35.0256 0.0978649)">
+        </path>
+        <path fill="none" stroke="#ff3c00" stroke-width="6" stroke-linecap="bevel" stroke-linejoin="bevel" opacity="1" 
+            d="M 14.832091331481934 2.6423487663269043 L 10.428183555603027 2.6423487663269043" 
+            transform="matrix(1 0 0 1 -10.09 49.4218)">
+        </path>
+        <path fill="none" stroke="#ff3c00" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="1" 
+            d="M 45.07675552368164 2.499267578125 L 4.733290672302246 51.42732238769531" 
+            transform="matrix(0.999988 -0.00493214 0.00493214 0.999988 -0.244835 0.66079)">
+        </path>
+    </g>
+</svg>

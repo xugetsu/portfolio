@@ -15,7 +15,7 @@ const gitLog = (props) => {
             if(commit.hash[0] === 'w'){ backgroundColor =  '#ff3c0042'}
             if(props.currentrank === commit.rank ){ 
                 if(commit.hash[0] === 'm'){ backgroundColor =  '#fea511'}
-                else if(commit.hash[0] === 'w'){ backgroundColor =  '#ff3c00'}
+                else if(commit.hash[0] === 'w'){ backgroundColor =  '#ff5a00e3'}
                 else { backgroundColor =  '#0077ff'}
             }
             return <div onClick={() => props.clicked(commit.rank)} 

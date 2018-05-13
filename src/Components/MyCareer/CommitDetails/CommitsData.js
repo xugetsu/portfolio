@@ -10,23 +10,24 @@ const commitsData = {
             m07:{rank:7,title:'Start Learning Java 3D ', date:'Sun/09/Sep/2017'},
             m08:{rank:8,title:'SOLIDWORKS - CSWP CERTIFICATE - ', date:'Fri/06/Oct/2017'},
             m09:{rank:9,title:'Start Developping A Java Software for 3D Robot mouvement Simulation', date:'Thu/12/Oct/2017'},
-            m10:{rank:13,title:'SOLIDWORKS PROFESSIONAL - Mold Making CERTIFICATE - ', date:'Mon/04/Dec/2017'},
-            m11:{rank:19,title:'SOLIDWORKS PROFESSIONAL - Weldments CERTIFICATE - ', date:'Tue/27/Feb/2018'},
-            m12:{rank:20,title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018',w:6},
-            m13:{title:'', date:'',x:17,w:1,btn:false},
-            m14:{title:'', date:'',x:18,w:1,btn:false},
-            m15:{title:'', date:'',x:19,w:1,btn:false},
-            m16:{rank:26,title:'English Language Training in AMIDEAST - Certification', date:'Wed/02/May/2018',x:20,w:1},
-            m17:{rank:27,title:'Start Looking for a Job !', date:'Thu/10/May/2018',x:21,w:2},
+            m10:{rank:13,w:4,title:'SOLIDWORKS PROFESSIONAL - Mold Making CERTIFICATE - ', date:'Mon/04/Dec/2017'},
+            m11:{rank:19,w:5,x:13,title:'SOLIDWORKS PROFESSIONAL - Weldments CERTIFICATE - ', date:'Tue/27/Feb/2018'},
+            m12:{rank:20,x:18,title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018'},
+            m13:{title:'', date:'',x:19,btn:false},
+            m14:{title:'', date:'',x:20,btn:false},
+            m15:{title:'', date:'',x:21,btn:false},
+            m16:{rank:26,x:22,title:'English Language Training in AMIDEAST - Certification', date:'Wed/02/May/2018'},
+            m17:{rank:27,x:23,title:'Start Looking for a Job !', date:'Thu/10/May/2018',w:2},
         },
         config:{
             branchType: 'master',
             startPoint:0,
-            rowLevel:1
+            rowLevel:2
         }
     },
     webDev:{
         commits:{
+            w00:{title:'', date:'',btn:false},
             w01:{rank:10,title:'Start learning HTML', date:'Thu/16/Nov/2017'},
             w02:{rank:11,title:'Start learning CSS', date:'Mon/20/Nov/2017'},
             w03:{rank:12,title:'First time developing a website / project portfolio', date:'Fri/01/Dec/2017'},
@@ -44,18 +45,18 @@ const commitsData = {
         config:{
             branchType: 'branchUp',
             startPoint:9,
-            rowLevel:2
+            rowLevel:4
         }
     },
     amideast:{
         commits:{
-            a01:{rank:20,title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018'},
+            a01:{rank:20,title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018',btn:false},
             a02:{rank:24,title:'English Language Training in AMIDEAST - Exam', date:'Tue/24/Apr/2018'},
             a03:{rank:26,title:'English Language Training in AMIDEAST - Certification', date:'Wed/02/May/2018',btn:false},
         },
         config:{
             branchType: 'branchDown',
-            startPoint:17,
+            startPoint:19,
             rowLevel: 0
         } 
     },
