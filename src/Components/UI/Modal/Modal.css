@@ -4,11 +4,12 @@
     left: calc(50% - 250px);
     margin-top: 60px;
     margin-bottom: 50px;
-    background: rgba(36, 36, 36, 0.753);
+    /* background: rgba(36, 36, 36, 0.753); */
     width: 500px;
     box-sizing: border-box;
     transition: all 0.3s ease-out;
     animation: fadeIn 0.3s ease-in-out both;
+    height:130vh;
 }
 
 .ExitBtn{

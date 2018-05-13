@@ -13,7 +13,7 @@ class Modal extends React.Component{
              <Backdrop show = {this.props.show}  
                    clicked = {this.props.exit}>
                 <CustomScrollbars 
-                    scrollId={3} width = {'100vw'} height = {'100vh'} zIndex={110}>
+                    scrollId={3} width = {'100vw'} height = {'100vh'} zindex={110}>
                     <div className = {styles.Modal} 
                          onMouseDown = { (e) => e.stopPropagation() }> 
                         <div className = {styles.ExitBtn} onClick = {this.props.exit}>
