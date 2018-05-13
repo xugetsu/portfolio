@@ -10,13 +10,13 @@ const gitLog = (props) => {
     log = c.map(
         commit => {
             const color = props.currentrank === commit.rank ? '#fff': 'inherit';
-            let backgroundColor = '#006ab142';
-            if(commit.hash[0] === 'm'){ backgroundColor =  '#fbff0042'}
-            if(commit.hash[0] === 'w'){ backgroundColor =  '#ff3c0042'}
+            let backgroundColor = '#8fc3ff29';
+            if(commit.hash[0] === 'm'){ backgroundColor =  '#b4a34e38'}
+            if(commit.hash[0] === 'w'){ backgroundColor =  '#ff937126'}
             if(props.currentrank === commit.rank ){ 
-                if(commit.hash[0] === 'm'){ backgroundColor =  '#fea511'}
-                else if(commit.hash[0] === 'w'){ backgroundColor =  '#ff5a00e3'}
-                else { backgroundColor =  '#0077ff'}
+                if(commit.hash[0] === 'm'){ backgroundColor =  '#fea51180'}
+                else if(commit.hash[0] === 'w'){ backgroundColor =  '#ff5a0080'}
+                else { backgroundColor =  '#0077ff80'}
             }
             return <div onClick={() => props.clicked(commit.rank)} 
                         key={commit.rank} 
