@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" 
+    xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" 
+    width="50" height="55">                                                           
+    <g>
+        <path fill="none" stroke="#0077ff" stroke-width="6" stroke-linecap="bevel" stroke-linejoin="bevel" opacity="1" 
+            d="M 14.8 2.65 L 10.4 2.64" 
+            transform="matrix(1 0 0 1 35 0)">
+        </path>
+        <path fill="none" stroke="#0077ff" stroke-width="6" stroke-linecap="bevel" stroke-linejoin="bevel" opacity="1" 
+            d="M 15 2.65 L 10.4 2.65" 
+            transform="matrix(1 0 0 1 -11 50)">
+        </path>
+        <path fill="none" stroke="#0077ff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="1" 
+            d="M 45 2.5 L 4.7 51.4" 
+            transform="matrix(1 0 0 1 0 0.7)">
+        </path>
+    </g>
+</svg>

@@ -13,7 +13,7 @@
         </path>
         <path fill="none" stroke="#ff3c00" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="1" 
             d="M 45.07675552368164 2.499267578125 L 4.733290672302246 51.42732238769531" 
-            transform="matrix(0.999988 -0.00493214 0.00493214 0.999988 -0.244835 0.66079)">
+            transform="matrix(1 0 0 1 -0.244835 0.66079)">
         </path>
     </g>
 </svg>
