@@ -1,5 +1,4 @@
 .TrackVertical{
-   border-radius:5px !important;
    position:absolute;
    top:0;
    bottom:0;
@@ -8,19 +7,72 @@
    background-color:#1d1d1d00;
    transition: all 0.1s ease-in-out;
 }
+
 .TrackVertical:hover{
   background-color:#1d1d1db6;
 }
+
 .ThumbVertical{
   position:absolute;
-  left: calc(50% - 0.25vw);
-  width: 0.5vw;
+  left: 25%;
+  width: 50%;
   background-color:#328fcd;
-  border-radius:5px !important;
   transition: all 0.1s ease-in-out;
 }
 
-.TrackVertical:hover .ThumbVertical, .ThumbVertical:active{
-    width:1vw;
-     left: calc(50% - 0.5vw); 
- }
+.ThumbVertical, .ThumbVertical:active{
+  left: 0; 
+}
+.TrackVertical:hover, .ThumbVertical, .ThumbVertical:active{
+  width:15px;
+}
+
+
+.TrackVertical1{
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  width: 8px;
+  background-color:#08151b00;
+  transition: all 0.1s ease-in-out;
+}
+.TrackVertical1:hover{
+  background-color:#08151b71;
+}
+.ThumbVertical1{
+  cursor: pointer;
+  position:absolute;
+  left:0;
+  width: 100%;
+  background-color:#ffffff48;
+  transition: all 0.1s ease-in-out;
+}
+.TrackVertical1:hover , .ThumbVertical1:active{
+  width: 15px;
+}
+
+.TrackHorizantal1{
+  cursor: pointer;
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height: 8px;
+  background-color:rgba(0, 45, 63, 0.451);
+  transition: all 0.1s ease-in-out;
+}
+.TrackHorizantal1:hover{
+  background-color:#08151b71;
+}
+.ThumbHorizantal1{
+  position:absolute;
+  bottom:0;
+  height: 100%;
+  background-color:#ffffff48;
+  transition: all 0.1s ease-in-out;
+}
+
+.TrackHorizantal1:hover , .ThumbHorizantal1:active{
+  height: 15px;
+}
