@@ -22,7 +22,7 @@ const commitsData = {
         config:{
             branchType: 'master',
             startPoint:0,
-            rowLevel:2
+            rowLevel:3
         }
     },
     webDev:{
@@ -36,28 +36,30 @@ const commitsData = {
             w06:{rank:16,title:'Start Learning React', date:'Wed/17/Jan/2018'},
             w07:{rank:17,title:'Start Developing my first project with react', date:'Wed/24/Jan/2018'},
             w08:{rank:18,title:'Start Learning Python (Full-Stack Track - One Million Arab Coders)', date:'Fra/26/Feb/2018'},
-            w09:{rank:21,title:'Start Learning Git (Full-Stack Track - One Million Arab Coders)', date:'Sun/18/Mar/2018'},
-            w10:{rank:22,title:'Taking The Final Assessment (Full-Stack Track - One Million Arab Coders) ', date:'Mon/02/Apr/2018'},
-            w11:{rank:23,title:'Start Developping A React App through courses', date:'Wed/04/Apr/2018'},
-            w12:{rank:25,title:'Start Developping My Website', date:'Thu/26/Apr/2018'},
-            w13:{rank:27,title:'Start Looking for a Job !', date:'Thu/10/May/2018',btn:false},
+            w09:{rank:21,w:2,title:'Start Learning Git (Full-Stack Track - One Million Arab Coders)', date:'Sun/18/Mar/2018'},
+            w10:{rank:22,x:20,title:'Taking The Final Assessment (Full-Stack Track - One Million Arab Coders) ', date:'Mon/02/Apr/2018'},
+            w11:{rank:23,x:21,title:'Start Developping A React App through courses', date:'Wed/04/Apr/2018'},
+            w12:{rank:25,x:22,title:'Start Developping My Website', date:'Thu/26/Apr/2018'},
+            w13:{rank:27,x:23,title:'Start Looking for a Job !', date:'Thu/10/May/2018',btn:false},
         },
         config:{
             branchType: 'branchUp',
             startPoint:9,
-            rowLevel:4
+            rowLevel:5
         }
     },
     amideast:{
         commits:{
-            a01:{rank:20,title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018',btn:false},
+            a00:{title:'', date:'',btn:false},
+            a01:{rank:20,title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018'},
             a02:{rank:24,title:'English Language Training in AMIDEAST - Exam', date:'Tue/24/Apr/2018'},
+            a00:{title:'', date:'',btn:false},
             a03:{rank:26,title:'English Language Training in AMIDEAST - Certification', date:'Wed/02/May/2018',btn:false},
         },
         config:{
             branchType: 'branchDown',
             startPoint:19,
-            rowLevel: 0
+            rowLevel: 1
         } 
     },
 };
