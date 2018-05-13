@@ -1,0 +1,32 @@
+.BackgroundImg {
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;   
+}
+
+
+.Ol li{
+    color: #fbff0042;
+    font-weight: 600;
+}
+.Ol li ul li{
+    color: #ddd;
+}
+
+.ImgCont{
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-content: center;
+}
+.ImgCont img{
+    max-width: 30%;
+    margin-left: 10px;
+    max-height: 50px;
+}
