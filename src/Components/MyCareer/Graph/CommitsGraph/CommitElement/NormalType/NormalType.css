@@ -1,14 +1,11 @@
 .NormalType{
-
     height: 5px;
     box-sizing: border-box;
     background-color: #ff7b00;
-    /* border-bottom: 5px solid #ff7b00; */
 }
 
 .NormalButton{
     position: absolute;
     z-index: 10;
-    right: 2px;
     bottom: -10px;
 }
