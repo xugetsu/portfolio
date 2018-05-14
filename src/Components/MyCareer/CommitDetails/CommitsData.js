@@ -10,14 +10,10 @@ const commitsData = {
             m07:{rank:7,title:'Start Learning Java 3D ', date:'Sun/09/Sep/2017'},
             m08:{rank:8,title:'SOLIDWORKS - CSWP CERTIFICATE - ', date:'Fri/06/Oct/2017'},
             m09:{rank:9,title:'Start Developping A Java Software for 3D Robot mouvement Simulation', date:'Thu/12/Oct/2017'},
-            m10:{rank:13,w:4,title:'SOLIDWORKS PROFESSIONAL - Mold Making CERTIFICATE - ', date:'Mon/04/Dec/2017'},
-            m11:{rank:19,w:5,x:13,title:'SOLIDWORKS PROFESSIONAL - Weldments CERTIFICATE - ', date:'Tue/27/Feb/2018'},
-            m12:{rank:20,x:18,title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018'},
-            m13:{title:'', date:'',x:19,btn:false},
-            m14:{title:'', date:'',x:20,btn:false},
-            m15:{title:'', date:'',x:21,btn:false},
-            m16:{rank:26,x:22,title:'English Language Training in AMIDEAST - Certification', date:'Wed/02/May/2018'},
-            m17:{rank:27,x:23,title:'Start Looking for a Job !', date:'Thu/10/May/2018',w:2},
+            m10:{rank:13,w:4,btn:'end',title:'SOLIDWORKS PROFESSIONAL - Mold Making CERTIFICATE', date:'Mon/04/Dec/2017'},
+            m11:{rank:19,w:6,btn:'end',x:13,title:'SOLIDWORKS PROFESSIONAL - Weldments CERTIFICATE', date:'Tue/27/Feb/2018'},
+            m12:{w:4,x:19,btn:false,title:'English Language Training in AMIDEAST - Certification', date:'Wed/02/May/2018'},
+            m13:{rank:26,btn:'start',x:23,title:'English Language Training in AMIDEAST - Certification', date:'Wed/02/May/2018'},
         },
         config:{
             branchType: 'master',
@@ -36,30 +32,32 @@ const commitsData = {
             w06:{rank:16,title:'Start Learning React', date:'Wed/17/Jan/2018'},
             w07:{rank:17,title:'Start Developing my first project with react', date:'Wed/24/Jan/2018'},
             w08:{rank:18,title:'Start Learning Python (Full-Stack Track - One Million Arab Coders)', date:'Fra/26/Feb/2018'},
-            w09:{rank:21,w:2,title:'Start Learning Git (Full-Stack Track - One Million Arab Coders)', date:'Sun/18/Mar/2018'},
+            w09:{rank:20,w:2,title:'Start Learning Git (Full-Stack Track - One Million Arab Coders)', date:'Sun/18/Mar/2018'},
             w10:{rank:22,x:20,title:'Taking The Final Assessment (Full-Stack Track - One Million Arab Coders) ', date:'Mon/02/Apr/2018'},
             w11:{rank:23,x:21,title:'Start Developping A React App through courses', date:'Wed/04/Apr/2018'},
             w12:{rank:25,x:22,title:'Start Developping My Website', date:'Thu/26/Apr/2018'},
-            w13:{rank:27,x:23,title:'Start Looking for a Job !', date:'Thu/10/May/2018',btn:false},
+            w13:{x:23,title:'', date:'',btn:false},
         },
         config:{
             branchType: 'branchUp',
             startPoint:9,
-            rowLevel:5
+            rowLevel:5,
+            open:true,
         }
     },
     amideast:{
         commits:{
             a00:{title:'', date:'',btn:false},
-            a01:{rank:20,title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018'},
+            a01:{rank:21,title:'English Language Training in AMIDEAST', date:'Mon/05/Mar/2018'},
             a02:{rank:24,title:'English Language Training in AMIDEAST - Exam', date:'Tue/24/Apr/2018'},
             a00:{title:'', date:'',btn:false},
-            a03:{rank:26,title:'English Language Training in AMIDEAST - Certification', date:'Wed/02/May/2018',btn:false},
+            a03:{btn:false,title:'English Language Training in AMIDEAST - Certification', date:'Wed/02/May/2018' },
         },
         config:{
             branchType: 'branchDown',
             startPoint:19,
-            rowLevel: 1
+            rowLevel: 1,
+            open:false,
         } 
     },
 };
