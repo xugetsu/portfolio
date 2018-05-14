@@ -9,12 +9,15 @@
 }
 
 
-.Ol li{
-    color: #fbff0042;
+.Ul li{
+    color: #00b7ff;
     font-weight: 600;
 }
-.Ol li ul li{
+.Ul li ul li{
     color: #ddd;
+    list-style: none;
+    font-family: "Century Gothic";
+    font-weight: 400;
 }
 
 .ImgCont{
@@ -26,7 +29,7 @@
     align-content: center;
 }
 .ImgCont img{
-    max-width: 30%;
+    max-width: 40%;
     margin-left: 10px;
     max-height: 50px;
 }
