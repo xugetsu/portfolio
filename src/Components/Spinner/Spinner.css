@@ -1,20 +1,20 @@
-.Spinner{
+.LoaderContainer{
   height: 100%;
 }
 
-.Spinner p{
+.LoaderContainer p{
     color: rgb(255, 255, 255);
     text-align: center;
     font-weight: bold;
     font-size: 26px;
  }
- .Spinner .Loader,
- .Spinner .Loader:after {
+ .LoaderContainer .Loader,
+ .LoaderContainer .Loader:after {
   border-radius: 50%;
   width: 10em;
   height: 10em;
 }
-.Spinner .Loader {
+.LoaderContainer .Loader {
   margin: 60px auto;
   font-size: 10px;
   position: relative;
