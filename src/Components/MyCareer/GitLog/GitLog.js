@@ -30,7 +30,7 @@ const gitLog = (props) => {
     return (
         <div className= {styles.GitLog}>
          <h4>$ Career log --all --oneline </h4>
-            <CustomScrollbars  style1 width= '100%'  height= '280px' zindex={10}>
+            <CustomScrollbars  style1 width= '100%'  height= '300px' zindex={10}>
                 {log}
            </CustomScrollbars>
         </div>

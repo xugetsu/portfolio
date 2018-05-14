@@ -16,7 +16,7 @@
     width: 120px;
 }
 .GitLog h4{
-    padding-left: 20px;
+    margin: 0 10px 10px 0;
     font-family: monospace;
 }
 .Commit{
