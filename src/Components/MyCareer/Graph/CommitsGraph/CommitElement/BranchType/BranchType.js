@@ -8,10 +8,12 @@ import Button from '../Button/Button';
 
 const branchType = (props) => {
     let branchsrc = null; 
-    const _Button = !props.Btn ? null: <Button className= {props.branchType === 'branch1' ? styles.BranchButtonBottom : styles.BranchButtonTop}
+    const btnStyles = (props.branchType ==='branch0Up' || 
+                        props.branchType ==='branch1Up' ) ? styles.ButtonTop : styles.ButtonBottom;
+    const _Button = !props.Btn ? null: <Button  className = {btnStyles}
                                                 content = {props.content} 
                                                 active  = {props.active}
-                                                clicked = {props.clicked} /> 
+                                                clicked = {props.clicked}/> 
     const imgStyles = (props.branchType ==='branch0Up' || props.branchType ==='branch1Up' ) ? styles.ImgBranchUp : styles.ImgBranchDown ;
    
     if(props.branchType ==='branch0Up' || props.branchType ==='branch0Down' ){
