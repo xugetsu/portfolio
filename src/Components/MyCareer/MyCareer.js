@@ -33,26 +33,26 @@ class MyCareer extends Component {
     }
 
     generateCommitsLog = (layout) => {
-        const commitsLog = Array(27).fill();
-        for( let i = 1; i <= 27; i++ ){
+        const commitsLog = Array(26).fill();
+        for( let i = 1; i <= 26; i++ ){
             const commit = layout.find( e => e.rank === i);
             commitsLog[i] = {content:commit.content, hash:commit.i, rank:i,p:(commit.x+commit.w) };
         }
         return commitsLog.slice(1);
     }
     loadCommitLog = (rank) =>  this.setState({currentCommit: this.state.commitsLog[rank-1]});
-    generateBranchData = (branchName, branchData, type = 'master', _x0, _y0, _w0 = 1, h0 = 1) => {
+    generateBranchData = (branchName, branchData, type = 'master', _x0, _y0,open = true, _w0 = 1, h0 = 1) => {
             const branch = Object.keys(branchData).map(
                 (commitKey, index, kayArray) => {
-                    const btn = branchData[commitKey].btn === undefined ? true : false;
+                    const btn = branchData[commitKey].btn === undefined ? 'middle' : branchData[commitKey].btn;
                     const x0 = branchData[commitKey].x === undefined ? _x0 + index :  branchData[commitKey].x;
                     const w0 = branchData[commitKey].w === undefined ? _w0 : branchData[commitKey].w ;
                     let commitForm = 'normal';
                     const date = branchData[commitKey].date;
                     const title = branchData[commitKey].title;
                     if(type !== 'master' && (index === 0 || index === (kayArray.length - 1))) {
-                        commitForm = type === 'branchUp' ? index === 0 ? 'branch0Up' : 'branch1Up'
-                                                         : index === 0 ? 'branch1Down' : 'branch0Down';
+                        commitForm = type === 'branchUp' ? index === 0 ? 'branch0Up' : open? 'normal':'branch1Up'
+                                                         : index === 0 ? 'branch1Down' : open? 'normal':'branch0Down';
 
                     }                                  
                     return {branchName: branchName,
@@ -67,18 +67,20 @@ class MyCareer extends Component {
         return branch;
     }
     generateLayoutData = (CommitsData) =>{
-        const layout = Object.keys(CommitsData).map(
-            branchKey => this.generateBranchData(branchKey,
-                                                 CommitsData[branchKey].commits,
-                                                 CommitsData[branchKey].config.branchType,
-                                                 CommitsData[branchKey].config.startPoint,
-                                                 CommitsData[branchKey].config.rowLevel)
+        const layout = Object.keys(CommitsData).map(branch =>
+               this.generateBranchData( branch,
+                                        CommitsData[branch].commits,
+                                        CommitsData[branch].config.branchType,
+                                        CommitsData[branch].config.startPoint,
+                                        CommitsData[branch].config.rowLevel,
+                                        CommitsData[branch].config.open)
         ).reduce( (currentElement, outputArray) => outputArray.concat(currentElement) ,[]);
+        console.log(layout);
         return layout;
     }
 
     nextCommitHandler = () => {
-        if(this.state.currentCommit.rank === 27){
+        if(this.state.currentCommit.rank === 26){
             return null;
         }else{
             this.setState({
@@ -98,26 +100,31 @@ class MyCareer extends Component {
     }
     render () {
        // console.log(this.state.currentCommit);
-        const commitGraph = this.state.loading ? null 
+        const graph = this.state.loading ? null 
             : <Graph  currentHash = {this.state.currentCommit.hash} 
                     currentCommit = {this.state.currentCommit} 
                     layout = {this.state.layout} 
                     loadCommitLog = {(currentCommit) => this.loadCommitLog(currentCommit)}/>;
         return (
         <div id='MyCareer' className= {styles.MyCareer}>
+
             <img className= {styles.GitSvm} src={gitsvm} alt='Git'/>
+
             <h1>My Career Repository</h1>
-            {commitGraph}
+
+            {graph}
+
             <CommitWrapper 
-                title={this.state.currentCommit.content[0]} 
-                date= {this.state.currentCommit.content[1]} 
+                title = {this.state.currentCommit.content[0]} 
+                date = {this.state.currentCommit.content[1]} 
                 hash = {this.state.currentCommit.hash} 
                 prevCommit = {this.prevCommitHandler}
-                nextCommit = {this.nextCommitHandler}/> 
+                nextCommit = {this.nextCommitHandler} /> 
+
             <GitLog commitsLog={this.state.commitsLog} 
                     clicked = {(rank) => this.loadCommitLog(rank)}
-                    currentrank = {this.state.currentCommit.rank} 
-                    />
+                    currentrank = {this.state.currentCommit.rank} />
+
         </div>
         );
     }
