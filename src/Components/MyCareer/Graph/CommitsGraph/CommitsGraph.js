@@ -13,12 +13,6 @@ class CommitsGraph extends Component {
     const commits = layout.map( commit => {
         let elementWidth = commit.w * gridWidth + 'px';
         let isActive = commit.i === this.props.currentHash;
-        switch (commit.i) {
-            case 'm12':isActive = this.props.currentHash === 'a01' ? true : false; break;
-            case 'm16':isActive = this.props.currentHash === 'a03' ? true : false; break;
-            case 'm17':isActive = this.props.currentHash === 'w13' ? true : false; break;
-            default: break;
-        }
         return (<div key={commit.i} style={{position:'relative'}}>
                     <CommitElement
                             commit = {commit} 
