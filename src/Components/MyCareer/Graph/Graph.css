@@ -1,4 +1,4 @@
-.CommitsGraph{
+.Graph{
     grid-column: 2/3;
     grid-row: 2/3;
     margin-top: 20px;
@@ -8,27 +8,37 @@
     position: relative;
     overflow: hidden;
     /* border-radius: 10px; */
-    background: rgb(40, 40, 43);
+    background: rgb(50, 50, 53);
     /* border-left: 10px solid #34486ee0;
     border-right: 10px solid #2a416ca8;
     border-top: 10px solid #2a416c;
     border-bottom: 10px solid #324d80ad; */
     box-sizing: border-box;
+    animation: backgroundColoChange 5s infinite alternate;
 }
 
-.Handle{
+.CommitsGraph{
     cursor: move;
     width: 1500px;
-    height: 100px;
+    height: 230px;
     border-radius: 5px;
-    background: rgb(40, 40, 43);
-    touch-action: none;
-    user-select: none;
-    display: flex;
+    background: linear-gradient(45deg, rgba(43,43,44,0.50) 0%,rgba(43,43,44,0.50) 13%,rgba(43,43,44,0.10) 41%,rgba(42,43,43,0.50) 72%,rgba(42,43,43,0) 100%);    display: flex;
     align-content: center;
     justify-content: flex-start;
     padding-left: 100px; 
     transition: margin 0.5s ease-in-out;
+    
+}
+:rout{
+    --d: rgba(63,76,107,1);
+}
+@keyframes backgroundColoChange{
+    from{
+        background: rgb(30, 40, 75); 
+    }
+    to{
+        background: rgb(44, 44, 44);
+    }
 }
 .Draggable{
     display: flex;
@@ -37,12 +47,12 @@
 }
 
 @media(max-width:740px){
-    .CommitsGraph{
+    .Graph{
         grid-column: 1/3;
         grid-row: 2/3;
         width: 95vw;
     }
-    .Handle{
+    .CommitsGraph{
         margin-top: -30px; 
     }
 }

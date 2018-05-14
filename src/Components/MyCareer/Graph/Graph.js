@@ -7,7 +7,7 @@ const graph = (props) => {
     const p =  props.currentCommit.p;
     const currentDraggableXPosition = (p < 3 )? 0 : - 50*(p  - 3);
     return (
-        <div className={styles.CommitsGraph} >
+        <div className={styles.Graph} >
             <Draggable  handle=".handle"
                         defaultPosition={{x: 0, y:0 }}
                         bounds={{bottom: 0, left: -100, right: 100, top: -30}}
@@ -15,7 +15,7 @@ const graph = (props) => {
                         onStart={this.handleStart} 
                         onDrag={this.handleDrag} 
                         onStop={this.handleStop}>
-                <div className={['handle', styles.Handle].join(' ')}
+                <div className={['handle', styles.CommitsGraph].join(' ')}
                        style={{marginLeft:currentDraggableXPosition}}>                     
                     <CommitsGraph layout = {props.layout}
                                   currentHash = {props.currentHash}
