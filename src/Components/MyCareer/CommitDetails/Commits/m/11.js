@@ -3,8 +3,7 @@ import c from '../../../../../Assets/Images/c1.PNG';
 const commit = () => {
     return (
         <article>
-            <p><br /> <br />More details coming soon.</p>
-            <img style={{height:'300px',display:'block',margin:'10px auto'}}src={c} />
+            <img style={{maxWidth:'100%',display:'block',margin:'10px auto'}}src={c} />
         </article>
     );
 }
