@@ -1,4 +1,4 @@
-.Button{
+.Active, .Button{
     position: absolute;
     z-index: 10;
     right: 0;
@@ -7,13 +7,20 @@
     height: 15px;
     box-sizing: border-box;
     border-radius: 10px;
-    border: 3px solid ghostwhite;
+    border: 2px solid ghostwhite;
     transition: all 0.2s ease-in-out;
+    background: rgb(39, 38, 38);
+    cursor: pointer;
 }
 
-.Button:hover{
-    transform: scale(1.2);
-    cursor: pointer;
+.Active{
+    background: #0099ff;
+    transform: scale( 1);
+    animation: aaa 1s infinite alternate ;
+}
+
+.Active .Details{
+   display: none;
 }
 
 .Button .Details{
@@ -32,10 +39,12 @@
     opacity: 0;
     transition: all 0.2s ease-in-out;
 }
+
 .Button:hover .Details{
    visibility: visible;
    opacity: 1;
 }
+
 .Button .Details::after{
         content: '';
         position: absolute;
@@ -47,3 +56,14 @@
         border-style: solid;
         border-color: #1f88ff transparent transparent
 }  
+
+
+
+@keyframes aaa{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.5);
+    }
+}
