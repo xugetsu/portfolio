@@ -14,14 +14,8 @@ const commitWrapper = (props) => {
         // Issue to fix : Unhandled Rejection when import failed...
         // If we use catch with import as commented above, the error will no longer 
         // transmited to Spinner's props. Which is unwanted behavior.
-        timeout: 10000, // 10 seconds
-        render(loaded, props){
-            let LoadedComponent = loaded.default;
-            return  (<CustomScrollbars scrollId={props.hash} width = {'auto'} height={'380px'} zindex={2} >
-                        <LoadedComponent />
-                    </CustomScrollbars>);
-        }
-    });
+        timeout: 10000, // 10 seconds    
+        });
     const date= props.date;
     return (
         <div className={styles.CommitWrapper} >            
@@ -34,7 +28,10 @@ const commitWrapper = (props) => {
                     {'On, '+date.slice(0,3)+'. '+date.slice(4,6)+' '+date.slice(7,10)+', '+date.slice(11)}
                 </span>
             </h2>
-            <br/> <Commit />
+            <br/> 
+            <CustomScrollbars scrollId={props.hash} width = {'100%'} height={'380px'} zindex={2} >
+              <div style={{height:'400px'}}> <Commit /></div>
+            </CustomScrollbars>          
         </div>
     );      
 }

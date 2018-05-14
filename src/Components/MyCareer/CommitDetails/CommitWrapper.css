@@ -35,11 +35,34 @@
 
 .CommitWrapper article{
     display: block;
-    background: rgba(0, 0, 0, 0.246);
     padding: 10px 20px 50px 20px ;
     text-align: left;
+    font-family: "Century Gothic";
+    font-size: 16px;
 }
 
+.CommitWrapper article{
+    min-height:400px;
+}
+.CommitWrapper article {
+    background: rgb(40, 40, 43);
+    padding: 20px;
+}
+.CommitWrapper article p{
+    font-family: "Century Gothic";
+    font-size: 16px;
+}
+
+.CommitWrapper article b {
+    color: #008cff
+}
+.CommitWrapper article h2{
+  margin-top: 0; 
+}
+.CommitWrapper article a{
+    text-decoration: none;
+    color: rgb(255, 208, 0);
+}
 .ButtonWrapper{
     position: absolute;
     right: 0;
