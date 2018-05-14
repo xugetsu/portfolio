@@ -1,10 +1,13 @@
 import React from 'react';
+import game from '../../../../../Assets/Images/2048b.PNG';
 const commit9 = () => {
     return (
         <article>
-            <p>Start Developing my first project with react.
-            <br /> <br />More details coming soon.</p>
-        </article>
+             <h2>2048 Game Ultra</h2>
+                <p>This project was developed to put the knowledge and skills I've learned into practice
+                <br/>Inspired by the <a target="_blank" rel="noopener noreferrer" href='http://2048game.com/'>original game</a>, I've developped my own game logic from scratch using the JavaScript library React.js</p> 
+                <img src={game} style={{maxWidth:'90%',display:'block',margin:'10px auto'}}/>
+          </article>
     );
 }
 export default commit9;

@@ -9,7 +9,6 @@ const commit = () => {
         <article >
             <div style={{zIndex:1}}>
                 <div className={styles.ImgCont}>
-                    <img src={udacity} />
                     <img src={mac} />
                     <img src={git} />
                 </div>
