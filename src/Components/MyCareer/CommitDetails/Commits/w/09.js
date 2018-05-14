@@ -9,14 +9,14 @@ const commit = () => {
         <article >
             <div style={{zIndex:1}}>
                 <div className={styles.ImgCont}>
-                    <img src={mac} />
                     <img src={git} />
+                    <img src={mac} style={{backgroundColor:'#eee'}}/>
                 </div>
                 <br/>
                 <h3>About this Course</h3>
                 With this course I learned the essentials of using the version control system Git.
                 This course consist of the folowing lessons:
-                <ol className={styles.Ol}>
+                <ul className={styles.Ul}>
                     <li>{'LESSON 1 - Purpose & Terminology'}
                         <ul>
                             <li>Learn why developers use version control and discover ways you use version control in your daily life</li>
@@ -64,7 +64,7 @@ const commit = () => {
                             <li>Use git reset and git revert to undo and erase commits</li>
                         </ul>
                     </li>
-                </ol>
+                </ul>
             </div>
        
         </article>
