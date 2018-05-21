@@ -35,12 +35,12 @@
   bottom:0;
   right:0;
   width: 8px;
-  background-color:#08151b00;
+  background-color:#282b33;
   transition: all 0.1s ease-in-out;
 }
-.TrackVertical1:hover{
-  background-color:#08151b71;
-}
+/* .TrackVertical1:hover{
+  background-color:#213455;
+} */
 .ThumbVertical1{
   cursor: pointer;
   position:absolute;
@@ -60,12 +60,12 @@
   right:0;
   bottom:0;
   height: 8px;
-  background-color:rgba(0, 45, 63, 0.451);
+  background-color:#282b33;
   transition: all 0.1s ease-in-out;
 }
-.TrackHorizantal1:hover{
+/* .TrackHorizantal1:hover{
   background-color:#08151b71;
-}
+} */
 .ThumbHorizantal1{
   position:absolute;
   bottom:0;
