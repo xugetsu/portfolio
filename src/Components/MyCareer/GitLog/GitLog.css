@@ -1,23 +1,23 @@
 .GitLog{
     grid-column: 2/3;
     grid-row: 3/4;
-    width: 45vw;
+    width: 100%;
     height: 350px;
     background-color: #282b33;
     text-align: left;
     font-family: monospace;
-    padding: 10px 0 10px 10px;
+    padding: 0 0 0 3px;
     box-sizing: border-box;
 }
 
 .Commit{
     background: linear-gradient(135deg, #3d464e 0%,#1e5799 100%);
-    border: 1px solid #21263a;
+    border: 1px solid rgb(0, 0, 0);
     position: relative;
     color: #ffffff;
     font-size: 15px;
     padding: 8px 0 5px 0;
-    margin-bottom: 8px;
+    margin-bottom: 3px;
     cursor: pointer;
     width: 100%;
     height: 30px;

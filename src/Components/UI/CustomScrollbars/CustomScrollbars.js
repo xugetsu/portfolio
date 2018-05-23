@@ -70,8 +70,8 @@ class CustomScrollbars extends Component{
                   style={{ width:this.props.width, height: this.props.height}}
                   renderTrackVertical={this.renderTrackV}    
                   renderThumbVertical={this.renderThumbV}
-                  renderThumbHorizontal={this.renderThumbH}
-                  renderTrackHorizontal={this.renderTrackH}    
+                //  renderThumbHorizontal={this.renderThumbH}
+               ///   renderTrackHorizontal={this.renderTrackH}    
                  // onScrollStop ={()=>console.log(this.myRef.current.getValues())}
                   >       
         {this.props.children}

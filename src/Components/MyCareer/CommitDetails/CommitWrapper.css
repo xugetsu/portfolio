@@ -1,22 +1,25 @@
+
 .CommitWrapper{
     grid-column: 1/2;
     grid-row: 2/4;
     height: 300px;
-    width: 50vw;
+    width: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     float: left;
     margin: 20px auto;
     height: 550px;
-    background: rgba(70, 70, 70, 0.267);
-    box-sizing: border-box;  
+    /* background: linear-gradient(135deg, rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%);} */
+    background-image: linear-gradient(to right top, #46505e, #414a57, #3c4450, #373f4a, #323943);
+    /* background-image: linear-gradient(to left bottom, #46505e, #45576f, #425d81, #3f6494, #3c6aa6); */
 }
-
 .CommitWrapper h2{
+    font-size: 20px;
     margin-left:20px;
     margin-right:20px;
 }
+
 .Message{
     position: relative;
     border-bottom: 1px solid #9acd32;
@@ -26,6 +29,7 @@
     padding-bottom: 10px;
     font-weight: normal;
 }
+
 .Message span{
     position: absolute;
     font-size: 15px;
@@ -44,10 +48,12 @@
 .CommitWrapper article{
     min-height:400px;
 }
+
 .CommitWrapper article {
     background: rgb(40, 40, 43);
     padding: 20px;
 }
+
 .CommitWrapper article p{
     font-family: "Century Gothic";
     font-size: 16px;
@@ -56,40 +62,72 @@
 .CommitWrapper article b {
     color: #008cff
 }
+
 .CommitWrapper article h2{
   margin-top: 0; 
 }
+
 .CommitWrapper article a{
     text-decoration: none;
     color: rgb(255, 208, 0);
 }
+
 .ButtonWrapper{
-    position: absolute;
-    right: 0;
-    top: 0;
+    margin-top: 20px; 
     width: auto;
     height: auto;
 }
+
 .ButtonWrapper button{
     border-style: none;
-    background: #00000023;
+    background: #353738;
     cursor: pointer;
-    padding: 5px 20px;
+    padding: 5px 40px;
     outline: none;
+    margin-left: 5px;
     transition: all 0.2s ease-in-out;
-    
+    border-radius: 5px;
 }
+
 .ButtonWrapper button:hover{
-    background: #52525238;
+    background: #414344;
 }
-/* .ButtonWrapper button:hover::after{
-   content: 'dd';
-   position: absolute;
-   bottom: -10px;
-   left: 20px;
-} */
+
 .ButtonWrapper button:active{
     transform: translate(2px,2px);
+}
+
+.Resize{ 
+    border-style: none;
+    background-color: #99cd32d2;
+    width: 30px;
+    height: 70px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 5px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    outline: none;
+}
+
+.Resize:hover{
+    background-color: #99cd32b9;
+}
+
+.Resize::after{
+    content: 'Resize';
+    position: absolute;
+    right:120%;
+    opacity: 0;
+    top: 50%;
+    transition: all 0.5s ease-in-out;
+ }
+
+.Resize:hover::after{
+    opacity: 1;
 }
 @media(max-width:740px){
     .CommitWrapper{

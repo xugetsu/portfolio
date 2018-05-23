@@ -5,11 +5,14 @@ import Graph from './Graph/Graph';
 import CommitWrapper from './CommitDetails/CommitWrapper';
 import CommitsData from './CommitDetails/CommitsData';
 import GitLog from './GitLog/GitLog';
+import next from '../../Assets/Icons/svgs/next.svg';
+import prev from '../../Assets/Icons/svgs/prev.svg';
 
 class MyCareer extends Component {
 
     state = {
         loading:true,
+        resize:false,
         currentCommit:{
             rank:10,
             hash:'w01',
@@ -75,7 +78,7 @@ class MyCareer extends Component {
                                         CommitsData[branch].config.rowLevel,
                                         CommitsData[branch].config.open)
         ).reduce( (currentElement, outputArray) => outputArray.concat(currentElement) ,[]);
-        console.log(layout);
+        //console.log(layout);
         return layout;
     }
 
@@ -98,28 +101,35 @@ class MyCareer extends Component {
             });
         }
     }
+    resizeHandler = () => {
+        this.setState({resize: !this.state.resize});
+    }
+
     render () {
-       // console.log(this.state.currentCommit);
+        // console.log(this.state.currentCommit);
+        const styleClasses = [styles.MyCareer, (this.state.resize ? styles.Resize : '')];
+
         const graph = this.state.loading ? null 
             : <Graph  currentHash = {this.state.currentCommit.hash} 
                     currentCommit = {this.state.currentCommit} 
                     layout = {this.state.layout} 
                     loadCommitLog = {(currentCommit) => this.loadCommitLog(currentCommit)}/>;
         return (
-        <div id='MyCareer' className= {styles.MyCareer}>
-
-            {/* <img className= {styles.GitSvm} src={gitsvm} alt='Git'/> */}
+        <div id='MyCareer' className= {styleClasses.join(' ')}>
 
             <h1>My Career Repository</h1>
 
             {graph}
+    
 
             <CommitWrapper 
                 title = {this.state.currentCommit.content[0]} 
                 date = {this.state.currentCommit.content[1]} 
                 hash = {this.state.currentCommit.hash} 
                 prevCommit = {this.prevCommitHandler}
-                nextCommit = {this.nextCommitHandler} /> 
+                nextCommit = {this.nextCommitHandler}
+                resize = {this.state.resize} 
+                onResize = {this.resizeHandler}/> 
 
             <GitLog commitsLog={this.state.commitsLog} 
                     clicked = {(rank) => this.loadCommitLog(rank)}

@@ -18,20 +18,23 @@ const commitWrapper = (props) => {
         });
     const date= props.date;
     return (
-        <div className={styles.CommitWrapper} >            
-            <div className={styles.ButtonWrapper} >
-                <button onClick={props.prevCommit}><img width='20px' alt='prev' src={prev}/></button>  
-                <button onClick={props.nextCommit}><img width='20px' alt='next' src={next}/></button>         
-            </div>    
+        <div className={styles.CommitWrapper}>             
+            <button className={styles.Resize} onClick = {props.onResize} >
+                   <img width='20px' alt='prev' src={props.resize ? prev : next }/>
+                </button> 
             <h2 className={styles.Message}> {props.title} 
                 <span>
                     {'On, '+date.slice(0,3)+'. '+date.slice(4,6)+' '+date.slice(7,10)+', '+date.slice(11)}
                 </span>
             </h2>
             <br/> 
-            <CustomScrollbars scrollId={props.hash} width = {'100%'} height={'380px'} zindex={2} >
+            <CustomScrollbars scrollId={props.hash} width = {'100%'} height={'340px'} zindex={2} >
               <div style={{height:'400px'}}> <Commit /></div>
-            </CustomScrollbars>          
+            </CustomScrollbars>     
+            <div className={styles.ButtonWrapper} >
+                <button onClick={props.prevCommit}><img width='20px' alt='prev' src={prev}/></button>  
+                <button onClick={props.nextCommit}><img width='20px' alt='next' src={next}/></button>     
+            </div>        
         </div>
     );      
 }
