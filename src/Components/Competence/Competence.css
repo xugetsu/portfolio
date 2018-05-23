@@ -35,6 +35,7 @@
 .Other{
     grid-column: 3 / 4;
     grid-row: 3 / 4; 
+    padding: 1px;
 }
 
 .Basic ul img{
