@@ -24,7 +24,10 @@ const gitLog = (props) => {
                 case 'w': spanBckColor = '#ff3c00'; branchName = 'Web'+'\u00A0'+'development '; break;
                 default:  spanBckColor = '#0077ff'; branchName = 'Languages'; break;
             }
-
+            if (commit.rank === 26){ // well I have no choice here :/ I must fix this particular case soon !!
+                spanBckColor = '#0077ff';
+                branchName = 'Languages';
+            }
             return <div onClick={() => props.clicked(commit.rank)} 
                         key={commit.rank} 
                         className={styles.Commit}
