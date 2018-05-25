@@ -3,9 +3,12 @@ import git from '../../../../../Assets/Icons/pngs/git.png';
 import udacity from '../../../../../Assets/Icons/pngs/udacity.png';
 import mac from '../../../../../Assets/Icons/pngs/1mac.png';
 import styles from '../commonStyles.css';
+import CustomScrollbars from '../../../../UI/CustomScrollbars/CustomScrollbars';
 
-const commit = () => {
+const commit = (props) => {
     return (
+        <CustomScrollbars scrollId={props.hash} width = {'100%'} height={'450px'} zindex={2} >
+
         <article >
             <div style={{zIndex:1}}>
                 <div className={styles.ImgCont}>
@@ -68,6 +71,7 @@ const commit = () => {
             </div>
        
         </article>
+        </CustomScrollbars> 
     );
 }
 export default commit;

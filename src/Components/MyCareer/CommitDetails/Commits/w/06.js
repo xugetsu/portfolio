@@ -1,10 +1,14 @@
 import React from 'react';
-const commit9 = () => {
+import CustomScrollbars from '../../../../UI/CustomScrollbars/CustomScrollbars';
+
+const commit = (props) => {
     return (
-        <article>
-            <p>Start Learning React.
-            <br /> <br />More details coming soon.</p>
-        </article>
+        <CustomScrollbars scrollId={props.hash} width = {'100%'} height={'450px'} zindex={2} >
+            <article>
+                <p>Start Learning React.
+                <br /> <br />More details coming soon.</p>
+            </article>
+        </CustomScrollbars> 
     );
 }
-export default commit9;
+export default commit;

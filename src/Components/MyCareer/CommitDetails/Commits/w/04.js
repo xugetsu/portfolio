@@ -1,10 +1,21 @@
 import React from 'react';
-const commit7 = () => {
-    return (
-        <article>
-            <p>Start learning JavaScript.
-            <br /> <br />More details coming soon.</p>
-        </article>
-    );
+import java from '../../../../../Assets/Icons/svgs/javaScript.svg';
+import styles from '../commonStyles.css';
+import CustomScrollbars from '../../../../UI/CustomScrollbars/CustomScrollbars';
+
+const commit = (props) => {
+  return (
+    <CustomScrollbars scrollId={props.hash} width = {'100%'} height={'450px'} zindex={2} >
+
+    <article className={styles.Article}>
+      <p>After my first try to create a website without JavaScript, 
+        I learned how much important to use Javascript along HTML and CSS.</p>
+      <p>Javascript is like the soul to the webpage. It makes its content dynamic 
+        and interactive with the user. It handles all the logic of the website 
+        and requests and responses from the server.</p>
+      <img style={{height:'150px',display:'block',margin:'10px auto'}} src={java} alt='javascript'/>
+    </article>
+    </CustomScrollbars> 
+  );
 }
-export default commit7;
+export default commit;

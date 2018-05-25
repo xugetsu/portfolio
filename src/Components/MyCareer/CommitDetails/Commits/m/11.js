@@ -1,10 +1,15 @@
 import React from 'react';
 import c from '../../../../../Assets/Images/c1.PNG';
-const commit = () => {
+import CustomScrollbars from '../../../../UI/CustomScrollbars/CustomScrollbars';
+
+const commit = (props) => {
     return (
-        <article>
-            <img style={{maxWidth:'100%',display:'block',margin:'10px auto'}}src={c} />
-        </article>
+        <CustomScrollbars scrollId={props.hash} width = {'100%'} height={'450px'} zindex={2} >
+            <article>
+                <img style={{maxWidth:'100%',display:'block',margin:'10px auto'}}src={c} />
+            </article>
+        </CustomScrollbars> 
+
     );
 }
 export default commit;
