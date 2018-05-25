@@ -33,3 +33,28 @@
     margin-left: 10px;
     max-height: 50px;
 }
+.ReactLogoWrapper{
+    position: relative;
+    margin: 20px;
+    float: right;
+    width:200px;
+}
+.ReactLogo{
+    height: 100px;
+    position: absolute;
+    right: -3px;
+    top:17px;
+    animation: spin 20s infinite linear;
+}
+
+@keyframes spin{
+    0% { transform: rotate(0deg);  }
+    100% { transform: rotate(360deg);  }
+}
+
+@media(max-width:580px){
+    .ReactLogoWrapper{
+        float: none;
+        margin: 20px auto;
+    }
+}

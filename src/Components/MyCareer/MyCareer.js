@@ -14,10 +14,10 @@ class MyCareer extends Component {
         loading:true,
         resize:false,
         currentCommit:{
-            rank:10,
-            hash:'w01',
-            content:['Start learning HTML','Thu/16/Nov/2017'],
-            p: 10
+            rank:16,
+            hash:'w06',
+            content:['Start Learning React','Wed/17/Jan/2018'],
+            p: 15
         },
         layout:null,
         commitsLog: null,
