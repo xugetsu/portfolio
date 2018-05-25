@@ -44,7 +44,7 @@
 }
 
 .CommitWrapper article{
-    min-height:400px;
+    min-height:500px;
 }
 
 .CommitWrapper article {
@@ -73,6 +73,12 @@
     color: rgb(255, 208, 0);
 }
 
+.CommitWrapper article  section{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-content: center;
+}
 .ButtonWrapper{
     margin-top: 20px; 
     position: absolute;

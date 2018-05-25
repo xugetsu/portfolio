@@ -9,7 +9,8 @@ const commit = (props) => {
              <h2>2048 Game Ultra</h2>
                 <p>This project was developed to put the knowledge and skills I've learned into practice
                 <br/>Inspired by the <a target="_blank" rel="noopener noreferrer" href='http://2048game.com/'>original game</a>, I've developped my own game logic from scratch using the JavaScript library React.js</p> 
-                <img src={game} style={{maxWidth:'90%',display:'block',margin:'10px auto'}}/>
+                <p>Please check my portfolio section for more information about this project.</p>
+                <img src={game} style={{maxWidth:'50%',display:'block',margin:'10px auto'}}/>
             </article>
         </CustomScrollbars> 
     );
