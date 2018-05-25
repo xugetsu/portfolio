@@ -107,15 +107,15 @@ class MyCareer extends Component {
 
     render () {
         // console.log(this.state.currentCommit);
-        const styleClasses = [styles.MyCareer, (this.state.resize ? styles.Resize : '')];
-
+        const style= {gridTemplateColumns: (this.state.resize ? '74% 25%' : '54% 45%')};
+       
         const graph = this.state.loading ? null 
             : <Graph  currentHash = {this.state.currentCommit.hash} 
                     currentCommit = {this.state.currentCommit} 
                     layout = {this.state.layout} 
                     loadCommitLog = {(currentCommit) => this.loadCommitLog(currentCommit)}/>;
         return (
-        <div id='MyCareer' className= {styleClasses.join(' ')}>
+        <div id='MyCareer' className= {styles.MyCareer} style={style}>
 
             <h1>My Career Repository</h1>
 

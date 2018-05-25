@@ -9,10 +9,9 @@ const commit = (props) => {
 
     <article className={styles.Article}>
       <p>After my first try to create a website without JavaScript, 
-        I learned how much important to use Javascript along HTML and CSS.</p>
-      <p>Javascript is like the soul to the webpage. It makes its content dynamic 
-        and interactive with the user. It handles all the logic of the website 
-        and requests and responses from the server.</p>
+        I immediately realised its importance : Javascript is like the soul to the webpage. It makes its content dynamic 
+        and interactive with the user. It handles all the logic of the website and the data flow between 
+        client and server.</p>
       <img style={{height:'150px',display:'block',margin:'10px auto'}} src={java} alt='javascript'/>
     </article>
     </CustomScrollbars> 
