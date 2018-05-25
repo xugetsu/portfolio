@@ -28,9 +28,7 @@ const commitWrapper = (props) => {
                 </span>
             </h2>
             <br/> 
-            <CustomScrollbars scrollId={props.hash} width = {'100%'} height={'340px'} zindex={2} >
-              <div style={{height:'400px'}}> <Commit /></div>
-            </CustomScrollbars>     
+            <Commit />
             <div className={styles.ButtonWrapper} >
                 <button onClick={props.prevCommit}><img width='20px' alt='prev' src={prev}/></button>  
                 <button onClick={props.nextCommit}><img width='20px' alt='next' src={next}/></button>     

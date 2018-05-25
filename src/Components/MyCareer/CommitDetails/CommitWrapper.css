@@ -9,10 +9,8 @@
     border-radius: 10px;
     float: left;
     margin: 20px auto;
-    height: 550px;
-    /* background: linear-gradient(135deg, rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%);} */
+    height: 520px;
     background-image: linear-gradient(to right top, #46505e, #414a57, #3c4450, #373f4a, #323943);
-    /* background-image: linear-gradient(to left bottom, #46505e, #45576f, #425d81, #3f6494, #3c6aa6); */
 }
 .CommitWrapper h2{
     font-size: 20px;
@@ -50,8 +48,11 @@
 }
 
 .CommitWrapper article {
-    background: rgb(40, 40, 43);
+    background: rgba(40, 40, 43, 0.5);
     padding: 20px;
+    border-radius: 10px;
+    margin: 0 20px;
+    padding-bottom: 50px;
 }
 
 .CommitWrapper article p{
@@ -74,8 +75,11 @@
 
 .ButtonWrapper{
     margin-top: 20px; 
-    width: auto;
-    height: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0 10px 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.466) , #00000000);
 }
 
 .ButtonWrapper button{

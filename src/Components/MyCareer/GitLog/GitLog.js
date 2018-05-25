@@ -46,7 +46,7 @@ const gitLog = (props) => {
     
     return (    
         <div className= {styles.GitLog}>
-            <CustomScrollbars  style1 width= '100%'  height= '340px' zindex={10}>
+            <CustomScrollbars  style1 width= '100%'  height= '310px' zindex={10}>
                 {log}
            </CustomScrollbars>
         </div>

@@ -7,14 +7,10 @@
     clear: both;
     position: relative;
     overflow: hidden;
-    /* border-radius: 10px; */
     background: rgb(50, 50, 53);
-    /* border-left: 10px solid #34486ee0;
-    border-right: 10px solid #2a416ca8;
-    border-top: 10px solid #2a416c;
-    border-bottom: 10px solid #324d80ad; */
     box-sizing: border-box;
     animation: backgroundColoChange 5s infinite alternate;
+    border-radius: 10px 10px 0 0;
 }
 
 .CommitsGraph{
