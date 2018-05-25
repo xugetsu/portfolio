@@ -51,6 +51,7 @@
     height: 30px;
 }
 .TryIt:hover{
+    background: #ffffff1a;
     border: 1px solid #ffffff;
 }
 

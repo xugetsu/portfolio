@@ -30,29 +30,6 @@
     margin-top: 20px;
     margin-bottom: 50px;
 }
-.TryIt{
-    position: absolute;
-    right: 20px;
-    top: 20px; 
-    cursor: pointer;
-    border: 1px solid #ccc9c9;
-    color: #ccc9c9;
-    transition: all 0.3s ease-in-out;
-    padding: 5px;
-}
-.TryIt span{
-    transition: all 0.3s ease-in-out;
-    color: #ccc9c9;
-}
-.TryIt:hover span{
-    color: #ffffff;
-}
-.TryIt img{
-    height: 30px;
-}
-.TryIt:hover{
-    border: 1px solid #ffffff;
-}
 
 @media(max-width:500px){
     .Project1{
