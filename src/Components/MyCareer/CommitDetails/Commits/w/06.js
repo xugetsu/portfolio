@@ -21,8 +21,8 @@ const commit = (props) => {
                 <p>I Started learning React Fundamentals with the provided tutorial in the official React's site : <a href='https://reactjs.org/tutorial/tutorial.html' target="_blank" rel="noopener noreferrer"> Intro To React </a>
                 and later I dived deeper into React's advanced features by taking <a href='https://www.udemy.com/react-the-complete-guide-incl-redux' target="_blank" rel="noopener noreferrer"> the React 16 - The Complete Guide </a>
                 course which also includes working with the well known dependencies like
-                <b><Anchor href='https://reacttraining.com/react-router/' color={'#55b2ff'}> Router 4 </Anchor></b> and 
-                <b><Anchor href='https://redux.js.org/' color={'#b97dfd'}> Redux.js </Anchor></b> .
+                <b><Anchor href='https://reacttraining.com/react-router/' color={'none'}> Router 4 </Anchor></b> and 
+                <b><Anchor href='https://redux.js.org/' color={'none'}> Redux.js </Anchor></b> .
                 </p>
             </article>
         </CustomScrollbars> 

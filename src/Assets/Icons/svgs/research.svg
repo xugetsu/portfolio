@@ -7,13 +7,11 @@
 <rect x="137.953" y="292.311" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 75.4308 632.6729)" style="fill:#ABCB57;" width="61.586" height="16.806"/>
 <rect x="0.079" y="430.187" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -257.4281 770.5503)" style="fill:#ABCB57;" width="61.586" height="16.806"/>
 <g>
-	<g>
-		<polygon style="opacity:0.2;fill:#FFFFFF;enable-background:new    ;" points="254.961,399.535 224.429,387.668 374.939,0 
-			405.473,11.847 		"/>
+	<g><polygon style="opacity:0.2;fill:#FFFFFF;enable-background:new;" 
+				points="290,300 265,280 360,40 390,40"/>
 	</g>
-	<g>
-		<polygon style="opacity:0.2;fill:#FFFFFF;enable-background:new    ;" points="298.66,436.49 268.121,424.616 418.631,36.946 
-			449.15,48.777 		"/>
+	<g><polygon style="opacity:0.2;fill:#FFFFFF;enable-background:new;" 
+			    points="350,300 320,300 410,60 430,100"/>
 	</g>
 </g>
 <path style="fill:#59595A;" d="M417.893,51.569c-29.186-29.187-67.992-45.26-109.268-45.26s-80.081,16.073-109.268,45.26
