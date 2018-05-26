@@ -1,5 +1,5 @@
 import React from 'react';
-import git from '../../../../../Assets/Icons/pngs/git.png';
+import gitlogo from '../../../../../Assets/Icons/svgs/Git-logo.svg';
 import udacity from '../../../../../Assets/Icons/pngs/udacity.png';
 import omac from '../../../../../Assets/Images/omac.jpg';
 import styles from '../commonStyles.css';
@@ -8,21 +8,27 @@ import octocat from '../../../../../Assets/Icons/pngs/octocat.png';
 
 const commit = (props) => {
     return (
-        <CustomScrollbars scrollId={props.hash} width = {'100%'} height={'450px'} zindex={2} >
+        <CustomScrollbars scrollId={props.hash} width = {'100%'} height={'410px'} zindex={2} >
 
         <article >
             <section >
               <p>This is the second part of the One Million Arab Coders - Full Stack Track program.
-              <br/>With this course I have received in-depth instruction on one of the most powerful tools available to programmers, 
-              the version control system Git.
-              <br/>Also, I have learned how I can use Github, the hosting service for Git, to create code repos, 
-              commit changes to code, and review commits to existing code repos.</p>
+              <br/><br/>With this course I have received in-depth instruction on one of the most powerful tools available to programmers, 
+              the version control system Git, to create code repos, commit changes to code, and review commits to existing code repos.
+              <br/><br/>Also, I have learned how to use Github, the hosting service for Git. I've became able to create remote repositories, to work with others on a version control project, 
+              to plan changes and implement them, to contribute to an existing repo and to add features on a project while it's in active development.</p>
               <img height='150px' style={{alignSelf:'center',margin:'0 0 0 50px'}} src={omac} />
             </section>
             <br/>
-            <section >
-              <img src={git} alt='git' width='150px' style={{alignSelf:'center',margin:'0 50px'}}/>
-              <img src={octocat} alt='github' width='150px' style={{alignSelf:'center',margin:'0 50px'}}/>
+            <section style={{textAlign:'center'}}>
+                <figure style={{alignSelf:'center'}}>
+                    <img src={gitlogo} alt='git' width='150px' style={{alignSelf:'center',margin:'0 50px'}}/>
+                    <figcaption><br/>Version Control System</figcaption>
+                </figure>
+                <figure>
+                    <img src={octocat} alt='github' width='150px' style={{alignSelf:'center',margin:'0 50px'}}/>
+                    <figcaption><br/>Hosting service Github</figcaption>
+                </figure>
             </section >
             
          

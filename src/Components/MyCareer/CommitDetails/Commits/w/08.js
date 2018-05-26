@@ -6,10 +6,10 @@ import Anchor from '../../../../Utilities/Anchor';
 
 const commit = (props) => {
     return (
-      <CustomScrollbars scrollId={props.hash} width = {'100%'} height={'450px'} zindex={2} >
+      <CustomScrollbars scrollId={props.hash} width = {'100%'} height={'410px'} zindex={2} >
         <article>
           <section >
-            <img height='150px' style={{margin:'15px 50px 0 0'}} src={omac} />
+            <img height='150px' style={{margin:'15px 30px 0px 20px'}} src={omac} />
             <p>
             The One Million Arab Coders is an initiative that seeks to equip 
             young Arabs with the tools to build their future, starting with fluency 
