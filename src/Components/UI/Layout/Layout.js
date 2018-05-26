@@ -9,6 +9,7 @@ class Layout extends Component{
     constructor(props) {
         super(props);
         this.myRef = React.createRef();
+        this.navigationElementsId = ['GeneralInfo','MyCareer','Competence','Portfolio','Contact'];
         this.state = {
           shrink: false,
           open: false,
@@ -17,9 +18,19 @@ class Layout extends Component{
         }
     }
     componentDidMount(){
-        const elementOffsetTop = ['GeneralInfo','MyCareer','Competence','Portfolio','Contact'].map(
-            id => document.getElementById(id).offsetTop);
-            this.setState({elementOffsetTop:elementOffsetTop});
+        window.addEventListener("resize", () => this.setElementOffsetTop());
+        this.setElementOffsetTop();
+    }
+    componentWillUnmount () { 
+        window.removeEventListener("resize", () => this.setElementOffsetTop());
+    }
+
+    setElementOffsetTop = () => {
+        const elementOffsetTop = this.navigationElementsId.map( elementId => 
+            document.getElementById(elementId).offsetTop
+        );
+        this.setState({elementOffsetTop:elementOffsetTop});
+        console.log('elementOffsetTop set');
     }
 
     navigateTo = (i) => {
