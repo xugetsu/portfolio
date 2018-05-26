@@ -13,8 +13,8 @@ const rootReducer = combineReducers({
     career: careerReducer,
 });
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // required for redux devTool
-const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
+//const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // required for redux devTool
+const store = createStore(rootReducer,  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()); //composeEnhancers(applyMiddleware(logger, thunk)));
 
 
 const app = () => {

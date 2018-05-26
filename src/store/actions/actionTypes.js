@@ -1,0 +1,1 @@
+export const GENERATE_DATA = 'GENERATE_DATA';

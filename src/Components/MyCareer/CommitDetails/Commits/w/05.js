@@ -9,7 +9,7 @@ const commit = (props) => {
       <CustomScrollbars scrollId={props.hash} width = {'100%'} height={'450px'} zindex={2} >
         <article className={styles.Article}>
           <p>
-          JavaScript is changing and I need to stay up to date !!
+          JavaScripthas evolved and I need to stay up to date !!
           <br/><br/>
           ES6 (ECMA Script6) is a major update to JavaScript that includes dozens of new features. With a focus on simplicity and readability.
           Whether you are building with a framework like React or websites in Vanilla JS, you are going to love everything about ES6.
