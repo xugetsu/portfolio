@@ -1,4 +1,5 @@
 {
+  "homepage": "https://xugetsu.github.io/portfolio/",
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
@@ -25,11 +26,10 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build" 
   },
   "devDependencies": {
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "gh-pages": "^1.1.0"
-  },
-  "homepage": "http://xugetsu.github.io/portfolio"
+  }
 }
