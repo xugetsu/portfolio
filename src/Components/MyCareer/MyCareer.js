@@ -12,34 +12,18 @@ import {__generateData__} from '../../store/actions/index';
 
 class MyCareer extends Component {
 
-
     componentDidMount(){
         this.props.onGenerateData();     
     }
 
-    loadCommitLog = (rank) =>  this.setState({currentCommit: this.props.commitsLog[rank-1]});
-
-
     render () {
         const style= {gridTemplateColumns: (this.props.resize ? '74% 25%' : '54% 45%')};
-       
-        const graph = this.props.loading ? null 
-            : <Graph  currentHash = {this.props.currentCommit.hash} 
-                    currentCommit = {this.props.currentCommit} 
-                    layout = {this.props.layout} 
-                    loadCommitLog = {(currentCommit) => this.loadCommitLog(currentCommit)}/>;
         return (
         <div id='MyCareer' className= {styles.MyCareer} style={style}>
-
             <h1>My Career Repository</h1>
-
-            {graph}
-    
-
+            <Graph/>
             <CommitWrapper /> 
-
             <GitLog />
-
         </div>
         );
     }
@@ -49,15 +33,11 @@ const mapDispatchToProps = dispatch => {
     return {
         onGenerateData: () => dispatch(__generateData__()),
     };
-}
+};
 
 const mapStateToProps = state => {
     return {
-        loading: state.career.loading,
-        layout: state.career.layout,
-        commitsLog: state.career.commitsLog,
         resize: state.career.resize,
-        currentCommit: state.career.currentCommit
     };
 };
 
