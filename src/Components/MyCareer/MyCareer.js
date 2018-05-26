@@ -38,9 +38,7 @@ class MyCareer extends Component {
 
             <CommitWrapper /> 
 
-            <GitLog commitsLog={this.props.commitsLog} 
-                    clicked = {(rank) => this.loadCommitLog(rank)}
-                    currentrank = {this.props.currentCommit.rank} />
+            <GitLog />
 
         </div>
         );

@@ -21,3 +21,10 @@ export const __resize__ = () => {
         type: actionTypes.RESIZE
     };
 };
+
+export const __loadCommit__ = (rank) => {
+    return {
+        type: actionTypes.LOAD_COMMIT,
+        rank       
+    };/*  ^  ES6 */
+};

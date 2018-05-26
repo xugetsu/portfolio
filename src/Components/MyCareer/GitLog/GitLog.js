@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './GitLog.css';
 import CustomScrollbars from '../../UI/CustomScrollbars/CustomScrollbars';
-
+import {connect} from 'react-redux';
+import {__loadCommit__} from '../../../store/actions/index';
 const gitLog = (props) => {
     let log = null;
 
@@ -28,7 +29,7 @@ const gitLog = (props) => {
                 spanBckColor = '#0077ff';
                 branchName = 'Languages';
             }
-            return <div onClick={() => props.clicked(commit.rank)} 
+            return <div onClick={() => props.onLoadCommit(commit.rank)} 
                         key={commit.rank} 
                         className={styles.Commit}
                         style = {{background: bckColor}}>
@@ -56,4 +57,17 @@ const gitLog = (props) => {
     );
 }
 
-export default gitLog;
+const mapDispatchToProps = dispatch => {
+    return {
+        onLoadCommit: (rank) => dispatch(__loadCommit__(rank)),
+    };
+}
+
+const mapStateToProps = state => {
+    return {
+        currentrank:  state.career.currentCommit.rank,
+        commitsLog:   state.career.commitsLog
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(gitLog);

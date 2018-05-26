@@ -32,6 +32,7 @@ const careerReducer = (state = initState, action) => {
             }else{
                 return {...state, currentCommit: state.commitsLog[state.currentCommit.rank]} 
             }  
+        case actionTypes.LOAD_COMMIT: return {...state, currentCommit: state.commitsLog[action.rank-1]}
         default: return state;
     }
 };
