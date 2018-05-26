@@ -11,7 +11,7 @@ const initState = {
             p: 15
         },
         layout:null,
-        commitsLog: null,
+        commitsLog: [],
 }
 
 const careerReducer = (state = initState, action) => {
@@ -19,6 +19,19 @@ const careerReducer = (state = initState, action) => {
         case actionTypes.GENERATE_DATA:
             const { layout, commitsLog } = data;
             return { ...state, loading: false, layout, commitsLog };
+        case actionTypes.RESIZE:   return {...state, resize: !state.resize} 
+        case actionTypes.PREVCOMMIT: 
+            if(state.currentCommit.rank === 1){
+                return null;
+            }else{
+                return {...state, currentCommit: state.commitsLog[state.currentCommit.rank - 2]} 
+            }  
+        case actionTypes.NEXTCOMMIT:
+            if(state.currentCommit.rank === 1){
+                return null;
+            }else{
+                return {...state, currentCommit: state.commitsLog[state.currentCommit.rank]} 
+            }  
         default: return state;
     }
 };
