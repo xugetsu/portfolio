@@ -22,13 +22,13 @@ const careerReducer = (state = initState, action) => {
         case actionTypes.RESIZE:   return {...state, resize: !state.resize} 
         case actionTypes.PREVCOMMIT: 
             if(state.currentCommit.rank === 1){
-                return null;
+                return state;
             }else{
                 return {...state, currentCommit: state.commitsLog[state.currentCommit.rank - 2]} 
             }  
         case actionTypes.NEXTCOMMIT:
-            if(state.currentCommit.rank === 1){
-                return null;
+            if(state.currentCommit.rank === 26){
+                return state;
             }else{
                 return {...state, currentCommit: state.commitsLog[state.currentCommit.rank]} 
             }  
