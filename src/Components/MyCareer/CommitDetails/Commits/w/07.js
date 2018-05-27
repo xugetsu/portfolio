@@ -8,7 +8,7 @@ const commit = (props) => {
             <article>
              <h2>2048 Game Ultra</h2>
                 <p>After learning the basics of React, I couldn't help myself from putting my new skills into practice.
-                <br/>Inspired by the <a target="_blank" rel="noopener noreferrer" href='http://2048game.com/'>original game</a>, I started developing my own game logic from scratch using the JavaScript library React.js</p> 
+                 Inspired by the <a target="_blank" rel="noopener noreferrer" href='http://2048game.com/'>original game</a>, I started developing my own game logic from scratch using the JavaScript library React.js</p> 
                 <p>Please check my portfolio section for more information about this project.</p>
                 <img src={game} style={{maxWidth:'70%',display:'block',margin:'10px auto'}}/>
             </article>

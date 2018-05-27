@@ -73,11 +73,20 @@
     color: rgb(255, 208, 0);
 }
 
-.CommitWrapper article  section{
+.CommitWrapper article section{
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     align-content: center;
+    margin-bottom: 10px;
+}
+.CommitWrapper article section figure{
+    align-self: center;
+    margin: 0 20px;
+    text-align: center;
+}
+.CommitWrapper article section p{
+    align-self: center;
 }
 .ButtonWrapper{
     margin-top: 20px; 
@@ -139,6 +148,14 @@
 .Resize:hover::after{
     opacity: 1;
 }
+
+@media(max-width:1100px){
+    .CommitWrapper article section{
+        flex-flow: column;
+        justify-content: center;
+    }
+}
+
 @media(max-width:740px){
     .Resize{
         display: none;
