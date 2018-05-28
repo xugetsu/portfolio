@@ -3,9 +3,9 @@ import GridLayout from 'react-grid-layout';
 import CommitElement from './CommitElement/CommitElement';
 
 class CommitsGraph extends Component {
-   componentDidUpdate(){
-       console.log('[CommitsGraph] did update')
-   } 
+//    componentDidUpdate(){
+//        console.log('[CommitsGraph] did update')
+//    } 
    render() {
     const gridWidth = 50; // grid Width
     const rowHeight = 5;
