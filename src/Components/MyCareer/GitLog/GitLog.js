@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styles from './GitLog.css';
-import CustomScrollbars from '../../UI/CustomScrollbars/CustomScrollbars';
+// import CustomScrollbars from '../../UI/CustomScrollbars/CustomScrollbars';
 import SpringScrollbars from '../../UI/CustomScrollbars/SpringScrollbars';
 import {connect} from 'react-redux';
 import {__loadCommit__} from '../../../store/actions/index';
@@ -68,7 +68,7 @@ class gitLog extends Component {
         return (    
             <div className= {styles.GitLog}>
                 <SpringScrollbars  ref={this.myRef} 
-                                   style1 width= '100%'  height= '310px' zindex={10}>
+                                   /*style1*/ width= '100%'  height= '310px' zindex={10}>
                     {log}
                 </SpringScrollbars>
             </div>

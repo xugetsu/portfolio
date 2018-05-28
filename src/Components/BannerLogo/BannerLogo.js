@@ -15,9 +15,9 @@ class BannerLogo extends Component{
     componentWillUnmount () { 
         window.removeEventListener("resize", () => this.forceUpdate());
     }
-    componentWillUpdate(){
-        console.log('[BannerLogo] • Updated')
-    }
+    // componentWillUpdate(){
+    //     console.log('[BannerLogo] • Updated')
+    // }
     switchIcon = (e) => {
             this.setState({
                 iconIndex: this.state.iconIndex + 1 === 5 ? 0 : this.state.iconIndex + 1,
