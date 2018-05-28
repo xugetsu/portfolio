@@ -38,11 +38,11 @@ export default class SpringScrollbars extends Component {
     render() {
         const zIndex = this.props.zindex;
         const VerticalThumb = (defaultStyles, props) => <div {...props} 
-                                                    onClick = { (e) => e.stopPropagation() }
+                                                    onClick = { (e) => e.stopPropagation() } // this added to not exit from  a backdrop when you click on the thumb
                                                     className={styles.ThumbVertical} 
                                                     style={{...defaultStyles,zIndex:zIndex}}/>
         const VerticalTrack = (defaultStyles, props) => <div {...props} 
-                                              onClick = { (e) => e.stopPropagation() }
+                                              onClick = { (e) => e.stopPropagation() }// this added to not exit from  a backdrop when you click on the truck
                                               className={styles.TrackVertical} 
                                               style={{...defaultStyles,zIndex:zIndex+1}}/>
         
