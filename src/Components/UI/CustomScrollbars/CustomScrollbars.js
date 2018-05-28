@@ -8,6 +8,53 @@ class CustomScrollbars extends Component{
     this.myRef = React.createRef();
   }
 
+
+
+  renderThumbV = (defaultStyles, props) => <div {...props} 
+                                                onClick = { (e) => e.stopPropagation() }
+                                                className={this.props.style1 ? styles.ThumbVertical1 : styles.ThumbVertical} 
+                                                style={{...defaultStyles,zIndex:this.props.zindex+1}}/>
+
+  renderTrackV  = (defaultStyles, props) => <div {...props} 
+                                                onClick = { (e) => e.stopPropagation() }
+                                                className={this.props.style1 ? styles.TrackVertical1 : styles.TrackVertical} 
+                                                style={{...defaultStyles,zIndex:this.props.zindex}}/>
+
+  renderThumbH = (defaultStyles, props) => <div {...props} 
+                                                onClick = { (e) => e.stopPropagation() }
+                                                className={this.props.style1 ? styles.ThumbHorizantal1 : styles.ThumbHorizantal} 
+                                                style={{...defaultStyles,zIndex:this.props.zindex+1}}/>
+
+  renderTrackH  = (defaultStyles, props) => <div {...props} 
+                                                onClick = { (e) => e.stopPropagation() }
+                                                className={this.props.style1 ? styles.TrackHorizantal1 : styles.TrackHorizantal} 
+                                                style={{...defaultStyles,zIndex:this.props.zindex}}/>
+  scrollTop (top) {
+    const scrollbars = this.myRef.current;
+    scrollbars.scrollTop(top);
+  }
+
+  render() {
+    return (
+      <Scrollbars ref={this.myRef} 
+                  style={{ width:this.props.width, height: this.props.height}}
+                  renderTrackVertical={this.renderTrackV}    
+                  renderThumbVertical={this.renderThumbV}
+                //  renderThumbHorizontal={this.renderThumbH}
+               ///   renderTrackHorizontal={this.renderTrackH}    
+                 // onScrollStop ={()=>console.log(this.myRef.current.getValues())}
+                  >       
+        {this.props.children}
+      </Scrollbars>
+    );
+  }   
+}
+
+ 
+
+
+export default CustomScrollbars;
+
 // componentDidMount = () =>{
   //   if(this.props.scrollId===0){
      
@@ -44,44 +91,3 @@ class CustomScrollbars extends Component{
   //   const scrollData = JSON.parse(localStorage.getItem("CustomScrollBarsValues"+this.props.scrollId));
   //   return scrollData;
 //  }
-
-  renderThumbV = (defaultStyles, props) => <div {...props} 
-                                                onClick = { (e) => e.stopPropagation() }
-                                                className={this.props.style1 ? styles.ThumbVertical1 : styles.ThumbVertical} 
-                                                style={{...defaultStyles,zIndex:this.props.zindex+1}}/>
-
-  renderTrackV  = (defaultStyles, props) => <div {...props} 
-                                                onClick = { (e) => e.stopPropagation() }
-                                                className={this.props.style1 ? styles.TrackVertical1 : styles.TrackVertical} 
-                                                style={{...defaultStyles,zIndex:this.props.zindex}}/>
-
-  renderThumbH = (defaultStyles, props) => <div {...props} 
-                                                onClick = { (e) => e.stopPropagation() }
-                                                className={this.props.style1 ? styles.ThumbHorizantal1 : styles.ThumbHorizantal} 
-                                                style={{...defaultStyles,zIndex:this.props.zindex+1}}/>
-
-  renderTrackH  = (defaultStyles, props) => <div {...props} 
-                                                onClick = { (e) => e.stopPropagation() }
-                                                className={this.props.style1 ? styles.TrackHorizantal1 : styles.TrackHorizantal} 
-                                                style={{...defaultStyles,zIndex:this.props.zindex}}/>
-  render() {
-    return (
-      <Scrollbars ref={this.myRef} 
-                  style={{ width:this.props.width, height: this.props.height}}
-                  renderTrackVertical={this.renderTrackV}    
-                  renderThumbVertical={this.renderThumbV}
-                //  renderThumbHorizontal={this.renderThumbH}
-               ///   renderTrackHorizontal={this.renderTrackH}    
-                 // onScrollStop ={()=>console.log(this.myRef.current.getValues())}
-                  >       
-        {this.props.children}
-      </Scrollbars>
-    );
-  }   
-}
-
- 
-
-
-export default CustomScrollbars;
-
