@@ -30,7 +30,6 @@ class Layout extends Component{
             document.getElementById(elementId).offsetTop
         );
         this.setState({elementOffsetTop:elementOffsetTop});
-        console.log('elementOffsetTop set');
     }
 
     navigateTo = (i) => {
@@ -38,7 +37,7 @@ class Layout extends Component{
         scrollbars.scrollTop(this.state.elementOffsetTop[i] - 50); // 50 is the height of the NavBar
     }
 
-    HandelScroll = () => {
+    scrollHandler = () => {
         const scrollbars = this.myRef.current;
         if(scrollbars.getScrollTop() > 50 && !this.state.shrink){
             this.setState({shrink:true});
@@ -68,7 +67,7 @@ class Layout extends Component{
         // console.log(this.state.currentActive);
         return (
             <SpringScrollbars   ref={this.myRef}  
-                                onScroll = {this.HandelScroll} 
+                                onScroll = {this.scrollHandler} 
                                 scrollid={0} 
                                 width = {'100vw'} 
                                 height = {'100vh'} 
