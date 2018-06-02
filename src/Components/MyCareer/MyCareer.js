@@ -8,7 +8,7 @@ import GitLog from './GitLog/GitLog';
 import next from '../../Assets/Icons/svgs/next.svg';
 import prev from '../../Assets/Icons/svgs/prev.svg';
 import {connect} from 'react-redux';
-import {__generateData__} from '../../store/actions/index';
+import {__fetchData__} from '../../store/actions/index';
 
 class MyCareer extends Component {
 
@@ -31,7 +31,7 @@ class MyCareer extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onGenerateData: () => dispatch(__generateData__()),
+        onGenerateData: () => dispatch(__fetchData__()),
     };
 };
 

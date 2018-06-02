@@ -1,5 +1,5 @@
 import * as actionTypes from '../actions/actionTypes';
-import data from '../careerDataStore/dataGenerator';
+import dataGenerator from '../careerDataStore/dataGenerator';
 
 const initState = {
         loading:true,
@@ -17,7 +17,7 @@ const initState = {
 const careerReducer = (state = initState, action) => {
     switch (action.type) {
         case actionTypes.GENERATE_DATA:
-            const { layout, commitsLog } = data;
+            const { layout, commitsLog } = dataGenerator(action.data);
             return { ...state, loading: false, layout, commitsLog };
         case actionTypes.RESIZE:   return {...state, resize: !state.resize} 
         case actionTypes.PREVCOMMIT: 
@@ -27,7 +27,7 @@ const careerReducer = (state = initState, action) => {
                 return {...state, currentCommit: state.commitsLog[state.currentCommit.rank - 2]} 
             }  
         case actionTypes.NEXTCOMMIT:
-            if(state.currentCommit.rank === 26){
+            if(state.currentCommit.rank === 28){
                 return state;
             }else{
                 return {...state, currentCommit: state.commitsLog[state.currentCommit.rank]} 

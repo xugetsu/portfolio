@@ -1,4 +1,4 @@
-import CommitsData from './CommitsData';
+// import CommitsData from './CommitsData';
 
 const generateBranchData = (branchName, branchData, type = 'master', _x0, _y0,open = true, _w0 = 1, h0 = 1) => {
   const branch = Object.keys(branchData).map(
@@ -39,18 +39,18 @@ const generateLayoutData = (CommitsData) =>{
 };
 
 const generateCommitsLog = (layout) => {
-    const commitsLog = Array(26).fill();
-    for( let i = 1; i <= 26; i++ ){
+    const commitsLog = Array(28).fill();
+    for( let i = 1; i <= 28; i++ ){
         const commit = layout.find( e => e.rank === i);
         commitsLog[i] = {content:commit.content, hash:commit.i, rank:i,p:(commit.x+commit.w) };
     }
     return commitsLog.slice(1);
 };
 
-const dataGenerator = () => {
+const dataGenerator = (CommitsData) => {
   const layout = generateLayoutData(CommitsData);
   const commitsLog = generateCommitsLog(layout);
   return {layout, commitsLog};
 };
 
-export default dataGenerator();
+export default dataGenerator;
