@@ -21,7 +21,7 @@ header{
     flex-flow: row;
     justify-content: center;
   }
-.NavBar button{
+.NavBar .NavButton{
     cursor: pointer;
     outline: none;
     color: aliceblue;
@@ -37,7 +37,7 @@ header{
   .NavBar button:hover{
     color: rgb(0, 183, 255);
 }
-  .NavBar button:active{
+.NavBar .ActiveNavButton{
     color: rgb(0, 183, 255);
 }
 

@@ -6,11 +6,21 @@ const navBar = (props) => {
     const logoWrapperStyles = [styles.LogoWrapper];
     const SideDrawerBtnStyles = [styles.SideDrawerBtn];
     const headerStyles = [''];
+
     if(props.shrink){
         logoWrapperStyles.push(styles.ShrinkLogo);
         headerStyles.push(styles.Shrink);
         SideDrawerBtnStyles.push(styles.SideDrawerBtnShrink);
+        
     }
+    const buttonStyles = (i) => {
+        if(props.currentActive === i){
+             return [styles.NavButton, styles.ActiveNavButton].join(' ');
+        }else{
+            return styles.NavButton;
+        }
+    };
+
     return(
         <header className ={headerStyles.join(' ')}>
             <div className={logoWrapperStyles.join(' ')} onClick={() => props.navigateTo(0)} >
@@ -22,11 +32,11 @@ const navBar = (props) => {
                 </span>
             </div>
             <nav className={styles.NavBar}>
-                <button onClick={() => props.navigateTo(0)}>Home</button>
-                <button onClick={() => props.navigateTo(1)}>My Career</button>
-                <button onClick={() => props.navigateTo(2)}>Competence</button>
-                <button onClick={() => props.navigateTo(3)}>Portfolio</button>
-                <button onClick={() => props.navigateTo(4)}>Contact</button>
+                <button className={buttonStyles(0)} onClick={() => props.navigateTo(0)} >Home</button>
+                <button className={buttonStyles(1)} onClick={() => props.navigateTo(1)}>My Career</button>
+                <button className={buttonStyles(2)} onClick={() => props.navigateTo(2)}>Competence</button>
+                <button className={buttonStyles(3)} onClick={() => props.navigateTo(3)}>Portfolio</button>
+                <button className={buttonStyles(4)} onClick={() => props.navigateTo(4)}>Contact</button>
             </nav>
             <div className={SideDrawerBtnStyles.join(' ')} onClick = {props.showDrawer}>
                 <div></div>
